@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">Best
+                  </span><span style="font-family: Arial,Sans-Serif;"><span style="font-weight: bold;">Practices</span></span></h2>
+              <h4>Redundancy</h4>
+              <span style="font-family: Arial,Sans-Serif;"><span style="font-weight: bold;"></span></span>Let's
+              start with redundancy.  One must expect things to fail so the best
+              practice is to plan for failure.  In this way we can keep the
+              needed data and services available when nodes or links fail.  So
+              the question is how long can something be down for.  In general
+              the higher the availability the greater the cost.  So for instance
+              It may be ok to recover a lab in a few days, in this case all we
+              need is backups.  While a primary web site or network links
+              required for business may need to be mirrored with complete site
+              redundancy.<br />
+              <h4>The N+1 model </h4>
+              For services such as Web, DNS, Mail, Proxy ... the N+1 model is
+              very useful as we can add capacity along with redundancy.  With
+              this model we load balance the request between multiple servers. 
+              <br />
+              <br />
+              One of the most basic ways to do this is with DNS.  For services
+              like SMTP it is built in to the MX records where we can have
+              multiple servers with different <span style="font-size:9.5pt;line-height:115%;
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;color:#333333;background:white;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">weights</span>. 
+              you can also give an "A" or in the case of IPv6 "AAA" record more
+              then one IP and the DNS request will rotate through the IPs. 
+              Having<span style="font-size:9.5pt;line-height:115%;
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;color:#333333;background:white;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">
+                multiple</span> A or AAA records does pose an issue where if one
+              of the IPs goes down a percentage of request will fail.<br />
+              <br />
+              To stop having up to 50% of request frail (i.e. if we have 2
+              servers and 1 goes down).  We can have load balancers that are
+              service aware (F5 and A10 for example), so that when a node has
+              problems it is taken out of rotation.<br />
+              <h4>Mirroring</h4>
+              Mirroring  is one of the simplest ways of adding redundancy.  The
+              major disadvantage of mirroring is cost as we will have hardware
+              that is not being used sitting around until we need it.  In some
+              cases where we don't need or can't use the extra capacity of N+1,
+              mirroring makes the most sense. <br />
+              <br />
+              A VIP (virtual IP) or floating IP is one of the easiest way to
+              mirror systems.  To do this we would set up a cluster of some kind
+              and assign the active node the VIP.  When something happens the
+              the active node the other node in the cluster becomes active and
+              is assigned the VIP.<br />
+              <br />
+              <h4>ASNs and BGP </h4>
+              <p>When we are looking at site or ISP redundancy we may need to
+                change the routing to entire pools of IP address associated with
+                an ASN.</p>
+              <span style="color: rgb(51, 51, 51); font-family: 'Lucida Grande', Arial, sans-serif; font-size: 12.8000001907349px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">BGP
+                (Border Gateway Protocol) is the method used for routing ASNs. 
+                Each router on the edge of the internal network runs BGP and
+                advertises its routes and receives routes via the BGP protocol. 
+                BGP is normally set up in a mesh where each router on the edge
+                of the internal network has routes to the other BGP members with
+                the same ASN.  In some cases you may want to have routers in you
+                network that recive the BGP routing information but are not part
+                of the mesh in this case you may set up your border routers as
+                route refelcters where they will tell the internal routers the
+                BGP routes assigned to them without needing to have the internal
+                routes as part of the BGP mesh.</span>
+              <h4><span style="font-weight: bold;">Geographic location</span></h4>
+              By default you will get better performance the closer you are to
+              the data you are accessing.  As RTT increases you performance
+              decreases.  So it makes the most sense to have the servers closer
+              to the users.  So in many cases like having offices in NY and LA
+              it may make sense to have local servers in both locations that
+              then sync their data between the sites as a back office task.<br />
+              <br />
+              RTT time and the affect it has on the application can very, the
+              biggest issues is the number of round trips needed for each
+              transacton.  If you are just sending files it may not be that big
+              an issues.  On the other hand if you have an interactive
+              application that is adding users to a database this would be a
+              bigger issue.<br />
+              <h4>To be continued ...</h4>
+              <span style="font-weight: bold;"></span> <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

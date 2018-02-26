@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site LINUX</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">Linux Web Servers and
+                  Applications</span></h2>
+              <h3><span style="font-weight: bold;">Web server overview</span></h3>
+              <p>The number one web server is Apache and the number 2 web server
+                is NGINX.
+                Both are excellent choices NGINX being the newer and is easy to
+                configure for modern apps and services. Red hat and Debian use
+                Apache web servers by default and is the most used so we are
+                going to go over basic Apache configuration and set up in Linux.
+              </p>
+              <p>As I have stated, when planning for any service you want to
+                take performance and up-time into into consideration.  This will
+                nominally involve having a load balancer of some type in front
+                of the web servers, as this gives you both redundancy and the
+                ability to increase capacity as needed by adding servers. You
+                can also use something as simple as <a href="http://www.keepalived.org/">keepalived</a>
+                with a VIP and have an active/standby setup.  One can also
+                consider using a cloud service for you application hosting. 
+                With most cloud services you can increase capacity on demand and
+                they offer centralized data storage.</p>
+              <h3><span style="font-weight: bold;">Basic Apache Setup</span></h3>
+              <p>By default all the web sites HTML pages and scripts are in
+                /var/www.  You can change this although it can be useful to have
+                everything in the default dir, especially if you are using
+                someone's pre-canned application.  One can also argue that it is
+                better to change this for security.  </p>
+              <h3> <span style="font-weight: bold;">Configuration Files</span></h3>
+              In Red Hat the configurations are in /etc/httpd/conf and it
+              generally users one file httpd.conf  This is not the standard for
+              Apache and had been modified by RedHat.  Debian uses a standard
+              Apache load and the configuration files on in /etc/apache2 with
+              the main config in apache2.conf and the network configuration in
+              ports.conf.  The variables are the same just the names and
+              location of the files have been changed.<br />
+              <br />
+              Verify that that the web server is listening on the correct port
+              and IP in the config file.  The "Listen" argument sets what IPs
+              and ports the server responds to.  If you want the web server to
+              respond on all IPs just give it the port number "Listen 80"  Or
+              you can give it the IP of the interface the web services is on ":"
+              and a port number "Listen 192.168.1.100:80".  <br />
+              <br />
+              For Red Hat you need to run setup and turn on the httpd service or
+              you can start it by hand.<br />
+              <br />
+              Once this is set you can put your docs in /var/www/html for RedHat
+              and /var/www for Debian and standard Apache installs.  Then you
+              are ready to go, the service will start by default when the server
+              is booted. <br />
+              <br />
+              <h3>Apache HTTPS Setup</h3>
+              We will go over certificate generation and basic HTTPS setup. 
+              This will cover most Linux systems although the Apache
+              configuration files and locations may very depending on the
+              distribution you are using. <br />
+              <br />
+              To generate a CSR (Certificate signing request) for either a
+              self-signed certificate or a PKI certificate authority, run the
+              following command.  When asked for the name this is the official
+              name of the web server not the host name.  So if you are going to
+              HTTPS://myserver.mydomain.com you would put
+              “myserver.mydomain.com” as the name.<br />
+              <br />
+              <div id="Data"> openssl req -nodes -newkey rsa:2048 -keyout
+                myserver.key -out sercer.csr</div>
+              <br />
+              To generate a self-signed certificate run the following command or
+              you can get a certificate from a certificate authority using the
+              CSR that you generated with the above command.<br />
+              <br />
+              <div id="Data"> openssl x509 -in sercer.csr -out myserver.crt -req
+                -signkey myserver.key </div>
+              <br />
+              Now that we have a key and a certificate we can set up HTTPS on
+              the server. Copy the files into the apache or system certificate
+              dir. Go to the Apache directory (normally /etc/apache2 Centos and
+              Redhat /etc/httpd). The location of the key and certificate files
+              should be in either httpd.conf or under the vhosts.d directory in
+              a conf file, or for RedHat in conf.d/ssl.conf.  You aneed to have
+              the following lines in the config file.<br />
+              <br />
+              <div id="Data"> &lt;IfDefine SSL&gt;<br />
+                &lt;IfDefine !NOSSL&gt;<br />
+                &lt;VirtualHost Your_IP_Address:443&gt;<br />
+              </div>
+              <br />
+              In /etc/syscofig/apache2 or the equlvent file on you server you
+              may need the following line<br />
+               <br />
+              <div id="Data"> APACHE_SERVER_FLAGS="SSL"<br />
+              </div>
+              <br />
+              Restart you web server and you should have HTTPS access.  You also
+              may want to disable HTTP or redirect HTTP to HTTPS.<br />
+              <br />
+              <h3>CGI setup</h3>
+              <p>To be continued ...<br />
+              </p>
+              <p><br />
+              </p>
+              <ul>
+              </ul>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div style="margin-left: -3px;" class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.linux.org"><img style="width: 205px;" alt="" src="tux_gnu.jpg" /></a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

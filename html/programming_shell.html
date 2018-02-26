@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site shell Programming</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5" style="width: 884px;"><br />
+              <h2 style="text-align: center;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">Basic
+                  Linux/UNIX Shell Scripting<br />
+                </span></h2>
+              <h3>Basic operations</h3>
+              <span style="font-weight: bold;">Backslash escape sequences</span>      
+              <br /><br />
+                  \a     alert (bell)<br />
+                  \b     backspace<br />
+                  \e     an escape character<br />
+                  \f     form feed<br />
+                  \n     new line<br />
+                  \r     carriage return<br />
+                  \t     horizontal tab<br />
+                  \v     vertical tab<br />
+                  \\     backslash<br />
+                  \'     single quote<br />
+                  \nnn   the eight-bit character whose value is  the  octal 
+              value<br />
+                             nnn (one to three digits)<br />
+                  \xHH  the  eight-bit  character  whose value is the
+              hexadecimal<br />
+                             value HH (one or two hex digits)<br />
+                  \cx     a control-x character<span style="font-weight: bold;"></span>
+              <p> <span style="font-weight: bold;">Special variables<br />
+                </span></p>
+                   $*     Expands  to a single word with the value of each
+              parameter separated by the first character of the IFS<br />
+                             special variable.  That is, "$*" is equivalent to
+              "$1c$2c...",<br />
+                   $@   Expands to a separate word.  That is, "$@" is equivalent
+              to "$1" "$2" ...  If the double-<br />
+                             quoted expansion occurs within a word, <br />
+                   $#     Total number of parameters on command line, where; $1
+              = parameter1, $2 = parameter2, ...<br />
+                   $?     Status (return code) of the most recently executed
+              command, 0 = no errors.<br />
+                   $$     Process ID of the shell.  In a () subshell, it expands
+              to the process  ID  of  the  current shell.<br />
+                   $!      Process ID of the most recently executed background
+              (asynchronous) command.<br />
+                   $0     Name  of  the  shell  or shell script, $0 is set to
+              the name of that file.  If  bash  is  started  with  the  -c<br />
+                             option,  then  $0 is set to the first argument
+              after the string to be executed.<br />
+                   $_     Absolute pathname used to invoke the shell or shell
+              script being executed.<br />
+              <span style="font-weight: bold;"><br />
+                Redirects</span><br />
+              <br />
+                   |     Pipe standard output<br />
+                   &gt;    Redirect standard output to a file<br />
+                  &gt;&gt;   Redirect standard output and append to file<br />
+                  2&gt;   Redirect standard error to a file ( &gt;file
+              2&gt;&amp;1 redirects both standard out and error to file)<br />
+                   &lt;    Redirect input from file<br />
+                  <br />
+              <span style="font-weight: bold;">Test</span><br />
+              <br />
+                  -e  FileName exists<br />
+                  -b  Returns a True exit value if the specified FileName exists
+              and is a block special file<br />
+                  -c  FileName is a character special file<br />
+                  -d  FileName is a directory<br />
+                  -f   FileName is a regular file<br />
+                  -g  FileName's Set Group ID bit is set<br />
+                  -h  FileName is a symbolic link<br />
+                  -k  FileName's sticky bit is set<br />
+                  -L  FileName is a symbolic link<br />
+                  -p  FileName is a named pipe (FIFO)<br />
+                  -r   FileName is readable by the current process<br />
+                  -s  FileName has a size greater than 0<br />
+                  -t   FileDescriptor is open and associated with a terminal<br />
+                  -u  FileName's Set User ID bit is set<br />
+                  -w FileName's write flag is on<br />
+                  -x  FileName's execute flag is on<br />
+                  -nt file1 is newer than file2<br />
+                  -ot file1 is older than file2<br />
+                  -ef file1 is another name for file2 <br />
+              <br />
+                  -n  the length of the String1 variable is nonzero<br />
+                  -z  the length of the String1 variable is 0 (zero)<br />
+                   =  String1 and String2 variables are identical<br />
+                  !=  String1 and String2 variables are not identical<br />
+              <br />
+                 -eq  Integer1 and Integer2 are equal<br />
+                 -ne  Integer1 and Integer2 are not equal<br />
+                 -gt   Integer1 and Integer2 are greater than<br />
+                 -ge  Integer1 and Integer2 are greater or equal <br />
+                 -lt    Integer1 and Integer2 are less than<br />
+                 -le   Integer1 and Integer2 are less or equal<br />
+              <br />
+              <h3>Logic </h3>
+              # Just a stupid logic example.<br />
+              if [ "$arg1" = "$arg2" &amp;&amp; "$arg1" != "$arg3" ]<br />
+              then <br />
+                  echo "Two of the args are equal."<br />
+                  exit 3<br />
+              elif [ $arg1 = $arg2 &amp;&amp; $arg1 = $arg3 ]<br />
+              then<br />
+                echo "args are equal"<br />
+                exit 0<br />
+              else<br />
+                echo "args are different"<br />
+                exit 4 <br />
+              fi<br />
+              <br />
+              <br />
+              #Check if Perl is installed<br />
+              if [ ! -f /usr/bin/perl ]; then<br />
+                  echo "Error: Must have Perl installed"<br />
+                  exit 2<br />
+              else<br />
+                  echo "Perl installed"<br />
+              fi<br />
+              <h3>Loops</h3>
+              #Delete old tmp file in users dir<br />
+              while read user<br />
+              do<br />
+                          echo $user &gt;&gt; logfile.lo<br />
+                          find /home/user/files/ * -name "*.tmp" -mtime +60
+              -exec rm {} \;<br />
+              done &lt; /usr/tmp/UserList.lst<br />
+              <br />
+              <br />
+              # displays a list of all files in the current directory<br />
+              for File in *<br />
+                  doif [ -r $File -a -w $File -a -x $File ]<br />
+                          then<br />
+                                  echo $File<br />
+                          fi<br />
+                  done<br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

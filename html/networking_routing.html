@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">Network routing</span></h2>
+              <p>We will go over the most common routing methods, although there
+                are many routing protocols that will not be covered.  This gives
+                a good overview of the most common network routing scenarios. 
+                Routing can be very complex and there are many books and sites
+                that just covering IP routing.</p>
+              <p><span style="font-weight: bold;">Top Level routing ASNs and BGP</span></p>
+              <p>The top level of routing is Autonomous System routing.  AS
+                routing sets polices for large blocks of IPs (Autonomous
+                Systems) each AS is assigned a 32bit number (ASN) that is
+                managed by iana.org.  ASes are designed so it is easy to reroute
+                large segments of IP address to multiple nodes for load
+                balancing and redundancy.  In most cases the nodes are in
+                different locations allowing for site fail-overs.  Only ISPs,
+                large companies and Universities use ASNs. As with IP addresses,
+                there are also ranges of AS numbers that are reserved for
+                private use and can be used on large internal networks for
+                fail-over and load balancing. <br />
+              </p>
+              <p>BGP (Border Gateway Protocol) is the method used for routing
+                ASNs.  Each router on the edge of the internal network runs BGP
+                and advertises its routes and receives routes via the BGP
+                protocol.  BGP is normally set up in a mesh where each router on
+                the edge of the internal network has routes to the other BGP
+                members with the same ASN.</p>
+              <p><span style="font-weight: bold;">OSPF (Open Shortest Path
+                  First) routing</span></p>
+              <p>OSPF is the most common routing protocol for internal networks
+                within an ASN.  The main advantage to OSPF is that it uses
+                metrics for routes so if one route has 3 hops to the destination
+                and the other path only has one hop it knows to send the traffic
+                through the shortest path.  This is very useful when you want to
+                have redundancy in the network.  As OSPF will generally avoid
+                circular routes and pick the best path. OSPF also has a link
+                state with the connected routers so it knows if a port goes down
+                and routes around the problem.  </p>
+              <p><span style="font-weight: bold;">RIP (Routing Information
+                  Protocol) </span></p>
+              <p>RIP is only suited for small local networks as it has a lot of
+                overhead and relies on the local systems to manage the routing
+                tables.  This is ok for small local networks with just a few
+                routes/routers. Most computer systems have RIP built into the OS
+                so this makes RIP very easy to set up.  </p>
+              <p><span style="font-weight: bold;">Static Routes and ICMP
+                  redirects.</span></p>
+              <p>In most cases systems have a default route to the local
+                router.  If you use DHCP to get IP address for your systems it
+                also gets a default route in most cases.  The local router (the
+                default route) should know about all the systems it routes to
+                via routing protocols or static routing tables.  If it gets a
+                packet for a system that has a direct route through a router on
+                the same local network it will send an ICMP redirect back to the
+                sender.  The sender will then process the redirect and add the
+                route to the local routing table.  All preceding packets for
+                that host will now go directly to the gateway in the ICMP
+                redirect.</p>
+              <p><span style="font-weight: bold;">Subnets</span></p>
+              <p>The use of subnets lets us divide large blocks of IP address
+                into smaller blocks for routing to local networks. The details
+                of subnetting are on the <a href="networking_IPs.html">IP
+                  address</a> page.  When using subnets we need to make sure all
+                the systems on the local network have the same subnet settings. 
+                You can route larger blocks of address to a local router that
+                are then broken down into smaller subnets on local LANs as long
+                as they are not part of the subnet the local system is on.  </p>
+              <p style="margin-left: 40px;">Example</p>
+              <p style="margin-left: 40px;">We have a 10.0.0.0 class A network.
+                The local system has an 8 bit mask (255.255.255.0) and an IP of
+                10.1.100.1.  You can have a route for 10.20.0.0 with a 16 bit
+                mask (255.255.0.0), but not 10.1.0.0 as that would include you
+                address.  You could have a default route that would include all
+                address except you local network, or multiple class C routes
+                10.1.102.0 etc.  </p>
+              <p><span style="font-weight: bold;">ARP (Address Resolution
+                  Protocol)</span></p>
+              <p>ARP is the lowest level of routing and is used on Ethernet to
+                associate an IP (IPv4 as IPv6 uses neighbor discovery) with a
+                MAC (media access control address) on the local network card. 
+                When a system wants to send data to an IP address on the local
+                network it sends out a brodcast ARP request.  The system with
+                that IP responds with an ARP reply.  The system making the ARP
+                request then adds the MAC to a local ARP table so it knows what
+                MAC address to send packets with that IP to.  </p>
+              <p>This works great until we start using virtual IPs and the IP
+                changes what interface it is on.  Now the local system has the
+                incorrect MAC for the IP and it looks like the VIP address is
+                down.  Eventually the system will expire the ARP entry and
+                resend the ARP request and it starts working again.  Systems
+                that did not have the old ARP table entry will work file.  This
+                can be confusing and causes many issues.  Better implementations
+                of VIP use ARP announcements broadcast to all systems on the
+                local network when the interface changes. </p>
+              <p>The other issues that can occur with ARP are when you have 2
+                computers with the same IP.  The last response gets put into the
+                ARP table, and it can flip between systems.  With today's
+                systems it is also possible to change the MAC address on many
+                systems and you can have more then one system with the same MAC,
+                although not as common a problem it can cause big issues.</p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

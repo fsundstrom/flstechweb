@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site Windows</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">Running a Windows IIS Web
+                  Server</span></h2>
+              <p><span style="font-weight: bold;">Web server architecture</span></p>
+              When planning a web server architecture you need to be able to
+              handle the expected transaction rate and in most cases you also
+              want to plan for redundancy.  This will nominally involve having a
+              load balancer of some type in front of the web servers, as this
+              gives you both redundancy and the ability to increase capacity by
+              adding servers. <br />
+              <br />
+              Other considerations include whether the hosted service is just a
+              plan HTML web site or an application of some type.  If the web
+              site includes some type of application then there are 2 main
+              things that need to be taken into consideration.  With most
+              applications you want to have the user session stay on one
+              server.  Most load balancers can be set up to maintain
+              client/server associations so applications function correctly. 
+              The other issue is insuring that the same data is available on all
+              servers.<br />
+              <br />
+              One consideration is using a cloud service for you application
+              hosting.  With most cloud services you can increase capacity on
+              demand and they offer centralized data storage.<br />
+              <br />
+              <p><span style="font-weight: bold;">Prepare your server for a
+                  basic web site</span></p>
+              <p>Run "Manage Your Server".  In the manage your server window run
+                "Add or remove roles".  Pick Application server (IIS) and
+                install.  Now your server is ready for a web site.  </p>
+              <p>Now run IIS manager from the administrative tools menu.  You
+                should have a web site "Default Web Site"  you can add
+                directories or you can add a new web site.  go to the documents
+                tab make sure your home page is in the default list.  Now we add
+                the new web site and pick the default home dir.  Put the HTML or
+                CGI files for your site in the default dir.  now start your
+                site.</p>
+              <p>This is just a basic setup for simple sites or to verify
+                everything.  In most cases we will want to run CGI scripting
+                most likely with some type of database for data storage.  There
+                are many settings and options that we will not go over at this
+                time.  Although I recommend learning about all the IIS features
+                we are just going to go over basic setup at this time.</p>
+              <p><span style="font-weight: bold;">Adding CGI scripting</span></p>
+              <p class="MsoNormal">Common scripting languages include Perl, PHP
+                and Java.  Microsoft servers also have .NET scripting that is
+                Microsoft specific. I recommend using the more common CGI
+                languages when feasible as this will allow porting to other
+                platforms in the future if needed.</p>
+              <p>This example is for adding Perl CGI scripting although the
+                process is the same for PHP and other scripting languages not
+                installed on Windows by default.  This also assumes that you
+                have already installed Active State Perl or other compatible
+                Perl library on the system.  In the Home Directory settings go
+                to configure "scripts and executables".  Pick the add and add
+                the ".pl" extension to the system.  add the following in the
+                Executable window "C:\Perl64\bin\perl.exe "%s" %s" where
+                C:\Perl64\bin\perl.exe is the path to the Perl executable.  Next
+                pick the Verbs that will be used (post, get ...) and check the
+                Script engine box.</p>
+              <p>Now set the permissions on the CGI dir you will use to allow
+                "Scripts and Executables"</p>
+              <br />
+              <p>To be continued ...</p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="description" content="Frank Sundstrom, Linux Information" />
+    <meta name="keywords" content="Linux, robots, networking, testing, virtualization," />
+    <meta name="author" content="Frank Sundstrom" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site LINUX</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2><span style="font-weight: bold;">Linux Security</span></h2>
+              <p>Linux has many security features although having a secure
+                system depends on setup and having the correct security
+                policies.  In practice we have seen that there will always be
+                security risk and all you can do is minimize the risk. You also
+                have to be aware of basic things such as physical security.  If
+                someone has access to the hardware it makes it much easier to
+                access data and modify files.  We are going to go over basic
+                security and safeguards here.  This is a very big subject and is
+                constantly changing and there is no way that I can cover
+                everything here.  I will go over best practices and try to point
+                people in the right direction. I recommend that you subscribe to
+                news letters and visit security web sites to stay updated and
+                informed.</p>
+              <p><br />
+                <a href="networking_security.html">Network security: </a> Please
+                visit my network security page for best practices and common
+                security issues.</p>
+              <p><br />
+                <span style="font-weight: bold;">Patches:</span>  keep you
+                systems updated to the current patch level.  I suggest not just
+                using automatic updates on production systems.  Test the updates
+                first and then update the production systems.  As you don’t want
+                to have production services go down because of compatibility
+                issues or bugs.<br />
+              </p>
+              <p><span style="font-weight: bold;">Passwords and logins:</span>  
+                Don’t keep the same password on you systems for years as this
+                greatly increases the chance that someone my get the password
+                with brute force or social engineering.   Just changing you
+                passwords every couple of months greatly reduces risk.  Also use
+                a good password, random charters are best but as no one can
+                remember them, this means that it is more likely it is written
+                down some ware.  Try to string several words together with
+                numbers, upper/lower case and symbols in a way that kind of
+                makes sense and you can remember like “Us3A,g00dp4ssw0rD!!!”</p>
+              <p> Turn off logins for default users including root.  This
+                greatly reduces the chance of someone getting into the system as
+                they need to guess a usersname and password.  Us the su command
+                or better yet sudo for root access.  You also should not have
+                the root password set the same as a user’s password.</p>
+              <p> <span style="font-weight: bold;">SSH and tunneling:</span>  
+                Another security risk is SSH tunneling.  Most Linux systems
+                support tunneling to any system on any port over SSH unless this
+                has been turned off.  You may think that all you are doing is
+                giving someone an SSH login to a system, where in realty you
+                just gave them access to you hole network.  You turn this off in
+                the “sshd_config” file with the following settings; 
+                “AllowTcpForwarding no” and  “X11Forwarding no”.  Remember that
+                if they have root access they can turn this back on.</p>
+              <p><span style="font-weight: bold;">Services:</span>  Don’t run
+                daemons or services that you don’t need or use as it just adds
+                risk.  When setting up services read up on security issues.  You
+                can have a secure version of software like bind or sendmail and
+                if the configuration is not done correctly you can have security
+                issues.  It may also be a good idea to run vulnerability
+                scanners against the systems especially if the setup is new to
+                you.</p>
+              <p><span style="font-weight: bold;">Data Security:</span>  Number
+                one here is physical access.  If someone has access to the
+                system they can boot form a CD or USB device and have access to
+                the network and files on the system.  You can minimize this risk
+                by limiting access to server rooms and locking doors.  You also
+                can set bios passwords, disable booting from devices and lock
+                cases.  This at least helps.</p>
+              <p> If you have sensitive data on a system not in a secure
+                computer center you can have an encrypted file system for the
+                data.  In general I don’t recommend encrypting the whole hard
+                drive as it makes it harder for fix issues and slows down the
+                system.  The best approach is an application that encrypts the
+                data with a strong encryption before storing it.</p>
+              <p><span style="font-weight: bold;">Logs:</span>  Use log analysis
+                tools on you servers.  Analyzing logs is one of the best ways to
+                find security issues especially on servers.  Looking at logs by
+                hand is ok although you can easily miss something.  I recommend
+                having a tool that gives statistics and top user, errors, … by
+                time of day.  Looking at logs for non-business hours is also a
+                good way to spot issues and any traffic is suspicious at these
+                times.</p>
+              <p> <span style="font-weight: bold;">Software: </span> Don’t load
+                software or packages that you don’t need on especially on
+                production servers as it just adds risk.  I see request for
+                things like PHPadmin on web servers all the time.  Not having
+                additional packages can eliminate many security issues.  Do run
+                things like tripwire and root kit revilers that detect changes
+                and report security issues. </p>
+              <p><br />
+                <br />
+              </p>
+              <p class="MsoNormal"> </p>
+              <p class="MsoNormal"> </p>
+              <p> </p>
+              <ul>
+              </ul>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: -3px;">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.linux.org"><img src="tux_gnu.jpg" alt="" style="width: 205px;" /></a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

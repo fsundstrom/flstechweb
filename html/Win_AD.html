@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site Windows</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">Windows Active Directory<br />
+                </span></h2>
+              <p>Microsoft's Active Directory service or AD is based on LDAP
+                (Lightweight Directory Access Protocol).  So basically it is
+                just a directory of users and computers.  Each record has
+                specific information about that user or system. AD also uses
+                Microsoft's own version of Kerberos for user authentication and
+                authorization (i.e. user passwords and permissions).  As well as
+                DNS for resolving system names.</p>
+              <p> The main use of active directory is to manage users and or
+                systems in an organization.  To use active directory you need to
+                install it on you windows server (or in most cases more then one
+                windows server for redundancy).  An active directory server is
+                referred to as a domain controller as it decides the polices for
+                systems and users in a domain.</p>
+              <p>The most basic use if AD is to manage users passwords and
+                policies.  In this way you can enforce password polices like
+                changing the password every 4 months or password types. 
+                Administrators can also lock out users or change their password
+                if a user has issues.  The other main use of AD is to enforce
+                data or system access polices for users and systems.</p>
+              <p>The Active Directory structure has a number of levels, forest,
+                tree, domain and organizational unit.  These are the logical
+                divisions of an Active Directory network.  A forest consists of
+                a number of trees.  Trees consists of one or more domains in the
+                same namespace (i.e. datacenter.mydomain.com,
+                offices.mydomain.com ...).  Each domain shares one database and
+                consists of objects (users, computers, printers ...) that can be
+                grouped into organizational units.  The OU (Organizational Unit)
+                is the recommended level at which to apply group policies.  You
+                can use group policies at the domain level but this leads to a
+                much more complex environment as each domain requires its own
+                domain controllers.</p>
+              <p><br />
+              </p>
+              <p><br />
+              </p>
+              <p><br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text"> <br />
+              <br />
+              <br />
+              <a href="http://www.dotclear.net/"></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

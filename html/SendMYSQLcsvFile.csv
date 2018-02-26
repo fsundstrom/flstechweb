@@ -1,0 +1,56 @@
+#!/usr/bin/perl -X
+#
+#   $Id$
+#   $HeadURL$
+#
+
+use DBI;
+
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+print'  Content-Type: text/html; charset=iso-8859-1',"\n\n";
+
+#use Data::Dumper;
+#use DBD;
+#use lib ("/usr/add-on/ChartDirector/lib") ;
+#use lib ("/logs/keynote/bin/cgi-bin/sla") ;
+#use perlchartdir;
+#use Time::Local;
+#use Statistics::Descriptive;
+
+my $user = 'root';
+my $pass = '';
+my $dsn = 'dbi:mysql:mysql:localhost:3306';
+my $table = "user";
+
+my $dbh = DBI->connect($dsn,$user,$pass)
+ or die "Can.t connect to the DB: $DBI::errstr\n";
+
+#
+#list columns
+#
+my  $sth = $dbh->prepare("SELECT * FROM $table WHERE 1=0");;
+
+$sth->execute();
+my $f = $sth->{NAME};
+print join(",",@{$f}),"\n";
+
+
+
+
+#
+# List DB as CSV
+#
+my $sth = $dbh->prepare(" select * from $table");
+$sth->execute;
+
+#fetch data
+while (@f = $sth->fetchrow_array()) {
+	print join(",",@f),"\n";
+}
+
+
+
+#########################################################################
+#
+

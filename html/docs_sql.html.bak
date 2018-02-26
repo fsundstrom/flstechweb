@@ -1,0 +1,963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site DOCS</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h4><span style="font-family: Arial,Sans-Serif;"><span style="font-weight: bold;">SQL
+                    reference </span></span></h4>
+              <p> </p>
+              <table cellspacing="0" cellpadding="0" border="1" style="width: 480px;">
+                <colgroup><col width="132" style="mso-width-source:userset;mso-width-alt:4693;width:99pt" />
+                  <col width="348" style="mso-width-source:userset;mso-width-alt:12373;width:261pt" />
+                </colgroup>
+                <tbody>
+                  <tr height="20" style="mso-height-source:userset;height:15.0pt">
+                    <td width="132" height="20" style="height:15.0pt;width:99pt"
+                      class="xl74">SQL Statement</td>
+                    <td width="348" style="border-left:none;width:261pt" class="xl74">Syntax</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="49" style="height:36.6pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">AND / OR</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="12" style="mso-height-source:userset;height:9.0pt">
+                    <td width="348" height="12" style="height:9.0pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="12" style="mso-height-source:userset;height:9.0pt">
+                    <td width="348" height="12" style="height:9.0pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE condition</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="12" style="mso-height-source:userset;height:9.0pt">
+                    <td width="348" height="12" style="height:9.0pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">AND|OR condition</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="91" style="height:67.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="7">ALTER TABLE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">ALTER TABLE table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ADD column_name datatype</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">or</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ALTER TABLE table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">DROP COLUMN column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="91" style="height:67.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="7">AS (alias)</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name AS column_alias</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">or</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">SELECT column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name  AS table_alias</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">BETWEEN</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">BETWEEN value1 AND value2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="37" style="height:27.6pt">
+                    <td width="132" height="37" style="height:27.6pt;border-top:none;
+  width:99pt" class="xl65">CREATE DATABASE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">CREATE DATABASE database_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="91" style="height:67.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="7">CREATE TABLE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">CREATE TABLE table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">(</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">column_name1 data_type,</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">column_name2 data_type,</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">column_name2 data_type,</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">...</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="91" style="height:67.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="7">CREATE INDEX</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">CREATE INDEX index_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ON table_name (column_name)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">or</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">CREATE UNIQUE INDEX index_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ON table_name (column_name)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">CREATE VIEW</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">CREATE VIEW view_name AS</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">SELECT column_name(s)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE condition</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="130" style="height:96.0pt;
+  border-top:none;width:99pt" class="xl65" rowspan="10">DELETE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">DELETE FROM table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE some_column=some_value</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">or</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">DELETE FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">(<font class="font6">Note: </font><font
+                        class="font5">Deletes the entire table!!)</font></td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">DELETE * FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">(<font class="font6">Note: </font><font
+                        class="font5">Deletes the entire table!!)</font></td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td width="132" height="19" style="height:14.4pt;border-top:none;
+  width:99pt" class="xl65">describe</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">describe table_name</td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td width="132" height="19" style="height:14.4pt;border-top:none;
+  width:99pt" class="xl65">DROP DATABASE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">DROP DATABASE database_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="65" style="height:48.0pt;border-top:
+  none;width:99pt" class="xl65" rowspan="5">DROP INDEX</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">DROP INDEX table_name.index_name (SQL Server)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">DROP INDEX index_name ON table_name
+                      (MS Access)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">DROP INDEX index_name (DB2/Oracle)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ALTER TABLE table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">DROP INDEX index_name (MySQL)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td width="132" height="19" style="height:14.4pt;border-top:none;
+  width:99pt" class="xl65">DROP TABLE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">DROP TABLE table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">GROUP BY</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name,
+                      aggregate_function(column_name)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE column_name operator value</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">GROUP BY column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="65" style="height:48.0pt;border-top:
+  none;width:99pt" class="xl65" rowspan="5">HAVING</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name,
+                      aggregate_function(column_name)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE column_name operator value</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">GROUP BY column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">HAVING
+                      aggregate_function(column_name) operator value</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">IN</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">IN (value1,value2,..)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="104" style="height:76.8pt;
+  border-top:none;width:99pt" class="xl65" rowspan="8">INSERT INTO</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">INSERT INTO table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">VALUES (value1, value2,
+                      value3,....)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl68">or</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">INSERT INTO table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">(column1, column2, column3,...)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">VALUES (value1, value2,
+                      value3,....)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">INNER JOIN</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name1</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">INNER JOIN table_name2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ON
+                      table_name1.column_name=table_name2.column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">LEFT JOIN</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name1</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">LEFT JOIN table_name2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ON
+                      table_name1.column_name=table_name2.column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">RIGHT JOIN</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name1</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">RIGHT JOIN table_name2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ON
+                      table_name1.column_name=table_name2.column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="52" style="height:38.4pt;border-top:
+  none;width:99pt" class="xl65" rowspan="4">FULL JOIN</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name1</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FULL JOIN table_name2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ON
+                      table_name1.column_name=table_name2.column_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="39" style="height:28.8pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">LIKE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE column_name LIKE pattern</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="39" style="height:28.8pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">ORDER BY</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">ORDER BY column_name [ASC|DESC]</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="26" style="height:19.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="2">SELECT</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="26" style="height:19.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="2">SELECT *</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT *</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="26" style="height:19.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="2">SELECT DISTINCT</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT DISTINCT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="117" style="height:86.4pt;
+  border-top:none;width:99pt" class="xl65" rowspan="9">SELECT INTO</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT *</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">INTO new_table_name [IN
+                      externaldatabase]</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM old_table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl68">or</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl67"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">SELECT column_name(s)</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">INTO new_table_name [IN
+                      externaldatabase]</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM old_table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="26" style="height:19.2pt;border-top:
+  none;width:99pt" class="xl65" rowspan="2">SELECT TOP</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT TOP number|percent column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td width="132" height="19" style="height:14.4pt;border-top:none;
+  width:99pt" class="xl65">show</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">show database, show tables, </td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td width="132" height="19" style="height:14.4pt;border-top:none;
+  width:99pt" class="xl65"> </td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66"> </td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td width="132" height="19" style="height:14.4pt;border-top:none;
+  width:99pt" class="xl65">TRUNCATE TABLE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">TRUNCATE TABLE table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="39" style="height:28.8pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">UNION</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s) FROM table_name1</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">UNION</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">SELECT column_name(s) FROM
+                      table_name2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="39" style="height:28.8pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">UNION ALL</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s) FROM table_name1</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">UNION ALL</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">SELECT column_name(s) FROM
+                      table_name2</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="40" style="height:29.7pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">UPDATE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">UPDATE table_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">SET column1=value,
+                      column2=value,...</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="14" style="mso-height-source:userset;height:10.5pt">
+                    <td width="348" height="14" style="height:10.5pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE some_column=some_value</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="39" style="height:28.8pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">WHERE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">SELECT column_name(s)</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">FROM table_name</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66">WHERE column_name operator value</td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="132" height="39" style="height:28.8pt;border-top:
+  none;width:99pt" class="xl65" rowspan="3">USE</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl66">USE database_name</td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="13" style="height:9.6pt">
+                    <td width="348" height="13" style="height:9.6pt;border-top:none;
+  border-left:none;width:261pt" class="xl66"> </td>
+                    <td><br />
+                    </td>
+                  </tr>
+                  <tr height="166" style="mso-height-source:userset;height:124.8pt">
+                    <td width="132" height="166" style="height:124.8pt;border-top:none;
+  width:99pt" class="xl69">drop and create table example</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl70">DROP TABLE IF EXISTS `web_users`;<br />
+                      CREATE TABLE `web_users` (<br />
+                      <span style="mso-spacerun: yes">  </span>`id` int(6) NOT
+                      NULL default '0',<br />
+                      <span style="mso-spacerun: yes">  </span>`first_Name`
+                      varchar(25) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`last_Name`
+                      varchar(25) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`phone_Number`
+                      varchar(120) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`address`
+                      varchar(15) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`status`
+                      varchar(30) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`type`
+                      varchar(30) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`password`
+                      varchar(30) NOT NULL default '',<br />
+                      <span style="mso-spacerun: yes">  </span>`notes`
+                      varchar(62) default NULL,<br />
+                      <span style="mso-spacerun: yes">  </span>PRIMARY KEY<span
+                        style="mso-spacerun: yes">  </span>(`id`,`First_Name`,`Last_Name`)<br />
+                      ) ENGINE=MyISAM DEFAULT CHARSET=latin1;</td>
+                  </tr>
+                  <tr height="44" style="mso-height-source:userset;height:33.0pt">
+                    <td height="44" style="height:33.0pt;border-top:none" class="xl71">adding
+                      records</td>
+                    <td width="348" style="border-top:none;border-left:none;width:261pt"
+                      class="xl70">INSERT INTO web_users VALUES
+                      ('1','Joe','Blow','732-555-1111','nowarevill nj','unknown
+                      status','guy','nopass','nothing to
+                      say'),('2','jim','bob','732-555-2222','nowarevill
+                      TN','unknown status','guy','nopass','nothing to say');</td>
+                  </tr>
+                  <tr height="19" style="height:14.4pt">
+                    <td height="19" style="height:14.4pt;border-top:none" class="xl72">backup</td>
+                    <td style="border-top:none;border-left:none" class="xl73">mysqldump
+                      database_name &gt; database_name.sql</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p> </p>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.dotclear.net/"></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site Robotics</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post" style="width: 536px;">
+              <h2 style="width: 614px;"><span style="font-weight: bold;">Raspberry
+                  Pi and Other Embedded Linux boards<br />
+                </span></h2>
+              <p>There are many choices for a small single board Linux system. 
+                I had several requirements.  It needed to be small, lightweight,
+                easy to use and have the needed I/O as well as audio.  At the
+                time the clear winner was the Respberry Pi.  Today we also have
+                the newer BeagleBoard systems and others that are as small as
+                the Pi.  </p>
+              <p>Both the Raspberry Pi and the BeagleBoard have good I/O
+                options.  If you just want to get going fast the BeagleBoard has
+                better I/O and many add on boards for almost anything you may
+                want to build.  Although there are now others that I would be
+                considering. The UDOO is a Linux board with a 4 core processor
+                and a built in Ardunio mega look a like.  There are also others
+                with this arrangement.  Giving you what I have built; a Linux
+                system with an attached microcontroller for I/O, all in one
+                board!  Looks like one of these may be in my next project.</p>
+              <h5><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">Raspberry
+                  Pi <br />
+                </span></h5>
+              <p>I am using the raspberry pi running Raspbian Linux, based on
+                Debian.  It  has a USB WiFi adapter and runs a web server for
+                communications over XML.  The other USB port goes to the Ardunio
+                mega that I use for all the I/O.  I also have a camera and the
+                next step is a small GPS board.</p>
+              <p>Most of my code is written in Perl and C so I am not using a
+                lot of CPU.  Performance is good, nothing to complain about.  As
+                the Linux is based on Debian all the needed packages were easily
+                installed with apt-get.  Backups are easy you just copy the
+                memory card to a image.  I am using a 16Gig card so space in not
+                a big issue. </p>
+              <p>Installation was easy you just copy the image to the memory
+                card and when it boots up for the first time, it expands the
+                drive to the size of the memory card.  Next you use apt-get
+                update to get the newest files (just like any Debian install). 
+                By default it runs a GUI interface on the built in HDMI
+                connector with support for USB keyboard and mouse.  The built in
+                Ethernet interface is set to DCHP an IP address by default.  As
+                the system was going to be used as a server I disabled the GUI
+                in /etc/inittab and changed the memory model per the
+                instructions on the Raspberry Pi site. </p>
+              <p>For the communications to the Ardunio I installed the Ardunio
+                library/tools and used a USB cable and the virtual serial port. 
+                I did have to change the getty statment in the inittab.conf file
+                not to use the same port.  A slicker way to do this is to use
+                the hardware serial port on the Pi with a voltage converter
+                attached to the Ardunio's hardware serial port.  This would free
+                up a USB port. </p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: -13px;">
+              <div style="text-align: center;">  Raspberry Pi</div>
+              <img src="Pi-1.jpg" alt="" style="width: 257px; height: 424px;" /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

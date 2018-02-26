@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">IP Addressing</span></h2>
+              The internet runs on IP addressing and routing.  Today we use two
+              versions of IP addressing on the internet, Internet Protocol
+              version 4 (IPv4) and Internet Protocol version 6 (IPv6). Both IPv4
+              and IPv6 addresses have finite pools of numbers.<br />
+              <br />
+              For IPv4 the address is 32-bits in size and contains a total of
+              4,294,967,296 addresses. An IPv6 address is 128-bits and contains
+              340,282,366,920,938,463,463,374,607,431,768,211,456 address.
+              Origanly the IPv4 32 bit address space was thought to be much
+              bigger then was needed.  In the 90s everyone started using the
+              internet and the IPv4 address space was running out, so IPv6 was
+              proposed. <br />
+              <br />
+              Not every IP address in the IPv4 or IPv6 pools can be assigned to
+              internet devices.  Some address are reserved and will not route. 
+              These address can only be used on internal networks.<br />
+              <ul>
+                <li>10.0.0.0/8 IP addresses: 10.0.0.0 -- 10.255.255.255</li>
+                <li>172.16.0.0/12 IP addresses: 172.16.0.0 -- 172.31.255.255</li>
+                <li>192.168.0.0/16 IP addresses: 192.168.0.0 – 192.168.255.255</li>
+                <li>127.0.0.1 is reserved for loopback addressing</li>
+                <li>The IPv6 private network pool is fc00::/7 </li>
+              </ul>
+              <h3>IPv4 Subnets</h3>
+              <p>Subnets are used to divided the address space into blocks for
+                routing.  The networks are categorized into 5  groups or Class
+                A, B, C, D &amp; E. Class A networks have their address range
+                from 1-126, Class B from 128-191, Class C from 192-223, Class D
+                from 224-239, Class E from 240-255. </p>
+              <p>A Mask is used to further divide the IP range.  When read in
+                binary, a subnet Mask will always be a string of 1's followed by
+                a string of 0's. The 1's cover the static part of the address
+                while the 0's cover addressable space in the subnet.  So if we
+                split a class A network into 255 class B networks the mask would
+                be 255.255.0.0 or 11111111.11111111 00000000.00000000 in binary
+                where the first 2 octets are used to address the network, so the
+                class A now works like a class B.</p>
+              <p>The following table shows the mask, bits and number of host.</p>
+              <img alt="" src="subnets.jpg" /><br />
+              <br />
+              <h3>IPv6 Subneting </h3>
+              <p class="MsoNormal">An IPv6 subnet mask is basically the same as
+                an IPv4 subnet but has more digets like the IPv6 address. IPv6
+                uses a 128 bits for each IP address, as opposed to IPv4's 32 bit
+                address, and those 128 bits are divided into 16-bit words (not 8
+                bit like IPv4), so an IPv6 address looks like this in binary.<br />
+                <br />
+0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000.0000000000000000</p>
+              <p class="MsoNormal">The subnetting is the same where we divide
+                the address into ones and zeros.  As IPv6 has so many more
+                possibilities a table is not shown.</p>
+              <p class="MsoNormal"><br />
+              </p>
+              <p class="MsoNormal">Frank L. Sundstrom</p>
+              <p class="MsoNormal"><br />
+              </p>
+              <p class="MsoNormal"><br />
+                <span style="font-weight: bold;"></span></p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

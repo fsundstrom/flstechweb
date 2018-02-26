@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site LINUX</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2><span style="font-weight: bold;">Linux Hardware<br />
+                </span></h2>
+              <p><br />
+              </p>
+              <h4>Intel Servers</h4>
+              In most cases Linux will be installed on Intel based systems. 
+              Linux can handle multiple processors with multiple cores.  The
+              Linux kernel handles this very well and in fact it runs best on 2
+              or more cores.  most versions support at least 32 cores for 32bit
+              systems and 64 for 64bit systems.  Beyond that you need to check
+              the version that you want to run.  In practice you are unlikely to
+              go beyond this limit unless you have a special need.  The newer
+              64bit kernel can support 2048 cores as I write this, although I
+              only know of one system by SGI that has that many cores.<br />
+              <br />
+              Intel processors run up to 4.4 GHz and have up to 8 cores.  The
+              Atom and Celeron support a max of 2 cores, The Core i processors
+              support a max of 4 cores, and the Xeon and Itanium found in
+              servers have up to 8 cores.<br />
+              <br />
+              When you start to go above 8 cores in total, memory size and speed
+              become a big performance issues as much as the number of CPUs or
+              cores.  The first thing is that you want the fastest memory
+              available in large systems so the CPUs are not waiting for data
+              access.  Next is memory size, you need to be able to use all the
+              processing power and if what needs to be processed is not in
+              memory the CPUs will not be fully utilized.  To support 16 or so
+              cores you would want lots of memory about 32 Gig.  A good
+              guideline is at least 1-2Gig of memory per core, plus overhead. 
+              The amount of memory depends upon what applications you are
+              running.  Where if you have a large database system you would want
+              double, quadruple or more then the above guideline as caching,
+              number of processes and connections come in to affect.  If the
+              system is just routing packets or calculating formulas you would
+              not need a lot of memory.  <br />
+              <br />
+              Blade centers are becoming common as it lets us have more
+              computers in less space.  Blade Centers have management advantages
+              as the remote KVM and power switching is built in.  They also have
+              cntrlized power and switches so we don't require the same amount
+              of wiring as individual computers.  From my experience in large
+              data centers I would recommend the HP Bladeservers over IBM as I
+              have seen lots of hardware issues with IBM Blade Centers.<br />
+              <br />
+              Their are also companies like Supermicro that make cheaper blade
+              systems. These do not have all the features that the big boys have
+              such as hot swapping, built in KVMs, switches, etc. But they do
+              give you a good high density suoution that is very affordable. <br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">Network Interfaces</span><br />
+              <br />
+              Not all network cards are created equal.  You can get network
+              cards with checksum and segmentation offloading witch will
+              increase speed on busy servers.  Also the amount of buffering may
+              be of concern in some cases.<br />
+              <br />
+              <span style="font-weight: bold;">Non Intel computers.  </span><br />
+              <br />
+              In most cases this would be a small single board computer like the
+              Raspberry Pi and BeagleBone.  As well as many others used for
+              robotics or imbedded systems like home routers and other
+              appliances.  Most of these use the ARM processor and a memory card
+              as the disk drive.   <br />
+              <br />
+              <br />
+              <br />
+               <br />
+              <br />
+                <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: -3px;">
+              <p class="imgContainer"><br />
+              </p>
+              <p class="imgContainer"><br />
+              </p>
+              <p class="imgContainer">IBM Blade Center</p>
+              <img src="IBM-BC.JPG" alt="" style="width: 232px; height: 219px; margin-left: 5px;" /><br />
+              <br />
+              <br />
+              <div style="text-align: center;">HP Bladesystem</div>
+              <img src="HP-baldesystem.jpg" alt="" style="width: 235px; height: 227px;" /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

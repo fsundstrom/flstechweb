@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site Programming in Perl</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div style="width: 884px;" id="p5" class="post"><br />
+              <h2 style="text-align: center;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">Basic
+                  Perl Programming<br />
+                </span></h2>
+              <h3>Basic operations</h3>
+              <p><span style="font-weight: bold;">String Operators</span></p>
+              •    x  - The returned string is the string on the left side of
+              the operand repeated the amount of times indicated by the right
+              operand. <br />
+              •    .  - Appends one string to another. <br />
+              •    ,  - Evaluates the left operand, then the right operand and
+              returns the result of the right operand? <br />
+              •    ++  - Increments the string by one value. The string "abc"
+              would become "abd".<br />
+              •    =~ s/xxx/yyy/  -Replace "xxx" with "yyy".<br />
+              •    =~ m/xxx/  -True if string Matches "xxx". ( i is case
+              insensitive $string =~ /MatchAnyCase/i ) <br />
+              •    !~  is just like =~ except the return value is negated in the
+              logical sense ( $string !~ /pattern/ )<br />
+              •    cmp - If the left string is less than, equal to, or greater
+              than the right string, the values -1, 0, or 1 are returned,
+              respectively. <br />
+              •    eq - True if the two strings are equal. <br />
+              •    ge - True if the left string is greater than or equal to the
+              right string. <br />
+              •    gt - True if the left string is greater than the right
+              string. <br />
+              •    le - True if the left string is less than or equal to the
+              right string. <br />
+              •    lt - True if the left string is less than the right string. <br />
+              •    ne - True if the two strings are not the same. <br />
+              <p><br />
+                <span style="font-weight: bold;">Numeric Operators</span><br />
+                •    +  - Adds two operands. <br />
+                •    -   - Subtracts one operand from another. <br />
+                •    ×  - Multiplies two operands. <br />
+                •    ÷  - Divides one operand by another returning the quotient.
+                <br />
+                •    % - Divides one operand by another returning the remainder
+                (modulus). <br />
+                •    ==  - Compares two operands, returning a boolean value of
+                true if they are equal. <br />
+                •    !=  - Compares two operands, returning a boolean value of
+                true if they are not equal. <br />
+                •    &lt;= - Compares two operands returning a boolean value of
+                true if the left operand is less than or equal to the right
+                operand. <br />
+                •    &lt;  - Less than comparison returning a boolean true value
+                if the operand on the left is less than the one on the right. <br />
+                •    &gt;=  - Compares two operands returning a boolean value of
+                true if the left operand is greater than or equal to the right
+                operand. <br />
+                •    &lt;=&gt; - A value of -1, +1, or 0 is returned if the left
+                operand is less than, greater than, or equal to the operand on
+                the right respectively. <br />
+                •    &amp;&amp;  - Logical AND. <br />
+                •    ||  - Logical OR. <br />
+                •    &amp; - Bitwise AND. <br />
+                •    |  - Bitwise OR. <br />
+                •    ~ - Bitwise XOR (exclusive OR). <br />
+                •    ++  - Increment the value by 1. <br />
+                •    -- Decrement the value by 1. </p>
+                <span style="font-weight: bold;">File System Operators</span><br />
+              -b  - Block Device. <br />
+              -B  - Binary Fiel.<br />
+              -c  - Character device<br />
+              -d  - Directory<br />
+              -e  - If filename of any type exist<br />
+              -f   - Regular file no directory<br />
+              -g  - Setgid bit set<br />
+              -k  - sticky bit set<br />
+              -l   - Link<br />
+              -M - age in days<br />
+              -o  - Is owned by effective uid<br />
+              -O  - Owned by the read uid/gid<br />
+              -p  - Named pipe<br />
+              -r  - Can read file<br />
+              -R - Can read form real uid/gid<br />
+              -s  - File size in bytes<br />
+              -S - Socket<br />
+              -t  - TTY device<br />
+              -T - Text fiel<br />
+              -u  - Setuid bit set<br />
+              -w  - Write access<br />
+              -W - Write access from real uid/gid<br />
+              -x  - Executable<br />
+              -X - Executable from real uid/gid<br />
+              -z  - Size is zero<br />
+              <br />
+              <span style="font-weight: bold;">Math and functions</span><br />
+              abs        Absolute value<br />
+              atan2     inverse tangent in radians<br />
+              cos        cosine in radians<br />
+              exp        exponent<br />
+              int          Convert the value to an integer and truncate it if
+              necessary<br />
+              log         natural log<br />
+              rand       random real number between 0 and the expression passed.
+              If no value is passed, 1 is assumed and a value between 0 and 1 is
+              returned<br />
+              sin         sine in radians<br />
+              sqrd       square root <br />
+              srand     random number seed to the value passed<br />
+              time       Returns the number of seconds since January<br />
+              <br />
+              <span style="font-weight: bold;">Special Variables</span> <br />
+              &lt;STDIN&gt;   Standard in<br />
+              @ARGV    The <span style="text-decoration: underline;">command-line
+                arguments</span> (each one space separated $ARGV[1],  $ARGV[2],
+              ...)<br />
+                $ARGV    Name of current file when reading &lt;&gt;<br />
+                       @_    Default array<br />
+                         $_   Default verifiable<br />
+                         $@ The Perl syntax error message from the last eval
+              command. If null, the last eval was parsed and executed correctly<br />
+                         $.    Current line number (or record number) of most
+              recent filehandle.<br />
+                         $/    Input record separator.<br />
+                         $|    Output autoflush. 1=autoflush, 0=default. Applies
+              to currently selected handle.<br />
+                         $,    Output field separator (lists)<br />
+                         $\    Output record separator.<br />
+                        $?    Child error. <span style="text-decoration: underline;">Status
+                code of most recent system call</span> or pipe.<br />
+                         $!    Operating System Error. <br />
+                      $^E    Extended Operating System Error (More Info).<br />
+                        $$    Process ID<br />
+                        $&lt;    Real user id of process.<br />
+                        $&gt;    Effective user id of process.<br />
+                        $(     Real group id of process.<br />
+                        $)     Effective group id of process.<br />
+                       $0     <span style="text-decoration: underline;">Program
+                name.</span><br />
+                      $^O    Operating System name.<br />
+                      $^C    Current value of flag associated with -c switch.<br />
+                      $^D    Current value of debugging flags<br />
+                      $^F     Maximum system file descriptor.<br />
+                      $^C    Current value of flag associated with -c switch.<br />
+                      $^D    Current value of debugging flags<br />
+                      $^F    Maximum system file descriptor.<br />
+                      $^T    Base time of program start.<br />
+                      $^V    Perl version.<br />
+                     $^W    Status of -w switch<br />
+                      $^X    Perl executable name. <br />
+                   @INC    List of library paths.<br />
+                   %INC    Keys are filenames, values are paths to modules
+              included via use, require, or do.<br />
+                  %ENV    Hash containing current environment variables<br />
+                   $a,$b    Sort comparison routine variables.  <br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">Variable Formats</span><br />
+              <br />
+              $array[7][12]            # array of arrays<br />
+              $array[7][12][10]      # array of arrays or arrays<br />
+              $array[7]{string}       # array of hashes<br />
+              $hash{string}[7]       # hash of arrays<br />
+              $hash{string}{'another string'}    # hash of hashes<br />
+              <br />
+              <span style="font-weight: bold;">Perl Special pattern matching
+                character operators<br />
+              </span><br />
+                  \   Quote the next metacharacter<br />
+                  ^   Match the beginning of the line<br />
+                  .   Match any character (except newline)<br />
+                  $   Match the end of the line (or before newline at the end)<br />
+                  |   Alternation<br />
+                  ()  Grouping<br />
+                  []  Character class<br />
+              <br />
+                  \   Quote the next metacharacter<br />
+                  ^   Match the beginning of the line<br />
+                  .   Match any character (except newline)<br />
+                  $   Match the end of the line (or before newline at the end)<br />
+                  |   Alternation<br />
+                  ()  Grouping<br />
+                  []  Character class<br />
+              <br />
+                  The following standard quantifiers are recognized:<br />
+              <br />
+                  *      Match 0 or more times<br />
+                  +      Match 1 or more times<br />
+                  ?      Match 1 or 0 times<br />
+                  {n}    Match exactly n times<br />
+                  {n,}   Match at least n times<br />
+                  {n,m}  Match at least n but not more than m times<br />
+              <br />
+                 By default, a quantified subpattern will match as many times as
+              possible. If you want it to match <br />
+                 the minimum number of times possible, follow the quantifier
+              with a "?".<br />
+              <br />
+                  *?     Match 0 or more times<br />
+                  +?     Match 1 or more times<br />
+                  ??     Match 0 or 1 time<br />
+                  {n}?   Match exactly n times<br />
+                  {n,}?  Match at least n times<br />
+                  {n,m}? Match at least n but not more than m times<br />
+              <br />
+                  Because patterns are processed as double quoted strings, the
+              following also work:<br />
+              <br />
+                  \t          tab                   (HT, TAB)<br />
+                  \n          newline               (LF, NL)<br />
+                  \r          return                (CR)<br />
+                  \f          form feed             (FF)<br />
+                  \a          alarm (bell)          (BEL)<br />
+                  \e          escape (think troff)  (ESC)<br />
+                  \033        octal char (think of a PDP-11)<br />
+                  \x1B        hex char<br />
+                  \c[         control char<br />
+                  \l          lowercase next char (think vi)<br />
+                  \u          uppercase next char (think vi)<br />
+                  \L          lowercase till \E (think vi)<br />
+                  \U          uppercase till \E (think vi)<br />
+                  \E          end case modification (think vi)<br />
+                  \Q          quote regular expression metacharacters till \E<br />
+              <br />
+              <h3>Loop control examples</h3>
+              <span style="font-weight: bold;"># While loop to read file</span><br />
+              open FILE, "&lt; $File" || die "Cannot open log file $File";<br />
+              while ($inLine = &lt;FILE&gt;) {<br />
+                   chop($inLine);<br />
+                 ($Date, $TimeR, $Type, $Data1, $Data2, $Data3, $Data4, $Rest) =
+              split(' ', $inLine,8 );<br />
+                  ...<br />
+              }<br />
+              close FILE;<br />
+              <p><br />
+              </p>
+              <span style="font-weight: bold;"># For next loop</span><br />
+              for ($i = 1; $i &lt;= 10; $i++) {<br />
+                    print $i , "\n";<br />
+              }<br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">#For each loop with if logic</span><br />
+              foreach $type ( keys %size) {<br />
+                 if ( $size{$type} &gt; 1000000000) {<br />
+                  $size{$type} = int($size{$type} / 1000000000) . " Gig";<br />
+               } elsif ( $size{$type} &gt; 1000000) {<br />
+                  $size{$type} = int($size{$type} / 1000000) . " Meg";<br />
+               }  elsif ( $size{$type} &gt; 1000) {<br />
+                  $size{$type} = int($size{$type} / 1000) . " K  ";<br />
+               } else {<br />
+                  $size{$type} = $size{$type} . "   ";<br />
+               }<br />
+              }<br />
+              <br />
+              <h3>Basic Sorts</h3>
+              # sort lexically<br />
+              @articles = sort @files;<br />
+              <br />
+              # same thing, but with explicit sort routine<br />
+              @articles = sort {$a cmp $b} @files;<br />
+              <br />
+              # same thing in reversed order<br />
+              @articles = sort {$b cmp $a} @files;<br />
+              <br />
+              # sort numerically ascending<br />
+              @articles = sort {$a &lt;=&gt; $b} @files;<br />
+              <br />
+              # this sorts the %age hash by value instead of key using an
+              in-line function<br />
+              @eldest = sort { $age{$b} &lt;=&gt; $age{$a} } keys %age;<br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">#Sort Hash example</span><br />
+              foreach $data_type ( sort keys %data) {<br />
+                  print  $data_type,"= ",$data{$data_type},"\n";<br />
+              }<br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">#Sort Hash of hash example with
+                sub</span><br />
+              sub total {<br />
+                  $DataUser{$b}{"Total"} &lt;=&gt; $DataUser{$a}{"Total"};<br />
+              }<br />
+              foreach $site (sort total keys %DataUser) {<br />
+                  print $DataUser{$site}{"Total"},"
+              ",$DataUser{$site}{"TP"},"\n";<br />
+              }<br />
+              <br />
+              <h3>CGI Library function</h3>
+              <p><span style="font-weight: bold;">Example 1 (output HTML to web
+                  server)<br />
+                </span></p>
+              # Basic CGI script<br />
+              use CGI;<br />
+              <br />
+              my $page = new CGI;<br />
+              my $msg = "New Test Server Script!";<br />
+              <br />
+              # print header and start the markup output<br />
+              print $page-&gt;header( "text/html" ),$page-&gt;start_html( $msg
+              );<br />
+              print $page-&gt;h2($msg);<br />
+              print $page-&gt;end_html;<br />
+              <br />
+              <span style="font-weight: bold;">Example 2 (</span><span style="font-weight: bold;"><span
+                  style="font-weight: bold;">output HTML to web server</span>
+                with standard lib)<br />
+                <br />
+              </span># first line loads CGI basic lib with standard decode, 2nd
+              line sets sending Perl errors to browser.<br />
+              use CGI ':standard';<br />
+              use CGI::Carp qw(fatalsToBrowser);<br />
+              <br />
+              # output a document p is for paragraph h is for header in html<br />
+              print header(), start_html("Document_name");<br />
+              print h1("print using headder 1 type");<br />
+              print p("print paragraph text");<br />
+              print end_html();<br />
+              <br />
+              <span style="font-weight: bold;">Example 3</span> <span style="font-weight: bold;">(read
+                form data and show on </span><span style="font-weight: bold;"><span
+                  style="font-weight: bold;">HTML page</span>)</span><br />
+              <br />
+              # first line loads CGI basic lib with standard decode and
+              escapeHTML libs, 2nd line sets sending Perl errors to browser.<br />
+              use CGI qw(:standard escapeHTML);<br />
+              use CGI::Carp qw(fatalsToBrowser);<br />
+              <br />
+              # get a parameter from a form, in this case "data"<br />
+              my $value = param('data');<br />
+              <br />
+              # output a document<br />
+              print header(), start_html("Output of form data"),<br />
+                    p("You typed: ", tt(escapeHTML($value))),<br />
+                    end_html();<br />
+              <br />
+              <h3> MySQL</h3>
+              <span style="font-weight: bold;"># basic MySQL query </span><br />
+              use DBI;<br />
+              <br />
+              # now connect to "MyDatabase" and get a database handle<br />
+              my $dsn = 'dbi:mysql:MyDatabase:localhost:3306';<br />
+              my $user = 'UserName';<br />
+              my $pass = 'Password';<br />
+              my $dbh = DBI-&gt;connect($dsn,$user,$pass) or die "Can.t connect
+              to the DB: $DBI::errstr\n";<br />
+              <br />
+              #fetch table "my_users" data<br />
+              my $sth = $dbh-&gt;prepare(" select * from my_users");<br />
+              $sth-&gt;execute;<br />
+              <br />
+              while (@f = $sth-&gt;fetchrow_array()) {<br />
+                              $id=$f[0];<br />
+                              $first_Name{$id}=$f[1];<br />
+                              $last_Name{$id}=$f[2];<br />
+                              $phone_Number{$id}=$f[3];<br />
+              }<br />
+              <br />
+              $dbh-&gt;disconnect();<br />
+              <br />
+              <br />
+              <span style="font-weight: bold;"># basic MySQL add records</span><br />
+              use DBI;<br />
+              <br />
+              # now connect to "MyDatabase" and get a database handle<br />
+              my $dsn = 'dbi:mysql:MyDatabase:localhost:3306';<br />
+              my $user = 'UserName';<br />
+              my $pass = 'Password';<br />
+              my $dbh = DBI-&gt;connect($dsn,$user,$pass) or die "Can.t connect
+              to the DB: $DBI::errstr\n";<br />
+              <br />
+              #add data to table "my_users"<br />
+              my $sth = $dbh-&gt;prepare("INSERT INTO my_users VALUES (?,?,?)");<br />
+              $sth-&gt;execute;<br />
+              <br />
+              foreach $id ( keys %first_Name) {<br />
+                            
+              $sth-&gt;execute($first_Name{$id},$last_Name{$id},$phone_Number{$id});<br />
+                             #or $sth-&gt;execute(@data[$id]); # for array not
+              separate variables. <br />
+              }<br />
+              <br />
+              $dbh-&gt;disconnect();<br />
+              <br />
+              <h3>CGI File Upload</h3>
+              <p><span style="font-weight: bold;">Sample form for file input</span></p>
+              <p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                "DTD/xhtml1-strict.dtd"&gt;<br />
+                &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+                lang="en"&gt;<br />
+                &lt;head&gt;<br />
+                &lt;meta http-equiv="Content-Type" content="text/html;
+                charset=utf-8" /&gt;<br />
+                &lt;title&gt;File Upload&lt;/title&gt;<br />
+                &lt;/head&gt;<br />
+                &lt;body&gt;<br />
+                &lt;form action="/cgi-bin/upload.cgi" method="post"<br />
+                enctype="multipart/form-data"&gt;<br />
+                &lt;p&gt;Photo to Upload: &lt;input type="file" name="photo"
+                /&gt;&lt;/p&gt;<br />
+                &lt;p&gt;Your Email Address: &lt;input type="text"
+                name="email_address" /&gt;&lt;/p&gt;<br />
+                &lt;p&gt;&lt;input type="submit" name="Submit" value="Submit
+                Form" /&gt;&lt;/p&gt;<br />
+                &lt;/form&gt;<br />
+                &lt;/body&gt;<br />
+                &lt;/html&gt;</p>
+              <p><span style="font-weight: bold;">Sample CGI script</span></p>
+              <p>#!/usr/bin/perl -wT<br />
+                use strict;<br />
+                use CGI;<br />
+                use CGI::Carp qw ( fatalsToBrowser );<br />
+                use File::Basename;<br />
+                $CGI::POST_MAX = 1024 * 5000;<br />
+                my $safe_filename_characters = "a-zA-Z0-9_.-";<br />
+                my $upload_dir = "/srv/www/uploads/";<br />
+                my $query = new CGI;<br />
+                my $filename = $query-&gt;param("photo");<br />
+                my $email_address = $query-&gt;param("email_address");<br />
+                if ( !$filename )<br />
+                {<br />
+                print $query-&gt;header ( );<br />
+                print "There was a problem uploading your photo (try a smaller
+                file).";<br />
+                exit;<br />
+                }<br />
+                my ( $name, $path, $extension ) = fileparse ( $filename, '..*'
+                );<br />
+                $filename = $name . $extension;<br />
+                $filename =~ tr/ /_/;<br />
+                $filename =~ s/[^$safe_filename_characters]//g;<br />
+                if ( $filename =~ /^([$safe_filename_characters]+)$/ )<br />
+                {<br />
+                $filename = $1;<br />
+                }<br />
+                else<br />
+                {<br />
+                die "Filename contains invalid characters";<br />
+                }<br />
+                my $upload_filehandle = $query-&gt;upload("photo");<br />
+                open ( UPLOADFILE, "&gt;$upload_dir/$filename" ) or die "$!";<br />
+                binmode UPLOADFILE;<br />
+                while ( &lt;$upload_filehandle&gt; )<br />
+                {<br />
+                print UPLOADFILE;<br />
+                }<br />
+                close UPLOADFILE;<br />
+                print $query-&gt;header ( );<br />
+                print &lt;&lt;END_HTML;<br />
+                &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                "DTD/xhtml1-strict.dtd"&gt;<br />
+                &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+                lang="en"&gt;<br />
+                &lt;head&gt;<br />
+                &lt;meta http-equiv="Content-Type" content="text/html;
+                charset=utf-8" /&gt;<br />
+                &lt;title&gt;Thanks!&lt;/title&gt;<br />
+                &lt;style type="text/css"&gt;<br />
+                img {border: none;}<br />
+                &lt;/style&gt;<br />
+                &lt;/head&gt;<br />
+                &lt;body&gt;<br />
+                &lt;p&gt;Thanks for uploading your photo!&lt;/p&gt;<br />
+                &lt;p&gt;Your email address: $email_address&lt;/p&gt;<br />
+                &lt;p&gt;Your photo:&lt;/p&gt;<br />
+                &lt;p&gt;&lt;img src="/upload/$filename" alt="Photo"
+                /&gt;&lt;/p&gt;<br />
+                &lt;/body&gt;<br />
+                &lt;/html&gt;<br />
+                END_HTML</p>
+		<p> CSV DB output SendMYSQLcsvFile.csv</p>
+              <p><br />
+              </p>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

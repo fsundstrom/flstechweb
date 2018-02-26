@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+		  <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="text"> <br />
+              <div style="text-align: center;"><span style="font-weight: bold;"><span
+                    style="font-family: Arial,Sans-Serif;">RS232 is the most
+                    common form of communications used for console access to
+                    equipment.   </span><br />
+                </span></div>
+              <br />
+              RS232 is one of the first methods used for terminal access to
+              computer systems and has been in use since the 70's.  The first
+              computer systems did not have network access as we know it today
+              and terminals were hard wired to the servers.  Today we use RS232
+              for console access to systems before we have network access or if
+              somthing happens on the network to prevent accessing the system.<br />
+              <br />
+              RS232 requires 3 wires to work the rest of the wires are used for
+              signaling if the systems are ready to send or receive data.  The 3
+              connections needed are ground, send and receive.  You can use
+              hardware flow control witch requires at least 2 more connections
+              (ether DSR/DTR or RTS/CTS).  Normally RTS/CTS is used for flow
+              control and DSR/DTR is used to let the other system know that the
+              equpment is ready for communications.   You can use software flow
+              control where the systems send Xon and Xoff over the wire.<br />
+              <br />
+              We also need to know when to use a null modem cable.  A null modem
+              cable lets us connect 2 similar hardware types together (i.e.
+              connecting 2 laptops together).  The 2 types of equipment are DTE
+              (data terminal equipment) this would include terminals (we don't
+              see them anymore) and computers.  The other type of equipment is
+              DCE (data communications equipment).  <br />
+              <br />
+              The next most important thing is the settings on the 2 systems. 
+              The settings are <span style="font-weight: bold;">baud</span>
+              (connection speed), <span style="font-weight: bold;">Data bits</span>
+              (the number of data bits most common is 8) <span style="font-weight: bold;">parity</span>
+              (normally set to odd or none ), <span style="font-weight: bold;">stop
+                bits</span> (Normally set to 1 ), and flow control(normally set
+              to CTS/RTS or somtimes software Xon/Xoff).  common speed settings
+              are 110, 150, 300, 600, 1200, 2400, 4800, 9600, 19200, 38400,
+              56000, 57600 and 115200. <br />
+              <br />
+              <span style="font-weight: bold;">Standard connectors are DB9 DB25
+                and RJ45 the following are the common pinouts.  Cisco uses the
+                Yost standard, PCs normally have DB9,  and IBM BC uses the EIA
+                standard.</span><br />
+              <br />
+              <table style="font-size: 14px; margin: auto; border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: black; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: center; background-color: rgb(249, 249, 249);"
+                class="wikitable">
+                <tbody>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      colspan="2">Signal</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      colspan="2">Origin</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      rowspan="2">DB-25</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      rowspan="2">DB9</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      colspan="5"><span class="Apple-converted-space"></span>RJ45</th>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Name</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Abbreviation</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">DTE</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">DCE</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">EIA/TIA-561</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Yost
+                      (DTE)</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Yost
+                      (DCE)</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Cyclades<sup
+                        style="line-height: 1; unicode-bidi: -webkit-isolate; font-weight: normal; font-style: normal; font-size: 11px;"
+                        class="reference" id="cite_ref-cyclom-y_4-0"><a style="text-decoration: none; color: rgb(11, 0, 128); white-space: nowrap; background: none;"
+                          href="http://en.wikipedia.org/wiki/Serial_port#cite_note-cyclom-y-4"><span></span><span></span></a></sup></th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Digi<span
+                        class="Apple-converted-space"> </span><sup style="line-height: 1; unicode-bidi: -webkit-isolate; font-weight: normal; font-style: normal; font-size: 11px;"
+                        class="reference" id="cite_ref-5"><a style="text-decoration: none; color: rgb(11, 0, 128); white-space: nowrap; background: none;"
+                          href="http://en.wikipedia.org/wiki/Serial_port#cite_note-5"><span></span><span></span></a></sup></th>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Transmitted
+                      Data</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">TxD</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Received
+                      Data</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RxD</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Data
+                      Terminal Ready</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DTR</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">20</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Data
+                      Carrier Detect</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DCD</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Data
+                      Set Ready</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DSR</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Ring
+                      Indicator</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RI</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">22</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">9</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Request
+                      To Send</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RTS</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Clear
+                      To Send</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">CTS</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center;">●</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Signal
+                      Ground</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">G</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      colspan="2"><small>common</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4,5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4,5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Protective
+                      Ground</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">PG</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      colspan="2"><small>common</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br class="Apple-interchange-newline" />
+              <span style="font-weight: bold;"><br />
+                Null Modem wiring.</span><br />
+              <br />
+              <table style="font-size: 14px; margin: 1em 0px; border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: black; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 249);"
+                class="wikitable">
+                <tbody>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      colspan="4">Side A</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      colspan="3">Side B</th>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"
+                      colspan="2">Signal Name and Abbreviation</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">DB-25<span
+                        class="Apple-converted-space"> <br />
+                      </span>Pin</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">DE-9<span
+                        class="Apple-converted-space"><br />
+                         </span>Pin</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">DB-9
+                      Pin</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">DB-25
+                      Pin</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Signal
+                      Name Abbreviation</th>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Frame
+                      Ground<span class="Apple-converted-space"> </span>(chassis)</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">FG</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; color: grey; vertical-align: middle; text-align: center; background: rgb(236, 236, 236);"
+                      class="table-na"><small>N/A</small></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">FG</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Transmitted
+                      Data<span class="Apple-converted-space"> </span>(TD)</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">TxD</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RxD</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Received
+                      Data<span class="Apple-converted-space"> </span>(RD)</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RxD</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">3</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">2</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">TxD</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Request
+                      To Send</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RTS</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">CTS</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Clear
+                      To Send</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">CTS</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">RTS</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Signal
+                      Ground</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">SG</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">5</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">7</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">SG</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Data
+                      Set Ready</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DSR</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">20</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">DTR</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Data
+                      Carrier Detect<span class="Apple-converted-space"> </span>(CD)</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DCD</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">Data Terminal Ready</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">DTR</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">20</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"
+                      rowspan="2">4</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">1</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">8</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DCD</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">6</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">DSR</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br class="Apple-interchange-newline" />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav"> </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

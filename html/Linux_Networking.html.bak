@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site LINUX</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">Linux
+                  Networking </span></h2>
+              <p>Linux has great networking features and can be used as a
+                server, router, firewall, VPN, cloud server, traffic simulator,
+                etc.  We will go over some networking basics here as well as
+                some not so common stuff.  For the most part I will cover Redhat
+                and Debian distributions.  </p>
+              <p><br />
+              </p>
+              <span style="font-weight: bold;">SSH Communications.<br />
+                <br />
+              </span>The most common method to connect to a Linux server is via
+              SSH.  SSH adds encryption to the connection protecting the users
+              information.  To connect from another Linux host just type "ssh
+              host_name or IP" and you will get the login prompt of the other
+              system.  From my PC I use a small easy to use SSH client called
+              putty.  You can get it form the <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/">official
+                putty site</a>.<br />
+              <br />
+              You can use SSH to run programs on the remote Linux box.  To run a
+              remote program and receive the result you just put the command
+              after the SSH statement.  So to run "ls" on 192.168.1.100 you <br />
+              would type "ssh 192.168.1.100 ls".  This is very useful for
+              automated administration.  "scp" is another program that uses SSH
+              encryption <span style="font-size:11.0pt;line-height:115%;
+font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">mechanism
+                </span>to <span style="font-size:11.0pt;line-height:115%;
+font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">securely
+                </span>transfer files between systems. <br />
+              <br />
+              You can also exchange the SSH keys between the systems for a
+              user.  This eliminates the SSH login process and uses the SSH keys
+              to authenticate the user.  To use SSH keys first you need to
+              generate a private and public key pair.  To do this run
+              "ssh-keygen", by default ssh-keygen creates RSA keys and puts them
+              in the users .ssh dir, a passphrase for additional security is
+              optional.  You then add the public key to the authorized_keys file
+              on the remote system.  This also works for "scp" (secure copy)<br />
+              <br />
+              For added security there is a know_host file and when a client
+              connectors to the server it puts a public key fingerprint of the
+              server in the users know_host file.  The next time you connect to
+              that IP address the key is compared and it creates a warning
+              message if they don't match.  This helps protect against spoofing
+              and man in the middle attacks.  In most cases this warning message
+              is also <span style="font-size:11.0pt;line-height:115%;
+font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">generated
+                </span>when the client does not have an entry in the table. 
+              Because of this mechanism it is recommend that you try the
+              connections by hand before using automated processes.<br />
+                 <br />
+              <br />
+              <span style="font-weight: bold;">Basic Ethernet administration</span><br />
+              <br />
+              The first command to run to see all the network interfaces is
+              "ifconfig".  When you run ifconfig with no options it gives a list
+              of all the active network interfaces on the system with settings
+              and network stats.  the next most useful command is "netstat"
+              netstat has many options; -r shows basic routing information, -i
+              shows interfaces and stats.<br />
+              <br />
+              <div style="margin-left: 40px;"><span style="font-weight: bold;">Redhat
+                  specific </span><br />
+                <br />
+                The redhat network service is called network so the restart networking
+                run:<br />
+                service network restart<br />
+                <br />
+                In redhat the interface settings are in a file under
+                /etc/sysconfig/network-scripts/ with each interface having is
+                own file in the format of ifcfg-interface_name.  for versions up
+                to 7 the name is normally eth0, eth1, etc.  In version 7 they
+                changed the Ethernet naming convention to  ens32, etc.  <br />
+                <br />
+                The ifcfg file contains all the settings for that interface.  It
+                has the interface name, whether it is connected on boot up, MAC
+                address, IP addresses or if it is DCHP, default gateway,
+                netmask, etc.<br />
+                <br />
+                RedHat interface configuration example (This is static or you
+                can state BOOTPROTO=dhcp and not include the IP and DNS details)<br />
+                <br />
+                DEVICE=eth0<br />
+                HWADDR=00:0F:20:72:6F:B5<br />
+                TYPE=Ethernet<br />
+                ONBOOT=yes<br />
+                BOOTPROTO=static<br />
+                IPADDR=192.168.1.22<br />
+                NETMASK=255.255.255.0<br />
+                DNS1=192.168.1.1<br />
+                DNS2=8.8.8.8<br />
+                <br />
+                <br />
+                <br />
+                <span style="font-weight: bold;">Debian specific </span><br />
+                <br />
+                The network service is called networking in debian so to restart
+                networking run:<br />
+                service networking restart<br />
+                <br />
+                Debian uses one file for all the interfaces
+                "/etc/network/interfaces", as all interfaces are in one file be
+                very careful as a mistake can stop all networking.  Under each
+                interface you can set the parameters for IP, netmask, etc.<br />
+                <br />
+                Example of basic interface configuration (eth0 has a static IP
+                and eth0 is using dhcp)<br />
+                <br />
+                #eth0<br />
+                auto eth0<br />
+                iface eth0 inet static<br />
+                        address 192.168.1.75<br />
+                        netmask 255.255.255.0<br />
+                        gateway 192.168.1.1<br />
+                <br />
+                #eth1<br />
+                auto eth1<br />
+                    allow-hotplug eth1<br />
+                    iface eth1 inet dhcp<br />
+                <br />
+              </div>
+              <br />
+              <br />
+              <span style="font-weight: bold;">Verifying the state of an
+                interface</span><br />
+              <br />
+              Sometimes you may want to see the physical state of an interface
+              you can use the ethtool command "ethtool interface_name".  This
+              shows the hardware settings as well as link status.  In some cases
+              you may need to install the package.  I highly recommend having
+              this on you system. <br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">Enabling routing between
+                interfaces<br />
+              </span><br />
+              By default routing is not enabled between interfaces and must be
+              enabled.  to do this for address you need to have the following in
+              "/etc/sysctl.conf".  For IPv4 "net.ipv4.ip_forward = 1", for IPv6
+              "net.ipv6.conf.all.forwarding=1".<br />
+              <span style="font-weight: bold;"><br />
+                <br />
+                Interface bonding for redundancy and speed<br />
+                <br />
+              </span>Linux has an option to bond interfaces so that one bonded
+              interface may point to several hardware Interfaces.  You can ether
+              have this as active/active where the interfaces are load balancing
+              using link aggregation or as active/standby where the links are
+              failing over in case of hardware or network issues.<br />
+              <br />
+              <div style="margin-left: 40px;"><a href="http://wiki.centos.org/TipsAndTricks/BondingInterfaces">Setting
+                  up bonding (Redhat)</a><br />
+                <a href="https://wiki.debian.org/Bonding">Setting up bonding
+                  (Debian)<br />
+                </a></div>
+              <br />
+              <span style="font-weight: bold;"> <br />
+                More then one IP on an interface using virtual interfaces</span><br />
+              <br />
+              In some cases you man want to multiple IPs for a signal
+              interface.  One of the easiest ways to do this is to create a
+              virtual interface.  The naming convention for this is
+              interface_name:ID (e.g. eth0:1, eth0:2, ...).  You can just treat
+              this as a different interface with a all new configuration (In
+              Redhat this has a new file, In Debian and others a new interface
+              in the interfaces file).  <br />
+              <br />
+              To do this from the command line temporary (i.e. until the next
+              restart) you can use the ifconfig command.<br />
+              "ifconfig eth0:1 ipaddr 192.168.1.10" and "ifconfig eth0:1 netmask
+              255.255.255.0" for an IP of 192.168.1.10 with a mask of
+              255.255.255.0 on eth0:1.<br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">Simulating real world network
+                conditions with tc (Linux Traffic Control)</span><br />
+              <br />
+              If you need to simulate network delays or dropped packets you can
+              use TC (Traffic Control).  First you will need two interfaces with
+              routing enabled between them.  Then you set up the test systems to
+              route through the Linux box and run tc on ether or both
+              interfaces. This way you can simulate packet drops or delays in
+              one direction or both.  <br />
+              <br />
+              Note that under normal conditions it takes about 50ms to go from
+              New York to LA.  In testing applications that are used over long
+              distances it may be worth simulating network delays, as if a round
+              trips takes 100ms only 10 round trips would caues a 1 second
+              delay.  Their are other options for traffic simulation, although I
+              have had good experiences with tc simulating real network
+              conditions.  <br />
+              <br />
+              <div style="margin-left: 40px;"><span style="font-weight: bold;">TC
+                  configuration examples.</span><br />
+                <br />
+                Add 100ms delay to packets going out of eth0<br />
+                <span style="font-style: italic;">    tc qdisc add dev eth0 root
+                  netem delay 100ms</span></div>
+              <div style="margin-left: 40px;"><br />
+                Add a delay of 100ms varying by 20ms going out of eth0<br />
+                    <span style="font-style: italic;">tc qdisc change dev eth0
+                  root netem delay 100ms 20ms</span><br />
+                <br />
+                Add a delay of 100ms varying by 30ms with a chance of 30% that
+                it will change<br />
+                   <span style="font-style: italic;"> tc qdisc change dev eth0
+                  root netem delay 100ms 20ms 30%</span><br />
+                <br />
+                Add a .15% loss to packets out of eht0 <br />
+                    <span style="font-style: italic;">tc qdisc change dev eth0
+                  root netem loss 0.15%</span><br />
+                <br />
+                Same as above but have 20% chance of consecutive packet loss to
+                sumilate real world<br />
+                    <span style="font-style: italic;">tc qdisc change dev eth0
+                  root netem loss 0.5% 20%</span></div>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div style="margin-left: -3px;" class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.linux.org"><img style="width: 205px;" alt="" src="tux_gnu.jpg" /></a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

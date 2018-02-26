@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site LINUX</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">Linux
+                  Performance and Monitoring<br />
+                </span></h2>
+              One of the keys to performance is indemnifying bottlenecks, you
+              can buy huge expensive systems for you applications to run on and
+              still have unknown bottlenecks causing issues, or you may simply
+              put a swap directory on a ramdisk and increase capacity 10 fold. 
+              The key is to identify what resources the applications/systems
+              need.<br />
+              <br />
+              <span style="font-weight: bold;">Monitoring</span><br />
+              <br />
+              System Monitoring is one of the keys to system performance.  With
+              proper monitoring you should be able to identify bottlenecks and
+              loading trends specific to your environment.  Their are many tools
+              to monitor system performance and utilization.  Their are command
+              line tools that give a snapshot of the system status and tools
+              that monitor continual that you can look at and see how the
+              servers behave over time.  <br />
+              <br />
+              To monitor system performance over time you can use sar.  sar is a
+              great tool and is the the backbone of system performance
+              monitoring.  Another good tool is munin this needs to downloaded
+              and installed.  munin can monitor multiple systems reporting
+              statics in a graphical format on web pages.  It is time consuming
+              to setup the first time, although it makes monitoring easy and
+              fast.  <a href="http://munin-monitoring.org/">The munin home page
+                is here.</a><br />
+              <br />
+              <span style="font-weight: bold;">Command Line Monitoring and
+                information tools</span><br />
+              <br />
+              <table border="1" style="width: 582px; height: 284px;">
+                <tbody>
+                  <tr>
+                    <td style="width: 148.85px;"><span style="font-weight: bold;">Command</span></td>
+                    <td style="width: 450.35px;"><span style="font-weight: bold;">Description</span></td>
+                  </tr>
+                  <tr>
+                    <td>top</td>
+                    <td>Gives a summary of system process, loading and memory
+                      usage </td>
+                  </tr>
+                  <tr>
+                    <td>netstat</td>
+                    <td>Shows network information such as connections, open
+                      ports, routing ...</td>
+                  </tr>
+                  <tr>
+                    <td style="height: 13px;">mpstat</td>
+                    <td>Shows processor stats for all cores</td>
+                  </tr>
+                  <tr>
+                    <td>pmap</td>
+                    <td>Detailed memory usage for process</td>
+                  </tr>
+                  <tr>
+                    <td>vmstat</td>
+                    <td>Report virtual memory statistics</td>
+                  </tr>
+                  <tr>
+                    <td>iostat</td>
+                    <td>Disk usage queues etc</td>
+                  </tr>
+                  <tr>
+                    <td>smartctl</td>
+                    <td>Control and Monitor Utility for SMART Disks</td>
+                  </tr>
+                  <tr>
+                    <td>Ethtool</td>
+                    <td>Shows network hardware setting and status</td>
+                  </tr>
+                  <tr>
+                    <td>dmesg</td>
+                    <td>Show system startup info</td>
+                  </tr>
+                  <tr>
+                    <td>mdstat</td>
+                    <td>Show software raid status</td>
+                  </tr>
+                  <tr>
+                    <td>lsof</td>
+                    <td>List open files and ports</td>
+                  </tr>
+                  <tr>
+                    <td>ntop</td>
+                    <td>Top for network traffic</td>
+                  </tr>
+                  <tr>
+                    <td>sar</td>
+                    <td>Monitors many metrics over time and is useful for
+                      trending</td>
+                  </tr>
+                  <tr>
+                    <td>sysctl</td>
+                    <td>Show or change Kernel tuning parameters </td>
+                  </tr>
+                  <tr>
+                    <td>numastat</td>
+                    <td>NUMA memory stats</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <br />
+              <span style="font-weight: bold;">Disk vs RAM</span><br />
+              <br />
+              Disk are slow and memory is fast, so we want to have the most used
+              data in memory.  We also want to avoid swapping memory to disk as
+              much as possible or at all, as using memory swap is very
+              inefficient.  Linux also uses free memory for cache and buffers. 
+              As of the 2.4 kernel version this has been unified and all we need
+              to know in most cases is cache/buffer memory is caching commonly
+              used files/data in memory for I/O operations.  In general the more
+              cache the better.  The top command is very useful to see a high
+              level overview of memory usage.<br />
+              <br />
+              <span style="font-weight: bold;">Storage Architecture</span><br />
+              <br />
+              The correct storage architecture can make huge differences in
+              application and system performance.  Each disk has a max I/O rate
+              as and each mounted filesystem has dedicated buffering I/O queues
+              etc.  So if we spread out the I/O over multiple devices we
+              increase I/O speed and efficiency.<br />
+              <br />
+              <div style="margin-left: 40px;"><span style="font-weight: bold;">System
+                  Partitioning</span><br />
+                <br />
+                We want to split up the most used directory's on their own
+                filesystems for maximum efficiency.  To start with have a
+                separate partition for the OS and data on the system.  So if the
+                system is a web server mount the active web dir on its own
+                filesystem so it has dedicated I/O and buffers etc.  Same if the
+                system is serving files for users have the /home or file storage
+                dir on its own mount.  With database systems you get the best
+                performance if you have a separate mounts for the metadata dir
+                and database dirs.<br />
+                <span style="font-weight: bold;"><br />
+                  Disk types, performance and data integrity</span><br />
+                <br />
+                For simple data integrity in a lab for instance software
+                mirroring may be fine.  Although software mirroring slows down
+                systems by default so in production systems we want to use
+                hardware RAID.  Also not all RAID configurations have the same
+                performance.  Each physical disk has a maximum I/O rate so when
+                we RAID disk we not only gain space we also gain speed.  The
+                more disk in a RAID the faster the I/O to a point.  RAID 0
+                (striping only) is the fastest raid.  I have used multiple RAID
+                0 devices (10 disk each) on separate mounts for large data
+                analysis systems reading form one and writing to the other. 
+                RAID 0 however has no redundancy so if you need data integrity
+                you can use: RAID 1/0 or 10 (mirrored striped devices "i.e.
+                mirrored RAID0 device" ) fastest, RAID 5 (parity) is next
+                fastest if you use a least 4 disk with you a big speed penalty
+                if 1 disk goes down, RAID 1 (mirrored only) is the slowest. 
+                There are also other RAID configurations depending on the vender
+                the\at combine some of the above.<br />
+                <br />
+                Physical disk speed also varies a great deal, the higher the RPM
+                the faster the disk can get to the data. Also today disk have
+                built in cache and cache size and speed mater a great deal. 
+                Hardware RAID systems also have cache most with battery backed
+                write cache the size of the cache always matters as disk are
+                slow and memory is fast.  The fastest solution is a RAM drive
+                where nothing is on a physical disk.  The issue with RAM drives
+                is cost, Texas Memory systems has great solutions for RAM
+                drives.<br />
+                <br />
+                <span style="font-weight: bold;">Attached storage</span><br />
+                <br />
+                Most of the time you can get away with on-board hardware RAID
+                and DISK although as data needs grow you have to move to
+                external storage.  The leading technologies  for this are SAN
+                over Fiber Chanel and iSCSI.  FC SAN disk systems have been
+                around for some time and are used in many applications.  SAN
+                systems are fast and require little OS overhead. The main
+                disadvantages of FC SAN is the need for dedicated hardware the
+                knowing how to set it up.  iSCSI uses standard Ethernet so you
+                may already have the network hardware ready to go.  Also your
+                present network engineers understand the technology.  You can
+                also use NAS devices NAS systems are just network file servers
+                that let you remotely mount (Normally over NFS).  The
+                disadvantage of iSCSI and more so with NAS is OS overhead.  For
+                best results with iSCSI and NAS you should have a dedicated
+                storage network. </div>
+              <br />
+              <span style="font-weight: bold;">Memory</span><br />
+              <br />
+              As mentioned the key to performance is having enough memory.  If
+              you don't have enough memory in you system it will be slow no
+              mater what you do.  A good guideline to start with is about 1 to 2
+              gig of memory per CPU core.  If you are going to have a large
+              database server you may want much more memory, as caching and the
+              number of running process becomes a big factor.  There are no
+              absolutes here and in general more memory is better.<br />
+              <br />
+              If you don't know how you applications will use memory you can
+              start on the low end and monitor memory usage and performance
+              metrics.  For the best performance you will want a minimum  of
+              2Gig of free memory for buffering and caching  on a typical Linux
+              system.  Once again this depends on the application if it is a
+              file server I would want at least 4 Gig of free memory and for a
+              simple router in a lab 1 gig of free memory is more then enough. 
+              <!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>  <o:AllowPNG/>
+ </o:OfficeDocumentSettings></xml><![endif]--><span style="font-size:9.5pt;line-height:115%;
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;color:#333333;background:white;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">Remember</span><!--[if gte mso 9]><xml>
+ <w:WordDocument>  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>  <w:TrackMoves/>
+  <w:TrackFormatting/>  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>   <w:OverrideTableStyleHps/>
+  </w:Compatibility>  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>   <m:smallFrac m:val="off"/>
+   <m:dispDef/>   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles></xml><![endif]--><!--[if gte mso 10]>
+<style> /* Style Definitions */
+ table.MsoNormalTable	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;	mso-style-priority:99;
+	mso-style-parent:"";	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;	mso-para-margin-left:0in;
+	line-height:115%;	mso-pagination:widow-orphan;
+	font-size:11.0pt;	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;	mso-hansi-theme-font:minor-latin;}
+</style><![endif]--> that most of the free memory is used as cache and buffering
+              for I/O operations.<br />
+              <br />
+              Another use of memory is for ramdisk.  In many cases the system
+              buffering is good enough but if you have a server with performance
+              issues you may want to put highly used files or DIRs on ramdisk. 
+              It is very easy to create and use a ramdisk.  The disadvantages
+              are size and data integrity, as it is using system memory for the
+              disk.  You need to copy needed files to the ramdisk on boot before
+              starting you applications and make sure that you don't store
+              important data or programs on them in case of power loss.<br />
+              <br />
+              <span style="font-weight: bold;">Services</span> <br />
+              <br />
+              This one is easy, don't run unneeded services as it takes up
+              system resources. <br />
+              <br />
+              <span style="font-weight: bold;">Networking</span><br />
+              <br />
+              Many network cards support offloading If the card and driver
+              support checksum offloading and TCP segmentation offloading this
+              can speed up your system.  Checksum offloading takes care of
+              cacluating the TCP and UDP checksums.  With segmentation
+              offloading the network card breaks up packets to the MTU size when
+              needed.  <br />
+              <br />
+              You want to make sure you have enough kernel buffer space assigned
+              for the interface.  Each TCP/IP connection takes up kernel buffer
+              space to manage and when this runs out the server starts refusing
+              connections.  You can tune the kernel buffers for maximum number
+              of connections or maximum throughput.  In ether case increasing
+              the total buffer size on servers is recommended.<br />
+              <br />
+              You can also change hardware buffer size on the NIC itself
+              (ring-buffer) if supported.  In general increasing the buffers on
+              the NIC will add some latency but increase overall throughput.<br />
+              <br />
+              It can also be more efficient to have several Virtual interfaces
+              (e.g. eth0:0 eth0:1 ...) with their own IPs and process serving
+              them as each interface will have its own TCP stack and application
+              service.  <br />
+              <br />
+               <br />
+              <br />
+                   <br />
+              <ul>
+              </ul>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: -3px;">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.linux.org"><img src="tux_gnu.jpg" alt="" style="width: 205px;" /></a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

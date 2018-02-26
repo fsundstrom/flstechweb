@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site VMs</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">Virtual
+                  Systems</span></h2>
+              <p>Today we can not talk about computer systems without including
+                virtualization.  We are going to go over several solutions.  The
+                most common and mainstream is VMware's vSphere Hypervisor (ESXi)
+                which is available as a free version for a limited number of
+                processors.  Vmware's ESXi runs under a modified version of
+                Linux witch is hidden from the user unless you turn on SSH
+                access. </p>
+              <p>I no longer use my computer to access the web directly.  With
+                all the security issues we have today, I use VMware player on my
+                PC and run a disposable virtual version of windows.  I also have
+                a system with VMware ESXi running that I have a variety of
+                Operating systems on for development and testing along with this
+                web server running on CentOS.  Another great advantage of
+                Virtual systems is the ease of backup and restore.  </p>
+              <p>Other common vitalization software includes Oracle VirtualBox,
+                Xzen and KVM.</p>
+              <h3>VMware</h3>
+              <p>VMware vSphere Hypervisor (ESXi) has a free license option that
+                supports a limited number of cores.  This is a full featured
+                VMware server it just has limited number of CPUs and cores
+                supported witch is fine if you are running it on a single
+                process system.  This site is running on VMware ESXi 5.5 and
+                there are many other VMs running at the same time with no
+                issues.</p>
+              <p><br />
+                To get started I would recommend at least 6 Gig of ram and a 2
+                core processor.  VMware 5.5 will not run with 4 gig of RAM form
+                my experience.  You can run older versions with less RAM
+                although more RAM is better with VMware.  In most cases I am
+                looking for 12 gig or more of RAM.  VMware is also very good at
+                recovering unused memory so if you have 5 systems running with
+                2Gig each and some are not doing much (i.e. the OS is not using
+                all the ram) you can be using a total of 6Gig or so Gig of the
+                RAM in the system.</p>
+              <p><br />
+                VMware has great monitoring tools to monitor RAM and CPU usage
+                for the total system or just one VM.  This makes it very easy to
+                decide on what system resources are needed.  VMware also runs
+                best with at least 2 disk drives one for VMware and one for
+                VMs.  Disk IO is the big bottleneck with VMware systems and
+                having a good RAID or SANs storage array can really help
+                performance.</p>
+              <p><br />
+                <span style="font-weight: bold;">Getting started with VMware</span></p>
+              <p>To get running you need to load the server on a 64 bit system
+                with at least 6 Gig of memory for EXSi 5.5.  after you load the
+                server set up the IP (I recommend a static IP for the server as
+                you need to attach to it with the client software).</p>
+              <p><br />
+                Next load the client software on your desktop or admin system. 
+                Now you can connect to the server with the remote system.  Once
+                you log in you will have access to the main VMware GUI
+                interface.  When first loaded the system as a trial license for
+                some time this has some very high number of cores it will
+                support (at least 32 by default).  Once you load the free
+                license this will go down to 8 and of course you can always buy
+                a license with more cores and CPUs. </p>
+              <p><br />
+                Now we are ready to create a VM (Virtual Machine).  You do this
+                just like you would load a standard server of desktop although I
+                recommend having an ISO image on the client system.  You can
+                also load the ISO on the VMware server for well used install
+                disk or if you are remote with a slow link between you and the
+                server.  VMware will also load VMs form your local CD/DVD ROM
+                drive.  VMware also has the ability to load and save OVF (Open
+                Virtualization Format) files.  This is a good way to save you VM
+                with all the setting Etc. and load it later or on a different
+                VMware server.</p>
+              <p>   <br />
+                To create a new VM go to file new virtual machine you can use
+                the typical setting for ease of use or custom.  Go through the
+                setting (they are quite self-explanatory) and create your new
+                VM.  You can always go back and make changes later.  Next power
+                it on and mount you ISO image.  From there it is just like
+                loading any other system. </p>
+              <p><br />
+                Common things to change are things like setting up a 2nd
+                interface on the server with a virtual switch for the VMs to
+                use.  You can even have tagged VLANS running into the hardware
+                interface and set port access to the systems just like any other
+                switch.  You can also get virtual switch add-ons from major
+                switch manufactures to mimic the rest of you network.  You can
+                connect a limited number or supported USB devices to the VMs. 
+                One thing I do is set the number of cores to 2 or more for many
+                types of VMs and many OSs run better with more than one core.</p>
+              <p><br />
+                That’s it for basic setup.  You can have very complex setups
+                with many virtual switches networks, routers, load balancers,
+                traffic simulators, Etc. all on one VMware server.  To simulate
+                very large telco environments with multiple sites and services,
+                I run blade servers with many VMs and have complex routing
+                including delays and network traffic issues.   <br />
+                <br />
+              </p>
+              <p>To be continued ...</p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: 2px;">
+              <p class="imgContainer" style="margin-left: -10px;"><br />
+              </p>
+              <img src="VM1.jpg" alt="" style="width: 254px; height: 130px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

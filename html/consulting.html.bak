@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="Frank Sundstrom, Consulting for computer systems including Linux, UNIX, Windows and Robotics"
+      name="description" />
+    <meta content="Frank Sundstrom,Sundstrom,Computer Systems Engineer, technology, administration, Linux, Windows, robots, microcontrollers, networking, testing, virtualization, consulting"
+      name="keywords" />
+    <meta content="Frank Sundstrom" name="author" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site CONSULTING</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Consulting Services</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VM"><a href="VM.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <span style="font-weight: bold;"></span>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post" style="width: 864px;">
+              <h1><span style="font-weight: bold;"></span></h1>
+              <h4>With more than 20 years of experience developing, debugging
+                and maintaining high profile services for the telecommunications
+                industry.  I am an innovative, resourceful, results-driven
+                engineer, that has demonstrated an ability to use my ingenuity
+                to find Solutions to challenging problems.<span style="mso-spacerun: yes"> 
+                </span>Specifically, I can offer you the following:<span style="font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+&quot;Times New Roman&quot;"></span></h4>
+              <ul>
+                <li>A broad and vast base of technical knowledge; proficiency in
+                  state-of-the-art hardware, networking services, software and
+                  programming languages.  Along with a <span style="font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">component</span>
+                  lever understanding of server and network hardware.</li>
+                <li><span style="font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">A
+                    packet-level knowledge of current network protocols and an
+                    ability to </span><span style="font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">diagnose
+                    network performance, routing  and design issues.</span></li>
+                <li><span style=" font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Expert
+                    with Linux systems; administration, debugging, reporting,
+                    and performance </span><span style=" font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><span
+                      style="font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">optimization</span>.<br />
+                  </span></li>
+                <li><span style="font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Adept
+                    at writing and compiling of software, making installs and
+                    creating custom Kernels, <br />
+                  </span></li>
+                <li><span style=" font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Design
+                    of large scale network and computer system architectures
+                    including carrier level load balancer and router
+                    configurations.<br />
+                  </span></li>
+                <li><span style=" font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Experienced
+                    at designing and deploying new computer centers,  test labs,
+                    simulators and production services.</span></li>
+                <li><span style="  font-size:9.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Working
+                    knowledge of today's security standards including Encryption
+                    Algorithms, VPN’s, intrusion Prevention and Detection and
+                    Firewalls.<br />
+                  </span></li>
+              </ul>
+              <p><br />
+              </p>
+              <p class="MsoNormal" style="text-align:justify"><span style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;">Send
+                  me email or call and we can discuss how I can help you with
+                  your needs.<span style="mso-spacerun: yes">  </span></span></p>
+              <p class="MsoNormal" style="text-align:justify"><span style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;"> </span></p>
+              <p class="MsoNormal" style="text-align:justify"><span style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;"> </span></p>
+              <p class="MsoNormal" style="text-align:justify"><span style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;">Thank
+you
+                  for your consideration.</span></p>
+              <p class="MsoNormal" style="text-align:justify"><span style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;">Sincerely,</span><span
+                  style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;"></span></p>
+              <span style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;">Frank
+L.
+                Sundstrom</span><br />
+              <span style="font-size:10.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;">(732)
+                787-3621<span style="mso-spacerun: yes"></span></span><br />
+              <a href="mailto:F_sundstrom@yahoo.com"><span style="font-size:10.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;">F_sundstrom@yahoo.com</span></a><br />
+              <br />
+              <br />
+              <a href="RES2014CF.doc" target="_blank">My Resume</a><br />
+              <br />
+              <h2><span style="font-weight: bold;"></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <br />
+    <br />
+    <!-- End #page -->
+  </body>
+</html>

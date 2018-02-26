@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site ROBOTS</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div style="width: 536px;" class="post" id="p5">
+              <h1><span style="font-weight: bold;">My prototype rover R1D1
+                                                <br />
+                </span></h1>
+              This is R1D1 (rev1 droid 1) and is designed to be an autonomous
+              robot or rover, not just a remote controlled toy.  After watching
+              a NOVA program on drones I decided to build one except that this
+              is a rover not a flyer.  I thought this would be useful as it can
+              go fetch stuff for me.<br />
+              <br />
+              I am building this from scratch and not using kits or precaned
+              software, as I will learn more this way and may come up with
+              something new.  It has a lightweight aluminum chassis and 4 wheel
+              drive system with 2 gear reduction motors.  The electronics
+              consist of an Arduino microcontroller board for basic I/O and
+              analog to digital conversion and a Raspberry Pi a small single
+              board Linux system for the brains.  The Raspberry Pi has a WiFi
+              adapter and runs a web server for communications over XML.<br />
+              <br />
+              This is still in the development phase and in the end it will have
+              an outside cover to protect electrons and drive form the elements.
+              As well as a place to transport items (i.e a tray) and an arm. So
+              what we are looking at is the robot base. I am going to start with
+              mistakes and things that worked well.  As it always helps to see
+              what others have done good and bad.  Next we will go into the
+              details of the design and systems.  
+              <h4> <span style="font-weight: bold;">Things That Worked<br />
+                </span></h4>
+              First I put an easy to reach on/off toggle switch on the outside. 
+              This has been very useful as when you have coding bugs with robots
+              they can go out of control. Having a separate Linux system works
+              very well as it has high level languages and the ability to run
+              multiple process.  The Raspberry Pi is running a version of Debian
+              so it has a large software base and runs most Linux packages. 
+              Where the Arduino is very good at one thing I/O.  The big wheels
+              are great as it does not get stuck.  The size is also good as it
+              is not too big the width is 14 inches.  It has a bank of LEDs
+              controlled by the Arduino.  This has been very useful for
+              debugging as the LEDs can indicate the status of several things.<br />
+              <h4> <span style="font-weight: bold;">Not So Good Stuff<br />
+                </span></h4>
+              This is the 2nd design as the first design had some issues with
+              the propulsion system.  I used 2 car electric seat motors and did
+              not have enough gear reduction.  The gearing is a big issue with
+              larger robots and it is always better to have a slower robot that
+              has more than enough power then a faster robot that has power
+              issues.  I also did not have enough degrees of warp on the drive
+              gear and when the chain got looser I had slipping issues.  The new
+              ver has an idler gear to solve this issue.  <br />
+              <br />
+              I started with the Arduino UNO and ran out of I/O pins, so I had
+              to switch to the Mega.  This one is not a mistake it is just that
+              now you can get an all in one board with the Raspberry and a built
+              in Arduino.  So I was not to only one to come up with this
+              design.  <br />
+              <h4> <span style="font-weight: bold;">Basic design</span></h4>
+              <span style="font-weight: bold;">Power</span><br />
+              <br />
+              The rover is powered by a 12 volt gel lead-acid battery.  This
+              gives a lot or current and holds <br />
+              a charge well.  The 12 volt leads are attached to the motor
+              controller and the motor controller is sending power to the
+              Arduino board (microcontroller).  I also have a modified USB car
+              charger to power the Raspberry Pi Linux board with a usb cable. 
+              Charging is very simple at this time and I am using a current
+              limiting resistor in line with a plug in 12 volt adapter with an
+              output of about 14v.  Also note the big power toggle switch on the
+              back to disconnect the battery as coding bugs can cause a run
+              away.  <br />
+              <br />
+              <span style="font-weight: bold;">Computer and Microcontroller </span>
+                    <br />
+              <br />
+              The rover is using a raspberry pi single board Linux system for
+              all the logic and higher level decision making.  I am using one of
+              the USB ports attached to the Arduino microcontroller for I/O
+              communions between the 2 systems (this uses a virtual serial
+              port).  I have designed a simple command response protocol for
+              communications (very similar to using an old modem). <br />
+              <br />
+              The Raspberry Pi Linux system has more processing power so it is
+              doing all the tricky stuff. I have a USB WiFi adapter for network
+              access and it is running an Apache web server.  The web server is
+              using Perl CGI for basic web pages and XML communications. It has
+              a camera that can be displayed on the web page and GPS for
+              navigation.  I am working on the navigation code now, where the
+              system will use waypoints and tell the Arduino ~ how far to go and
+              what direction.  If it gets off course or sees an obstacle the
+              navigation system will recompute and start over.  <br />
+              <br />
+              The Arduino has inputs for the sonic distance sensors and when you
+              give it a command to move you can also state a max distance to
+              stop at.  The Arduino also has a compass so it can follow a
+              heading.   The motors are using 2 of the pulse width modulated
+              outputs and a purpose built motor controller (Pololu Dual
+              MC33926).  There are opto sensors on the gears to  judge distance
+              traveled and speed.  As the Arduino is a real time system and can
+              not process 2 things at once, the opto sensors on the gears are
+              using interrupt driven inputs to <span style="font-size:11.0pt;line-height:115%;
+font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">ensure
+accurate
+                readings</span><br />
+              <br />
+              Next is bumper sensors also interrupt driven so it will stop
+              quickly if it hits something.  <br />
+              As the sonic distance sensors are about 95% reliable.  I also need
+              to work on permanent mounting for the sonic sensors as I was using
+              plywood to work out the sensor array geometry.<br />
+              <br />
+              <span style="font-weight: bold;">Hardware</span><br />
+              <br />
+              The construction is all aluminum to save weight.  The load bearing
+              parts are made form aluminum angle iron (What an oxymoron that
+              is!) and the main case is an old aluminum T1 modem chassis that
+              was just the right size.  The wheels are home depot lawn mower
+              wheels.  I used a solid aluminum rod for the wheels to attach to,
+              as this reduced the load on the frame.  The frame is just bolted
+              together no welds.  Note that some of the components are a little
+              long as this is still a prototype and you can’t add metal.  The
+              heaviest things are the battery, motors and wheels, the rest of
+              the construction is quite light.  I would like lighter wheels and
+              am thinging of drilling some holes in them as the rubber is very
+              thick and heavy.<br />
+              <br />
+              Although the drive shafts are solid the wheels have brass bearings
+              and are driven individually and not by the shaft.  This allows
+              tank like steering, so to turn in a tight circle one set of wheels
+              goes forward and one set backwards. Their are also brass bearings
+              where the shafts go through the frame to reduce friction even more
+              when both sets of wheels are going the same direction.  The wheels
+              are held in place by aluminum collars with set screws on the
+              inside of the shafts  and a washer with a cotter pin on the
+              outside to hold the wheels on.<br />
+              <br />
+              The Motors are 12V 3A gear reduction with a max speed of ~
+              40RPMs.  The chain drive is #25 chain with ¼ pitch.  To give more
+              degrees of wrap on the drive gears and for tension adjustment
+              there are idler gears on each side.  Each wheel has a gear driven
+              by the chain and keyways have been put in the wheels to prevent
+              slippage.  The gear ratio is about 1.5 / 1 as the motors are
+              relatively slow.  This gives a stable system with a lot of torque.
+              <br />
+              <br />
+              <span style="font-weight: bold;">Software</span><br />
+              <br />
+              To be continued ...</div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div style="margin-left: -116px;" class="text">  <img src="Rover1.jpg"
+                alt="" style="width: 342px; height: 256px;" /><br />
+              <br />
+              <img src="rover2.jpg" alt="" style="width: 341px; height: 261px; margin-left: 7px;" /><br />
+              <br />
+                                   Original Rover<br />
+              <img style="margin-left: 6px; width: 342px; height: 217px;" alt=""
+                src="R1D0.jpg" /><br />
+                         <br />
+                            Brain (Raspberry Pi, Arduino and Dual MC33926 board)<br />
+              <img src="R1D1_brain.jpg" alt="" longdesc="R1D1_brain.jpg" style="width: 342px; height: 199px; margin-left: 7px;" /><br />
+              <br />
+                                 Opto sensor on gear<br />
+              <img style="margin-left: 6px; width: 343px; height: 309px;" alt=""
+                src="R1D1_opto_snr.jpg" /><br />
+              <br />
+              <img src="r1d1_frame.jpg" alt="" style="width: 342px; height: 287px; margin-left: 7px;" /><br />
+              <br />
+              <img src="R1d1_frame2.jpg" alt="" style="width: 343px; height: 267px; margin-left: 6px;" /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

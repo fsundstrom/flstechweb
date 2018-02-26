@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2><span style="font-weight: bold;">Basic TCP/IP communications<br />
+                </span></h2>
+              <p>The 2 most common form of IP communications are TCP
+                (Transmission Control Protocol) and UDP (User Datagram
+                Protocol).  Both have their advantages UDP is fast requires no
+                setup, although delivery is unreliable.  TCP on the other hand
+                is a reliable transport that tracks packets and content with
+                some overhead.</p>
+              <p>A TCP connection requires 2 ports the service port that the
+                server is listening on (i.e. port 80 for HTTP) and the return
+                port that the client sets up for the connection.  The port on
+                the client side of the connection is temporary and is only used
+                for one session.  When the TCP session is ended, the client
+                stops listening on the port and the next TCP session the client
+                sets up uses a different return port.  </p>
+              <p><span style="font-weight: bold;">TCP sessions and the 3 way
+                  handshake</span></p>
+              <p>TCP requires session set up between the client and the host. 
+                This is known as the 3 way handshake as it takes  a minimum of 3
+                packets.  The first packet is from the client this is a SYN
+                packet and has the IP of the host the port number of the service
+                (80 for HTTP) and the port number that the client has set up for
+                the host to communicate back on.  After the host receives the
+                SYN it sends back a SYN/ACK packet to the client to verify that
+                it has received the SYN.  The last step is the client sending
+                back an ACK for the SYN/ACK.  now we can send and receive data</p>
+              <p>In order to have a reliable transport TCP requires that packets
+                transmitted be acknowledged with an ACK.  Not every packet needs
+                to be acknowledged.  The system receiving the data sets a
+                receive window size.  After the sending system sends that much
+                data it waits for an ACK from the system receiving the data.  On
+                connection start up the window is set very small (normally 4x
+                MTU) and is doubled with each data segment until the max window
+                size is reached or transmission, loading issues occur.       </p>
+              <p>When the client or server wants to close the connection it
+                sends a FIN packet.  The other system would normally send a
+                FIN/ACK although it can continue to send data before sending the
+                FIN in this case it would just send an ACK.</p>
+              <p>Open connections are also closed after a timeout period.  This
+                is to clear connections with hosts that are not sending data for
+                some reason.  Many protocols use a keepalive packet sent at
+                regular intervals to insure that the TCP connections are not
+                timed out when no data is being sent.  </p>
+              <p><span style="font-weight: bold;">Retransmissions and detecting
+                  packet loss<br />
+                </span></p>
+              <p>Retransmission due to a timeout, each packet is has a
+                retransmission timer; if the timer expires before the data has
+                been acknowledged, it is considered lost and is retransmitted. 
+                This is not that common as most time the client detects the loss
+                and request a retransmission before the timeout. </p>
+              <p>Retransmission as a result of 3 or more duplicate ACKs. As the
+                receiving node gets packets that are out of sequence (i.e.,
+                after the missing packet data should have been seen), it sends
+                duplicate ACKs with the same acknowledgement number of the
+                missing packet. When the sending node receives the third
+                duplicate ACK, it assumes the packet was lost and retransmits
+                it.</p>
+              <p><br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

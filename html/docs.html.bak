@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site DOCS</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2><span style="font-weight: bold;">Useful Docs</span></h2>
+              <h2><span style="font-weight: bold;"></span></h2>
+              <span style="font-weight: bold;"><br />
+              </span>
+              <ul>
+                <li><a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+                    title="HTTP1.1_Codes"><span style="font-weight: bold;">HTTP
+                      return codes</span></a></li>
+                <li><a href="docs_subnets.html" title="ipv4subnets"><span style=" font-weight: bold;">Subnets</span></a></li>
+                <li><span style="  font-weight: bold;"><a href="docs_re.html">Regular
+                      expressions</a><br />
+                  </span></li>
+                <li><a href="docs_sql.html"><span style="   font-weight: bold;">SQL
+                      commands</span></a></li>
+                <li><span style="    font-weight: bold;"><a href="docs_inet_codes.html"><span
+                        style="color: #3388cc;"><span style="text-decoration: underline;">Domain
+                          name country codes</span></span></a><br />
+                  </span></li>
+                <li><span style="    font-weight: bold;"><br />
+                  </span></li>
+              </ul>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.dotclear.net/"></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

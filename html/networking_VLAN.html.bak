@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">VLANs</span></h2>
+              A virtual LAN or VLAN is a logical LAN on a network segment.  A
+              network segment can have multiple VLANs.  Each VLAN is assigned a
+              VLAN number with a max of 4094 VLANs on a network (i.e. VLAN
+              1-4094).  Each packet has the VLAN number in the layer 2 header as
+              per the IEEE 802.1Q spec.  As this is a layer 2 feature it is
+              protocol independent.<br />
+              <br />
+              VLAN packets are ether routed by the local switch, router or by
+              the local systems network stack.  In most cases it is the switch
+              that routes packets for a particular VLAN to the host on that
+              port.  This has an added advantage as VAN compliant switches only
+              send traffic to VLANs assigned to a port.  When a switch port is
+              configured for a VLAN the switch tags all packets received form
+              the host with the VLAN number.  You can also set up a port on a
+              switch as a trunk allowing VLANS to span multiple switches or
+              routers.  When you set up a trunk on a port you can assign what
+              VLANs are trucked through the port allowing routing of VLAN
+              traffic.<br />
+              <br />
+              VLANs are very useful for separating traffic on a network.  This
+              gives many advantages including security, broadcast filtering and
+              increased capacity on a segment.  One of the advantages of VLANs
+              is that a switch only handles broadcast packets for the VLANs
+              assigned to it.  Each VLAN is just like having an independent LAN
+              and needs to be routed and administered separately.  For instance
+              if you are using DHCP, systems on that VLAN must have access to a
+              DHCP server.  As traffic including broadcast packets is not
+              bridged between VLANs.<br />
+              <br />
+              Network backbones commonly use VLANs.  You can have a 10 Gig
+              backbone network attached to slower local LANs and separate the
+              traffic on the backbone with VLANs.  For VOIP you can have a VLAN
+              with a high QOS and isolate the traffic going to local VOIP
+              switches.  This gives improved connectivity as the VOIP traffic is
+              isolated.  You could do this with hardware although it would cost
+              more and be harder to manage, then with having a single physical
+              backbone. <br />
+              <br />
+              VLANs are also very useful for test environments where you need to
+              have separate network segments.  You can have multiple
+              environments on the same set of physical switches without the need
+              to rewire everything for different setups.  VMware also has the
+              ability to handle VLANs on their virtual switches and with virtual
+              routers, load balances, etc. You can have quite a complex test
+              environment with a minimum amount of hardware.  If you add Linux
+              systems with traffic control or other network simulators you can
+              easily simulate large WAN environments.<br />
+              <br />
+               <br />
+              <br />
+                     </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

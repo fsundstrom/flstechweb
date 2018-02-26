@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site LINUX</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div>
+              <h2><span style="font-weight: bold;">Linux DNS servers</span></h2>
+              Linux uses the bind package for DNS on most Linux and UNIX systems
+              you use the bind service to start and stop the DNS server.  Red
+              has renamed the service to named much like they did with the
+              Apache web serve were they renamed it httpd. <br />
+              <br />
+              With Debian the service will start if you have a valid
+              /etc/named.conf file.  With Redhat you need to run setup or
+              chkconfig and turn on the named daemon.  I am going to go over the
+              basic setup here although bind is one of those things that where
+              many books have been written just covering bind configuration. 
+              Today you need to be very careful setting up a DNS server as the
+              hacking and cache poisoning of DNS servers is common.<br />
+              <br />
+              For security you want to run the most resent version of bind witch
+              is version 9.  My just updated CentOS 6 server is running
+              9.8.2-0.30.<br />
+              <br />
+              <h3>Basic DNS configuration</h3>
+              I am going to go over setting up a basic DNS server with caching
+              and 2 zones one for flstech.com and one for 192.168.1.  We also
+              are going to set up the server to only handle caching request form
+              the local systems.  This is a standard configuration were you
+              would serve DNS records for your domain and only respond to non
+              authoritative request form local systems.<br />
+              <br />
+              As we have gone over in the networking section on DNS one can have
+              a master, slave, caching or forwarding server.  In practice one
+              would not normally have a master and caching server on the same
+              system although this is a good overview of how to set up a DNS
+              server.  If this was a production system one would also want to
+              sign the master records with a key using dnssec-keygen and
+              dnssec-signzone.  It is also a good idea to have a key for slave
+              updates from a master server to prevent anyone form updating the
+              slave system with a spoofed record.<br />
+              <br />
+              The main configuration is in "/etc/named.conf" file.  The
+              named.conf file is the master configuration file and points to
+              other configuration files including the zone files that store the
+              details for each set of address and/or names that the server is
+              responsible for.  This configuration file is for bind 9 and has
+              key checking enabled.  verifying the keys of DNS responses to help
+              prevent cache poisoning. <br />
+              <br />
+              Also note that I have only set up one server as this is just a
+              test server.  In most cases you would have more then on server set
+              up as master for redundancy.  In that case you would have more
+              then one name server defined for NS and the @ shortcut would not
+              work in the zone files.   <br />
+              <h4><span style="font-weight: bold;">Configuration files</span></h4>
+              <span style="font-weight: bold;">Named.conf</span> file is the
+              main configuration file.  You can see here that only local subnets
+              have access to the server and that the zones that we are master
+              for have "allow-query { any; };" added to the zone configuration
+              to allow any IP address.  In this example the server is listining
+              for DNS request on all interfaces.  To change this you can give it
+              a list of IPs instead of the any in the listen-on line.<br />
+              <br />
+              <div id="Data">// Added access list wiht local IP address I have 2
+                here for an example <br />
+                <br />
+                acl "ournets" { 192.168.1.0/24; 192.168.2.0/24; };<br />
+                <br />
+                // the listen-0n line is set for all interfaces to listen on
+                just one<br />
+                // This config is also set not to listen on IPv6<br />
+                // IP set this to listen-on port 53 { 127.0.0.1; 192.168.1.22;
+                }; <br />
+                // for local host and 192.168.1.22<br />
+                //<br />
+                // note the dnssec options used to verify DNS records for
+                caching name server<br />
+                // <br />
+                <br />
+                options {<br />
+                        listen-on port 53 { any; } ;<br />
+                //  comented out IPV6    listen-on-v6 port 53 { ::1; };<br />
+                    listen-on-v6 { none; };<br />
+                        directory       "/var/named";<br />
+                        dump-file       "/var/named/data/cache_dump.db";<br />
+                        statistics-file "/var/named/data/named_stats.txt";<br />
+                        memstatistics-file
+                "/var/named/data/named_mem_stats.txt";<br />
+                        allow-query     { localhost;  ournets; };<br />
+                        recursion yes;<br />
+                <br />
+                        dnssec-enable yes;<br />
+                        dnssec-validation yes;<br />
+                        dnssec-lookaside auto;<br />
+                <br />
+                 /* Path to ISC DLV key */<br />
+                        bindkeys-file "/etc/named.iscdlv.key";<br />
+                <br />
+                        managed-keys-directory "/var/named/dynamic";<br />
+                };<br />
+                <br />
+                logging {<br />
+                        channel default_debug {<br />
+                                file "data/named.run";<br />
+                                severity dynamic;<br />
+                        };<br />
+                };<br />
+                <br />
+                zone "." IN {<br />
+                        type hint;<br />
+                        file "named.ca";<br />
+                };<br />
+                <br />
+                zone "0.0.127.in-addr.arpa" in {<br />
+                        type master;<br />
+                        file "db.127.0.0";<br />
+                };<br />
+                <br />
+                <br />
+                zone "1.168.192.in-addr.arpa" in {<br />
+                        type master;<br />
+                        file "db.198.138.100";<br />
+                        allow-query { any; };<br />
+                };<br />
+                <br />
+                zone "flstech.com" {<br />
+                        type master;<br />
+                        file "db.flstech.zn";<br />
+                        allow-query { any; };<br />
+                };<br />
+                <br />
+                include "/etc/named.rfc1912.zones";<br />
+                include "/etc/named.root.key";<br />
+              </div>
+              <h4><span style="font-weight: bold;">Zone Files</span></h4>
+              Next you need to have Zone files that are in the named.conf file. 
+              As per the named.conf file <br />
+              You put these files in /var/named.  These are just examples and
+              the network is a local 192.168.1 network<br />
+              <br />
+              <span style="font-weight: bold;">db.flstech.zn</span> is the main
+              zone file with the name to IP resolution for A and MX records in
+              this case.<br />
+              You can also have AAAA IPv6 records.  Note that names with the
+              domain have a "." at the end so bind will not add the domain.<br />
+              <br />
+              <div id="Data"> <span style="font-family: Courier New,Courier,monospace;">$TTL
+                  1H<br />
+                  @       IN SOA  @ rname.invalid. (<br />
+                                                  2       ; serial<br />
+                                                  1D      ; refresh<br />
+                                                  1H      ; retry<br />
+                                                  1W      ; expire<br />
+                                                  3H )    ; minimum<br />
+                  <br />
+                                          NS      @<br />
+                  localhost               IN      A   127.0.0.1<br />
+                  localhost               IN      AAAA    ::1<br />
+                  <br />
+                  flstech.com.            IN      A   192.168.1.12<br />
+                  www                     IN      A   192.168.1.12<br />
+                  mail                    IN      A   192.168.1.12<br />
+                  Webserver               IN      A   192.168.1.12<br />
+                  flstech.com.        IN  MX 10 mail.flstech.com.<br />
+                  Inet-Router             IN      A   192.168.1.1<br />
+                  WiFi-1                  IN      A   192.168.1.2<br />
+                  WiFi-2                  IN      A   192.168.1.3<br />
+                  Cisco-Router            IN      A   192.168.1.7<br />
+                  Cisco-2900Switch        IN      A   192.168.1.5<br />
+                  Laserjet4000            IN      A   192.168.1.20<br />
+                  Debian                  IN      A   192.168.1.78<br />
+                  Centos6                 </span><span style="font-family: Courier New,Courier,monospace;"><span
+                    style="font-family: Courier New,Courier,monospace;">IN     
+                    A   192.168.1.22<br />
+                  </span>Centos5                 IN      A   192.168.1.21<br />
+                  cnetos6server           IN      A   192.168.1.22<br />
+                  fileserver2             </span><span style="font-family: Courier New,Courier,monospace;"><span
+                    style="font-family: Courier New,Courier,monospace;">IN     
+                    A   192.168.1.10</span><br />
+                  VMware                  IN      A   192.168.1.55<br />
+                  <br />
+                  Windwos-Server          IN      A   192.168.1.83<br />
+                  Windows7-Client         IN      A   192.168.1.92<br />
+                  Windows7-Clinet2        </span><span style="font-family: Courier New,Courier,monospace;">IN     
+                  A   192.168.100.5</span></div>
+              <br />
+              <br />
+              <span style="font-weight: bold;">db.192.168.1</span> file with
+              local reverse lookup information in this case it is a privet IP
+              range<br />
+              <br />
+              <div id="Data"> <span style="font-family: Courier New,Courier,monospace;">$TTL
+                  1H<br />
+                  @       IN SOA  @ rname.invalid. (<br />
+                                                  0       ; serial<br />
+                                                  1D      ; refresh<br />
+                                                  1H      ; retry<br />
+                                                  1W      ; expire<br />
+                                                  3H )    ; minimum<br />
+                  <br />
+                          NS      @<br />
+                          A       127.0.0.1<br />
+                          AAAA    ::1<br />
+                          PTR     localhost.<br />
+                  <br />
+                  <br />
+                  11      IN PTR   www.flstech.com.<br />
+                  2       IN PTR   WiFi-1.flstech.com.<br />
+                  3       IN PTR   WiFi-2.flstech.com.<br />
+                  7       IN PTR   Cisco-Router.flstech.com.<br />
+                  22      IN PTR   cnetos6server.flstech.com.</span><br />
+              </div>
+              <br />
+              <span style="font-weight: bold;"><br />
+                db.127.0.0</span> generic IPv4 loopback file<br />
+              <br />
+              <div id="Data"><span style="font-family: Courier New,Courier,monospace;">$TTL
+                  1D<br />
+                  @       IN SOA  @ rname.invalid. (<br />
+                                                 0       ; serial<br />
+                                                 1D      ; refresh<br />
+                                                 1H      ; retry<br />
+                                                 1W      ; expire<br />
+                                                 3H )    ; minimum<br />
+                          NS      @<br />
+                          A       127.0.0.1<br />
+                          PTR     localhost.</span><br />
+              </div>
+              <br />
+              <br />
+              <h3>Testing</h3>
+              Restart the named service.  When you do this major errors stopping
+              the server form running will be displayed.  You can use dig
+              pointing to the localserver "dig @192.168.1.22 www.flstech.com" to
+              see if it is working, check all the names and zone files.  I also
+              suggest checking the configurations with the bind named-checkzone
+              utility.  As well as running a vulnerability scanner against your
+              DNS server.<br />
+              <br />
+              <br />
+              <p><br />
+              </p>
+              <ul>
+              </ul>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: -3px;">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.linux.org"><img src="tux_gnu.jpg" alt="" style="width: 205px;" /></a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

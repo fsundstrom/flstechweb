@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site LINUX</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 style="width: 630px;"><span style="font-weight: bold;">Linux
+                  configuration basics</span></h2>
+              <p>The following shows the command line methods for system
+                configuration as the GUI tools are optional and not always
+                installed on servers.  Also the GUI tools are quite self
+                explanatory If you know what you need to do.</p>
+              <p><br />
+              </p>
+              <span style="font-weight: bold;">Package management </span><br />
+              <p>Redhat uses "yum" to automatically fetch and install packages. 
+                You can also use yum to update all installed packages by running
+                "yum update".  "rpm" is used to look at installed packages or
+                install/remove packages by hand.</p>
+              <p>Debian uses "apt-get" to automatically fetch and install
+                packages.  To update all installed packages you run "apt-get
+                update" to update the apt db, then run "apt-get upgrade" to
+                upgrade the packages.  To list installed packages or
+                install/remove packages by hand you use "dpkg". </p>
+              <p><span style="font-weight: bold;">Run Levels</span></p>
+              <p>The basic Linux system has 7 defined run levels 0-6.  Run
+                levels are used to set what services and programs run on the
+                system.  Run level 1 is what is called single user mode and is
+                used for maintenance.  At run level 1 the system does not mount
+                additional drives and has no networking services and just basic
+                programs are available. Run levels 2 - 5 are left open for
+                things like GUI interface etc.  Run level 0 is a shutdown of the
+                system and Run level 6 reboots the system.</p>
+              <p>To set run level you use the init command.  So to change to run
+                level 3 run "init 3".  or to reboot the server run "init 6".  In
+                order to see what run level you are at run "runlevel".      </p>
+              <p><span style="font-weight: bold;">Networking</span></p>
+              <div style="margin-left: 40px;"> <a href="Linux_Networking.html">My
+                  Linux networking page</a> has lots of networking information
+                and information on more complex configuration settings. 
+                Including interface bonding and routing between interfaces.</div>
+              <a href="Linux_Networking.html"><span style="color: #333333;"></span></a>
+              <p style="margin-left: 40px;"><span style="font-weight: bold;">IP
+                  Configuration</span></p>
+              <p style="margin-left: 40px;">By default the interfaces detected
+                during the installation are set to DHCP.  If you need to use
+                static address you can set them by editing the network
+                configuration file or files depending on the Linux distribution.
+                You can also use the GUI and NetworkManager.  You can run
+                ifconig with no options and it will show the IPs for each
+                interface on the system.</p>
+              <div style="margin-left: 40px;"><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Networking_Guide/sec-Using_the_Command_Line_Interface.html">Interface
+                  IP configuration Redhat</a></div>
+              <div style="margin-left: 40px;"><a href="https://wiki.debian.org/NetworkConfiguration">Interface
+                  IP configuration Debian</a></div>
+              <div style="margin-left: 40px;">
+                <p><span style="font-weight: bold;">Routing</span></p>
+                <p>By default you have routes to the local networks the system
+                  is attached to.  The default setting also prevent the system
+                  routing packets between networks if you have multiple
+                  interfaces attached to different networks.  If you are using
+                  DHCP most likely you also received a default route for all
+                  systems not on the local networks.  If you are using static
+                  IPs you can add a default route to the interface configuration
+                  file.  </p>
+                <p>You can view the routing table with "netstat -r" this will
+                  show all the basic routes on the system.  You can also use the
+                  route command to add routes by hand although all the routes
+                  added by hand will disappear when the networking service is
+                  restarted.  With more complex networks you may want to have
+                  static routing tables that can be automatically enabled when
+                  an interface comes up.</p>
+                <p>The iptables package allows for much more complex routing and
+                  NATing.  iptables gives you much of the functionality of a
+                  router.  With iptables you can route based on source address
+                  detestation address. you can have rules for NATing certain
+                  address or all traffic out or in to an interface.  iptables
+                  also lets you block traffic based on rules (i.e. block ssh
+                  packets for all non-local traffic or form certain inerfaces).
+                        </p>
+              </div>
+              <p style="margin-left: 40px;"><span style="font-weight: bold;">DNS
+                  client and resolving host names</span></p>
+              <p style="margin-left: 40px;">The "/etc/host" file contains a
+                local list of names to IP address.  If you are using you system
+                as a server, you should set a static IP and add the IP to the
+                host file with the name of the system.  Many Linux packages look
+                in the host file for the system name. You can also use the host
+                file for aliases to local systems and on the internet.</p>
+              <p style="margin-left: 40px;">The host lookup process also uses
+                another file "/etc/resolv.conf".  If you are running DHCP this
+                is set to the nameserver DHCP supplies.  The resolv.conf file
+                contains 2 things; a list of nameservers and it can also include
+                a default domain to use if one is not supplied (i.e systemA
+                becomes systemA.mydomain.net during DNS lookups).</p>
+              <p style="margin-left: 40px;">    "/etc/resolv.conf" file example</p>
+                              <span style="font-style: italic;">search
+                mydomain.net<br />
+                                nameserver 192.168.1.1<br />
+                                nameserver 8.8.8.8</span><br />
+              <br />
+              <div style="margin-left: 40px;">To lookup a host in DNS you run
+                "dig" or "nslookup".  To see the details of a domain such as the
+                administrators info and primary name servers run "whois". </div>
+              <p style="margin-left: 40px;">The "/etc/nsswitch.conf" file has a
+                line to set the host lookup order.  This is normally set to
+                "hosts:  files dns" where it looks up host names in the local
+                "/etc/host" file first then DNS. The order can be changed or you
+                can add things like local db, or NIS.  </p>
+              <p style="margin-left: 40px;"><br />
+              </p>
+              <span style="font-weight: bold;">Users, Groups and Passwords</span><br />
+              <p>Linux by default has user levels the highest level is the
+                "root".  For a secure system it is recommended that you do not
+                log in as root and have a user name.</p>
+              <p>Linux uses several files to store user and group information. 
+                the user information is in /etc/passwd, the group information is
+                stored in /etc/group and the encrypted passwords and account
+                expiration information is stored in /etc/shadow.</p>
+              <p>The format of the password file is Username, password or X for
+                shadow file, UserID, GroupID, comment, home DIR, login shell. 
+                The following is for my user "frank"</p>
+              <p>    <span style="font-style: italic;">frank:x:500:500:Frank
+                  Sundstrom:/home/frank:/bin/bash</span></p>
+              <p>The group file has the groups and users assigned to each group.
+                The group file tends not to use passwords although the field
+                exist.  The format of the group file is Group_Name, Password,
+                GroupID, Users_In_Group.  The following are the 2 entries for my
+                user frank it is in it's own user group and the users group.</p>
+                 <span style="font-style: italic;"> frank:x:500<br />
+                    users:x:100:frank</span><br />
+              <br />
+              You can add a user with an already encrypted password with the
+              following commands that I use in scripts setting up new systems. 
+              In this way the passwords are not in plain text.  This also
+              specifies the group and user IDs so it is the same on all
+              systems.  In reality I read the users, groups and passwords from a
+              file and add more then one user at a time.<br />
+              <br />
+                  <span style="font-style: italic;">groupadd -g500</span><br />
+              <span style="font-style: italic;">    useradd frank -g 500 -u 500
+                -c "Frank Sundstrom" -G users<br />
+                    echo frank:encripted_password_from_shadow | chpasswd -e</span><br />
+              <br />
+              <br />
+              <p>To be continued ...</p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

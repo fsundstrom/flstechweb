@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2><span style="font-weight: bold;">Network Security</span></h2>
+              <p><span style="font-weight: bold;">Security ?</span></p>
+              <p>I have been doing this for over 20 years and know that there is
+                no such thing as a secure system unless you lock it in an RF
+                shielded steel room with no outside access, an armed guard and
+                don't let anyone use it. Not a very practical solution so by
+                default we always will have security risk.  Even encryption
+                cannot be trusted you always hear that some new standard will
+                fix everything until you read an article on how someone found a
+                way to decrypt the data or break into the protocol.  Not to
+                mention social engineering where you just ask for access or a
+                password.  What you need to do is weigh the risk vs what can be
+                done to prevent the issue vs how practical it is.</p>
+              Ok so we can not have a secure system although we can take
+              reasonable steps to have reasonably secure systems.<br />
+              <h3>Best Practices </h3>
+              <p><span style="font-weight: bold;">Keep everything patched:</span> 
+                This is obvious but necessary especially with VPNs, firewalls
+                and servers on the internet. </p>
+              <p><span style="font-weight: bold;">Stay informed: </span> Knowing
+                what the threats are is one of the best prevention measures. 
+                Subscribe to security newsletters and check security web sites
+                on a regular basis </p>
+              <p> <span style="font-weight: bold;">Passwords:</span>  Don’t
+                keep the same password on you systems for years as this
+                increases the chance that someone my get the password. Just
+                changing you passwords every couple of months greatly reduces
+                risk.  Also use good passwords, random charters are best but as
+                no one can remember them this means that it is more likely it is
+                written down some ware.  I like to string several words together
+                with numbers, upper/lower case and symbols in a way that kind of
+                makes sense and I can remember.</p>
+              <p>Don't save passwords in your browser, FTP program, phone, etc. 
+                If someone gets access to you device  they now can access those
+                resources.  If you must store passwords use a secure program
+                with more than 256 bit encryption to do so.</p>
+              <p>You can also add secure ID devices to login mechanisms.  Where
+                you have to have a number that is constantly changing along with
+                your login to access the system.  At this time this is the best
+                security method as even if someone gets the login information it
+                is no longer valid when they try to use it, assuming they don't
+                steal the secure ID device.   </p>
+              <p> <span style="font-weight: bold;">Limit access:</span>  This
+                is one of the simplest steps and can have a great effect.  You
+                see networks all the time where they let all traffic in and rely
+                on system security.  This gives an attacker a much better chance
+                of gaining access to a system that may not have correct patches,
+                was not set up correctly, has a simple password, etc.  By
+                limiting access to only what is needed you greatly reduce risk.
+              </p>
+              <p> Use the 2 completely separate networks model where
+                applicable.  Where you isolate internet or public data traffic
+                form administration traffic.  You don’t allow public access to
+                systems that don’t need it just by not connecting them to the
+                public network.  For systems that do need public network access
+                like a router you have a separate physical interface or VLAN for
+                admin access and don’t even have a way to login form the public
+                network.  The same for things like SQL servers etc. only allow
+                access to the required services on the public network and have a
+                separate physical interface attached to a separate network for
+                administration and system login.   <br />
+                <br />
+                <span style="font-weight: bold;">Router access lists:</span> 
+                This approach is unlike a firewall as this stops all traffic
+                except the networks or systems you want to have access to your
+                network.  By default firewalls let traffic through if they think
+                that the inside systems started the conversation.  Firewalls
+                also are doing more processing of the packet data and use more
+                resources. Where telling a router only let X.X.X.X through or
+                not to let certain subnets or ports through completely blocks
+                traffic and as all the router is looking at is the Protocol,  IP
+                address and maybe the port it does not require that much
+                processing power.  At the least you should block you own subnets
+                (you know that you should not see traffic coming from internal
+                address) at the router and lower ports that you are not using 
+                (e.g. block all ports less than 1024 except for port 80 to
+                x.x.x.x).</p>
+              <p> <span style="font-weight: bold;">Firewalls:</span> 
+                Preferably setup on the border between the internal network and
+                the internet to limit outside traffic.  You also may want to
+                have internal firewalls between users and servers.  If you need
+                internet access you have to all IPs through the router except
+                for a black hole list or other security threats (I do cheat here
+                and filter some non US address, you know the countries to block
+                if possible).  Set up the firewall to only allow what you need
+                and nothing else.</p>
+              <p> It is suggested to block access to ports and sites that allow
+                remote access to systems like gotomypc.com as you want users
+                logging in through a secure VPN connection.</p>
+              <p> <span style="font-weight: bold;">VPNs:</span>  Use VPNs for
+                access to internal systems form the internet as this gives an
+                added level of security.  Don’t just open a hole in the firewall
+                for your exchange server or systems you may need outside access
+                to.  Only open a hole to a VPN server and use that for internal
+                access.  This adds a level of security and encrypts all the
+                data.  In many cases you may also want to set up internal VPNs
+                for access to a computer center or systems with sensitive data. 
+                VPNs are a great security tool for limiting access to multiple
+                systems.  The best VPN servers use a secure ID device that has a
+                constantly changing code along with you login so you are not
+                using the same access code all the time.</p>
+              <p>It is also suggested to use VPNs with high encryption settings
+                over 256 bits to connect remote sites as this adds security and
+                encryption to the traffic.  It is also a good practice to have
+                an access list on the firewall or router to only allow IPs of
+                you remote systems access to your VPN.   </p>
+              <p> <span style="font-weight: bold;">Proxy servers:</span> Can
+                help with security as you can set up rules and local systems
+                only need to have access to the proxy server not the whole
+                internet.  Proxy servers are also a point of concern as it gives
+                an intruder a centralized system with all traffic.  I have mixed
+                feelings about proxy servers, if done right they can help in
+                many ways and if done wrong they can cause big security issues. 
+                The 2 major issues you need to be careful with is unauthorized
+                data access as all the data is going through the server and
+                cache poisoning.</p>
+              <p><span style="font-weight: bold;">WiFi: </span> It is best to
+                set up wifi as an external network and require users to use VPNs
+                etc. to access internal systems.  Wifi is very similar to an
+                internet link were it is publicly accessible if the passwords
+                are hacked or acquired via social engineering. </p>
+              <p> <span style="font-weight: bold;">Intrusion detection systems:</span> 
+                IDS and IPS are very useful as they just passively monitor
+                traffic and with the later intrusion prevention system react to
+                threats.  You can get a nice report as to what issues you may
+                have. </p>
+              <p> <span style="font-weight: bold;">Traffic monitoring:</span>
+                General traffic monitoring is not only good for finding network
+                issues it also is a good security tool.  Look for unusual
+                activity, services on strange ports and changes in trends.</p>
+              <p><span style="font-weight: bold;">Port and IP Scanning:</span> 
+                Run Frequent port and IP scans on you internal network and from
+                outside the firewall looking for changes.  Also look for scans
+                form other systems.  Most intrusion detection systems will
+                report scanning activity.  It is also a good idea to run
+                vulnerability scanners on you network form outside just like
+                hackers would.</p>
+              <p><span style="font-weight: bold;">Virus and Malware software</span>: 
+                It is suggested to Install Virus and Malware detection software
+                on any systems that access your network.</p>
+              <p><span style="font-weight: bold;">Security policies:</span> 
+                Have a security policy so people know what is expected.  This
+                can be a great help to securing your network, as this gives
+                everyone guidelines to follow.</p>
+              <p><br />
+              </p>
+              <p>Frank Sundstrom.</p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

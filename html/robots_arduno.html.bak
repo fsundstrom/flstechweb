@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site ROBOTS</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">Arduino<br />
+                </span></h2>
+              <p></p>
+              The Arduino is a microcontroller that can easily be programed by a
+              computer via the USB port.  It uses a variant of C and has a huge
+              following so sample code is easy to come by.  I have used it in my
+              rover along with a Raspberry Pi board running Linux.  The Arduino
+              comes in many flavors and not all are created equal  as I have
+              found out.<br />
+              <br />
+              My first rover used the Uno that has 14 basic I/O pins some analog
+              some digital.  The 6 analog pins have built in A/D converters with
+              10bits (0-1024) and also can bu used as pulse width modulation for
+              output.  you can hook a verity of devices directly to the Arduino
+              including standard hobby servos, switches, sensors and
+              potentiometers.  There are also a wide verity of shields that just
+              plug into the Ardunio and come with pre built libraries to get you
+              off and running fast.<br />
+              <br />
+              Next I used the Due which has many more I/O pins and found that I
+              needed to modify the my hardware to be compatible as the timer
+              used for the pulse width modulation for pins 9 and 19 changed form
+              an 16bit timer to a 8bit timer.  To fix this I needed to use pins
+              11 and 12 that have a 16bit timer. <br />
+              <br />
+              <ul>
+                <li><a title="ArdunioHowTo" href="robots_My_arduno.html">Basic
+                    Ardunio code and hardware for Robots</a></li>
+                <li><a title="MC33926_Lib_fix" href="robots_arduno_MC33926.html">How
+                    to fix timers on MC33926 Motor driver for Ardunio mega 2560</a></li>
+                <li><a title="Motor Driver" href="https://www.pololu.com/product/2503">P</a><a
+                    title="Motor Driver" href="https://www.pololu.com/product/2503">ololu
+                    Dual MC33926 Motor driver shield</a></li>
+                <li><a title="Ardunio " href="http://arduino.cc/">Link to the
+                    Ardunio home page</a></li>
+                <li><a title="MCM" href="http://www.mcmelectronics.com/"><span style="color: #3388cc;"><span
+                        style="text-decoration: underline;">MCM electronics
+                        (sells Ardunio and shields)</span></span></a></li>
+              </ul>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+                <br />
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+                                  <span style="font-weight: bold;">Ardunio UNO</span><br />
+              <img title="Ardunio UNO" style="width: 229px; height: 173px;" src="ArduinoUno_R3_Front_450px.jpg" /><br />
+              <br />
+              <br />
+                                   <span style="font-weight: bold;">Ardunio
+                MEGA</span><br />
+              <img style="width: 235px; height: 359px;" title="Ardunio MEGA" alt=""
+                src="ArduinoMega2560_R3_Front_450px.jpg" /><br />
+              <a href="http://www.dotclear.net/"></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

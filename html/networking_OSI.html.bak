@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">The OSI (</span>Open Systems
+                Interconnection) Model</h2>
+              The OSI Model is a conceptual model used to describe the functions
+              and layers needed for system communications. The model was
+              conceived by the Open Systems Interconnection project at the
+              International Organization for Standardization (ISO) ref ISO/IEC
+              7498-1.<br />
+              <br />
+              The OSI model describes 7 layers that can be used for
+              communications, some of the layers may be omitted in some cases. 
+              We use the model to describe the process of network continuations
+              form the hardware to the application and receiving and
+              transmitting the data.<br />
+              <h5><span style="font-weight: normal;">The 7 layers are;<br />
+                </span></h5>
+              <ol>
+                <li><span style="font-weight: bold; text-decoration: underline;">Physical
+                    layer</span>, describes the physical connection to the
+                  system used to transmit the data to the next node.  This would
+                  be the cables (Fiber optic, 10baseT, etc) and  associated
+                  hardware.</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">Data
+                    link layer</span>, is responsible for node to node
+                  transmission.  This layer ensures  reliable transmission of
+                  data over layer1. For example Ethernet, Token Ring, Frame
+                  relay and ATM are Layer 2 protocols.</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">Network
+                    layer</span>, provides routing, congestion control and
+                  transport of data over the netowrk. The network layer provides
+                  both connectionless and connection-oriented services.  The IP
+                  protocol is an example of layer 3.</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">Transport
+                    layer</span>, provides overall end-to-end validation and
+                  integrity of the data as well as dividing it into manageable
+                  chunks.  This layer is the last layer responsible for the
+                  transport of the data over the network.  TCP, and UDP are
+                  examples of layer 4. </li>
+                <li><span style="font-weight: bold;"><span style="text-decoration: underline;">Session
+                      Layer</span>,</span> permits two parties to hold ongoing
+                  communications called a session across a network. The
+                  applications on either end of the session can exchange data or
+                  send packets to another for as long as the session lasts.  In
+                  reality, this layer is often not used or is incorporated into
+                  layer 4.</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">Presentation
+                    Layer</span>, provides a method of translating between the
+                  application and network formats. Transforming the data into a
+                  form that the application and network layers will accept. 
+                  This layer formats and/or encrypts the data being sent across
+                  the network.</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">Application
+                    layer</span>, is the top layer of the OSI model. It provides
+                  a set of interfaces for <br />
+                  applications to obtain access to the networked.  This would
+                  include HTTP, FTP, SNMP, and any application that you would
+                  use to access network serivces.</li>
+              </ol>
+              <br />
+              <span style="font-weight: bold;">What is layer 8 ?<br />
+                <br />
+              </span>Layer 8 refers to services/applications that have been
+              embedded into the transport layer7.  For instance a java toolbar
+              that has been embedded into the HTTP stream.  At this time layer 8
+              is not an official layer although it is used by many network
+              venders to describe services and offerings.<br />
+              <br />
+              <br />
+              Frank Sundstrom.  <br />
+               <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

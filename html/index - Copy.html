@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site HOME</title>
+    <meta lang="en" name="dc.type" <meta="" content="Info on what I am doing and Technology in general Frank Sundstrom" />
+    <meta name="dc.format" content="text/html" />
+    <link rel="top" href="http://bluegriffon.org/" title="Home" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://bluegriffon.org/feed/atom" />
+    <link rel="stylesheet" type="text/css" href="./BlueGriffon.org_files/style.css" />
+    <style type="text/css" media="print">
+@import url(/themes/blueairmessage/../default/print.css);
+</style> <link rel="stylesheet" href="./BlueGriffon.org_files/thickbox.css" type="text/css"
+      media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <br />
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="http://inletcafe.com/franks">Home</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="http://bluegriffon.org/pages/Documentation">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 class="post-title">How to write a Sidebar</h2>
+              <div class="post-content">
+                <p>To offer new sidebar content to BlueGriffon users, you have
+                  to distribute your application as an installable extension to
+                  BlueGriffon, a *.xpi file.</p>
+                <p>The application id for BlueGriffon is <code>{8fa6f1b4-7ed3-4895-bac6-01f1cc206ab3}</code>
+                  .</p>
+                <ol class="readonly" id="mozToc">
+                  <!--mozToc h3 1 h3 2-->
+                  <li><a href="http://bluegriffon.org/pages/Docs/WriteASidebar#mozTocId287073">How
+                      to register a new sidebar</a></li>
+                  <li><a href="http://bluegriffon.org/pages/Docs/WriteASidebar#mozTocId290755">Make
+                      your sidebar observe editor events</a></li>
+                </ol>
+                <h3>How to register a new sidebar</h3>
+                <p>Your extension should add elements to
+                  chrome://bluegriffon/content/main.xul through a XUL overlay :</p>
+                <ul>
+                  <li>append a new <code>sidebaritem</code> element to <code>&lt;sidebaritems
+                      id="sidebaritems"&gt;</code></li>
+                  <li>that element must have an ID, unique in the ID name space
+                    of main.xul</li>
+                  <li>that element must have a <code>name</code> attribute,
+                    representing your sidebar content ; that sidebar should be a
+                    NAME ; it is recommended that the ID and that attribute have
+                    the same value</li>
+                  <li>that element must have a <code>src</code> attribute,
+                    containing the URL of the document to be shown in your
+                    sidebar content; this is typically going to be a chrome URL
+                    in your XPI</li>
+                  <li>that element can have a <code>title</code> containing a
+                    (possibly localized) string representing the sidebar item.
+                    That string will be used in the sidebar to list the
+                    available sidebar items or title the visible sidebar items.
+                    If absent, the value of the <code>name</code> attribute is
+                    used.</li>
+                </ul>
+              </div>
+              <p class="page-info">Published on Tuesday, August 12 2008 by
+                BlueGriffon</p>
+            </div>
+          </div>
+        </div>
+        <!-- End #main -->
+        <div id="sidebar">
+          <div id="blognav">
+            <div id="search">
+              <h2><label for="q">Search</label></h2>
+              <form action="http://bluegriffon.org/" method="get">
+                <fieldset>
+                  <p><input type="text" size="10" maxlength="255" id="q" name="q"
+                      value="" /> <input type="submit" class="submit" value="ok" /></p>
+                </fieldset>
+              </form>
+            </div>
+            <div class="text">
+              <p class="imgContainer"><a href="http://bluegriffon.org/post/2013/09/24/META-Seal-of-Recognition"><img
+                    src="./BlueGriffon.org_files/META_Seal-150.png" style="border: 0px none; "
+                    alt="META Seal of Recognition 2013" /></a></p>
+              <p class="imgContainer"><img src="./BlueGriffon.org_files/webhostingsearch-best-web-tool.png"
+                  style="border: 0px none; " alt="WebhostGear Best Tool 2012" /></p>
+              <p class="imgContainer"><a href="http://bluegriffon.org/post/2010/10/01/Open-World-Forum-Innovations-Award%21%21%21"><img
+                    src="./BlueGriffon.org_files/OWFAward.png" style="width: 220px; height: auto; border: 0px none; "
+                    alt="Open World Forum 2010 Innovation Award" /></a></p>
+              <p class="imgContainer" style="margin-top: 0px"><a href="http://en.www.netexplorateur.org/palmares/2011"><img
+                    src="./BlueGriffon.org_files/Netexplorateur-Top100-2011.png"
+                    style="width: 220px; height: auto; border: 0px none; " alt="Netexplorateur 2011 Top 100" /></a></p>
+              <p class="imgContainer"><a href="http://www.mozilla.org/poweredby"><img
+                    src="./BlueGriffon.org_files/powered-by-mozilla.png" style="border: 0px none; "
+                    alt="Powered by Mozilla" /></a></p>
+            </div>
+            <div id="topnav">
+              <ul>
+                <li class="topnav-home"><a href="http://bluegriffon.org/">Home</a><span>
+                    - </span></li>
+                <li class="topnav-arch"><a href="http://bluegriffon.org/archive">Archives</a></li>
+              </ul>
+            </div>
+            <div class="categories">
+              <h2>Categories</h2>
+              <ul>
+                <li><a href="http://bluegriffon.org/category/Announcements">Announcements</a></li>
+                <li><a href="http://bluegriffon.org/category/Progress">Progress</a></li>
+                <li><a href="http://bluegriffon.org/category/Community">Community</a></li>
+                <li><a href="http://bluegriffon.org/category/Fresh-Meat">Fresh
+                    Meat</a></li>
+                <li><a href="http://bluegriffon.org/category/Thinking-at-loud">Thinking
+                    at loud</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End #blognav -->
+          <div id="blogextra"> </div>
+          <!-- End #blogextra --> </div>
+      </div>
+      <!-- End #wrapper -->
+      <div id="footer">
+        <p>Firefox is a registered trademark of the Mozilla Foundation, and
+          BlueGriffon is not associated with or endorsed by the Mozilla
+          Foundation.<br />
+          <a href="http://bluegriffon.org/">BlueGriffon.org</a> - Thème <a href="http://aerial-type.com/post/blueairmessage">Blue
+            Air Message</a> (2.0) par <a href="http://aerial-type.com/">David
+            Yim</a>
+          <!-- - <a href="http://validator.w3.org/check?uri=http://bluegriffon.org/">HTML Strict 1.0</a>
+ / <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://bluegriffon.org/">CSS</a>-->
+          - Powered by <a href="http://www.dotclear.net/">DotClear</a></p>
+      </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

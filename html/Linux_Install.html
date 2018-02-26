@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site LINUX</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2><span style="font-weight: bold;">Linux Installation</span></h2>
+              <p>Basic Linux installation is simple with today's versions.  You
+                just boot from the distribution DVD/CD and follow the
+                instructions.  This gives you a running system with the modules
+                you pick.  The trick is setting up the system with what you need
+                and not having too much overhead.</p>
+              <p class="MsoNormal">There are 2 basic methodologies to consider
+                when loading a Linux system.<span style="mso-spacerun:yes">  </span>You
+                can just try to install what you need and nothing else.<span style="mso-spacerun:yes"> 
+                </span>This is the basis of setting up a production server where
+                you don’t want any overhead or security risk.<span style="mso-spacerun:yes"> 
+                </span>For instance, If you are setting up a mail server there
+                is no need to have a web server, GUI interface, Etc.<span style="mso-spacerun:yes"> 
+                </span>If you add extra packages you would want to turn them off
+                anyway.<span style="mso-spacerun:yes">  </span>Also with the
+                extra software, you are adding possible security risk that you
+                may need to manage.  If you are running a production server on
+                the internet you will see all kinds of request for added
+                packages like PHP administration services on web servers.  By
+                not loading additional packages you can eliminate many threats.<span
+                  style="mso-spacerun:yes"> </span></p>
+              <p class="MsoNormal">The other way to go about loading a system is
+                to say you want to load everything.<span style="mso-spacerun:yes"> 
+                </span>This is more of a development environment.<span style="mso-spacerun:yes"> 
+                </span>Where you don’t want to have to find and load packages
+                that you may need in the future.<span style="mso-spacerun:yes"> 
+                </span>In many cases I will start with a system with everything
+                loaded and after the system is working the way I want, I will
+                reload it with just the essentials that I need.</p>
+              <p class="MsoNormal">This Web server is a good example of just
+                having what you need.<span style="mso-spacerun:yes">  </span>The
+                whole thing is running on a virtual machine with just a 5Gig
+                hard drive and 1.5 gig of memory.<span style="mso-spacerun:yes"> 
+                </span>I do have 2 virtual CPUs assigned as todays operating
+                systems run much better with more than one CPU.<span style="mso-spacerun:yes"> 
+                </span>Having more than one CPU helps prevents the system
+                hanging form things like cleanup task or a lot of simtincas
+                hits. </p>
+              <h4 class="MsoNormal">Post install</h4>
+              <p></p>
+              <p class="MsoNormal">If you have not created your own install disk
+                or installation server, one of the first things that you will
+                want to do is update all the packages to the latest version. 
+                This is as everyone knows a continuous task.<span style="mso-spacerun:yes"> 
+                </span>If you are in a production environment I highly recommend
+                testing all updates first and having a local server or disk to
+                update the production systems from.<span style="mso-spacerun:yes"> 
+                </span>The automatic updates are fine but you may have
+                compatibility issues or I have seen updates with added bugs.<span
+                  style="mso-spacerun:yes">  </span>So if possible test updates
+                before loading them on important systems!</p>
+              <p></p>
+              <p class="MsoNormal"><span style="font-weight: bold;">Getting
+                  Updates for Red Hat:</span></p>
+              <p class="MsoNormal">Red Hat uses "yum" to automatically fetch and
+                install packages.  You can also use yum to update all installed
+                packages by running "yum update".  "rpm" is used to look at
+                installed packages or install/remove packages by hand.</p>
+              <p class="MsoNormal"><span style="font-weight: bold;">Getting
+                  Updates for Debian:</span></p>
+              <p class="MsoNormal">Debian uses "apt-get" to automatically fetch
+                and install packages.<span style="mso-spacerun:yes">  </span>To
+                update all installed packages you run "apt-get update" to update
+                the apt db, then run "apt-get upgrade" to upgrade the packages.<span
+                  style="mso-spacerun:yes">  </span>To list installed packages
+                or install/remove packages by hand you use "dpkg".</p>
+              <p></p>
+              <p class="MsoNormal"><span style="font-weight: bold;">Installing
+                  additional software packages</span></p>
+              <p class="MsoNormal">Not all precompiled packages are created
+                equal.<span style="mso-spacerun:yes">  </span>Different Linux
+                distributions use different package managers and they are not
+                compatible with each other.<span style="mso-spacerun:yes">  </span>Red
+                Hat uses rpm (RedHat Package Manager) and Debin uses dpkg
+                (Debian Package).<span style="mso-spacerun:yes">  </span>You
+                also have to be aware of the version of the distribution as not
+                all kernel and library versions are compatible (i.e Red Hat 5
+                rpm’s and Red Hat 6 rpm’s ) in a few cases this my work but not
+                many.<span style="mso-spacerun:yes">  </span>The last issue
+                here is 64 vs 32 bit systems.<span style="mso-spacerun:yes">  </span>You
+                can no install a 64 bit package on a 32 bit system.<span style="mso-spacerun:yes"> 
+                </span>You can install most 32 bit packages on 64 bit systems
+                although this is not generally recommended.</p>
+              <p class="MsoNormal">In many cases the package that you are
+                looking for may be on the CD or DVD you installed the system
+                from and the package was just not installed during the
+                installation procedure.<span style="mso-spacerun:yes">  </span>I
+                just installed a Red Hat 6 system and though that everything was
+                installed with the options I picked and nmap was not installed.<span
+                  style="mso-spacerun:yes">  </span>So I just installed it from
+                the DVD with “rpm -ivh rpm_file_name.rpm”.<span style="mso-spacerun:yes"> 
+                </span>You can also use yum and apt-get to search for and
+                install common packages.</p>
+              <p class="MsoNormal"><span style="font-weight: bold;">Installing
+                  software from source code archives</span></p>
+              <p class="MsoNormal">In many cases a precompiled package may not
+                be available for the Linux version you are running and you will
+                need to compile and install it yourself from the source code.<span
+                  style="mso-spacerun:yes">  </span>With todays software this
+                is nominally not that hard.<span style="mso-spacerun:yes">  </span>I
+                am going to go over the most common steps, although I do
+                recommend reading and README or INSTALL files in the archive
+                dir. </p>
+              <span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Most
+                packages come in the form of a tared zipped archive.<span style="mso-spacerun:yes"> 
+                </span>You can just put it in /var/tmp or your home dir.<span style="mso-spacerun:yes"> 
+                </span>I recommend a sub dir in your home dir as you may want to
+                go back to it at some time.<span style="mso-spacerun:yes">  </span>Go
+                to the dir that you are going to compile the software in and
+                untar the archive with “tar -zxvf name_of_tar_file.tar.gz”.<span
+                  style="mso-spacerun:yes">  </span>cd to the new archive dir
+                and read any install information.<span style="mso-spacerun:yes"> 
+                </span>Create the Makefile for your system with “./configure”
+                looking for any errors like missing libraries that you may need
+                to install. Next run make “make” and watch for any errors.<span
+                  style="mso-spacerun:yes">  </span>In most cases you install
+                the software with “make install” just like that.<span style="mso-spacerun:yes"> 
+                </span>Note that not all packages use the same make commands and
+                sometimes you need to run things like “make all” this is why you
+                need to read the README and INSTALL files.<span style="mso-spacerun:yes"> 
+                </span>Good luck ;-)</span>
+              <p></p>
+              <p class="MsoNormal"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><br />
+                </span></p>
+              <p class="MsoNormal"> </p>
+              <p class="MsoNormal"> </p>
+              <p> </p>
+              <p></p>
+              <p></p>
+              <ul>
+              </ul>
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text" style="margin-left: -3px;">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <a href="http://www.linux.org"><img src="tux_gnu.jpg" alt="" style="width: 205px;" /></a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

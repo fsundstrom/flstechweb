@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site ROBOTS</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+		  <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">My
+                  Arduino Pololu Dual MC33926 fix for Mega2560</span></h2>
+              <div style="text-align: center;"><br />
+              </div>
+              <p></p>
+              I used the Pololu Dual MC33926 Motor driver shield for my rover. 
+              This can handle up to 5A per motor and has circuit protection
+              along with Arduino libs.  This worked great with the UNO but with
+              the mega Arduino changed the timer used to timer2 an 8 bit timer
+              for pins 9 and 10, not timer1 the 16bit timer used on the UNO and
+              the motors were loud and did not have the same power as the
+              modulation was at a lower frequency.  <br />
+              <br />
+              To fix this I remapped the pins for the pulse width modulation to
+              11 and 12 (timer1 on the mega, back to a 16 bit timer) and
+              modified the following code.  I also remapped pin 12 (status flag)
+              to 22 on the Ardunio<br />
+              <br />
+              <span style="font-weight: bold;">Note, the 2 Jumpers added from
+                pins 11 and 12 after the traces were cut for pins 9 and 10</span>.<span
+                style="font-weight: bold;"> Also to remap the original pin12 the
+                trace was cut and the 2 pin header was put in,  next a jumper
+                was put from the bottom pin of the header to pin 22 on the
+                Ardunio board.  You can see the pin 22 jumper in the pics on the
+                left. </span><br />
+              <br />
+              <div style="text-align: center;"><img src="Motor_controler2.jpg" alt=""
+                  style="width: 311px; height: 213px;" /><br />
+              </div>
+              <br />
+              <div style="text-align: center;">
+                <h3><span style="font-weight: bold;">Code changes made to motor
+                    controller library<br />
+                  </span></h3>
+              </div>
+              <hr /><br />
+              In the DualMC33926 lib the following files were modified to fix
+              the issues with the pulse width and new pin mappings.  The files
+              are
+              found  in the arduino dir under libraries/DualMC33926MotorShield.<br />
+              <br />
+              <span style="font-weight: bold;">DualMC33926MotorShield.cpp</span><br />
+              <span style="font-style: italic;"><br />
+                nfs was changed to pin to 22</span><br />
+              <br />
+                _nSF = 22;<br />
+              <br />
+              <span style="font-style: italic;">The timer call used
+                was changed to OCR1A and code was changed to recognize the mega
+              </span>2560<br />
+              <br />
+                #if defined(__AVR_ATmega168__)||
+              defined(__AVR_ATmega328P__)||defined(__AVR_ATmega2560__)<br />
+                OCR1A = speed;<br />
+              <span style="font-weight: bold;"><br />
+                DualMC33926MotorShield.h</span><br />
+              <br />
+              <span style="font-style: italic;">The pins for the PWM
+                were changed to 11 and 12,</span> the remapped pins that use
+              timer1 on the mega<br />
+              <br />
+                  static const unsigned char _M1PWM = 11;<br />
+                  static const unsigned char _M2PWM = 12;<br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+                <br />
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              Pololu motor controller in R1D1 rover<br />
+              <br />
+              <img src="Motor_controler1.jpg" alt="" style="width: 216px; height: 222px;" /><br />
+              <br />
+              <img src="motor_controler3.JPG" alt="" style="width: 217px; height: 111px;" /><br />
+              <a href="http://www.dotclear.net/"></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

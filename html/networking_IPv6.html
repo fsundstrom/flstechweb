@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post">
+              <h2 style="text-align: center;"><span style="font-weight: bold;">IPv6
+                  Basics</span></h2>
+              <br />
+              <h3> <span style="font-weight: bold;">IPv6 addressing</span></h3>
+              <p>An IPv6 address is 128-bits and contains
+                340,282,366,920,938,463,463,374,607,431,768,211,456 total
+                addresses. IPv6 addresses are made up of eight four-digit hex
+                fields (Hextet), each of them representing 16 bits, . They are
+                separated by colons ":". Any leading zero bytes within a given
+                field may be dropped. If there are more than four consecutive
+                zero bytes they may be collapsed into a double colon "::".
+                However, only one such :: is allowed per address.</p>
+              <p><br />
+                The following IPv6 Address is the same in all examples, showing
+                different notations of the address</p>
+                  fe80:0000:0000:0000:0000:0020:3000:01b4<br />
+                  fe80:0 :0 :0 :0:20:3000:1b4<br />
+                  fe80::20:3000:1b4<br />
+              <p>Like in IPv4 their are reserved IPv6 address blocks for; local
+                networks, IPv4 compatibility and multicast.  At this time all
+                address assigned to internet systems are in the 2000::/3 block.</p>
+              2000::/3 is the global unicast space and is used for standard
+              internet addressing<br />
+              0000::/8 is reserved for IPv4 compatibility and address are in the
+              form of ::FFFF:1.1.1.1 and so on.<br />
+              FC00::/7 is reserved for local non routable network addressing<br />
+              FE80::/10 is for local non routable system addressing<br />
+              FF00::/8 is for multicast addressing<br />
+              <br />
+              ::1 is the default IPv6 loopback<br />
+              <h3><span style="font-weight: bold;">IPv6 Subnetting </span></h3>
+              <p class="MsoNormal">An IPv6 subnet mask is basically the same as
+                an IPv4 subnet but has more digits like the IPv6 address. IPv6
+                uses 128 bits for each IP address, as opposed to IPv4's 32 bit
+                address.  So the mask for a single IP would be /128 not /32. 
+                Other than the total number of bits it works the same were the
+                address is broken up into two parts the network addressing space
+                and the local addressing space based on the number of bits.</p>
+              <p class="MsoNormal">Today's IPv6 standards suggest a local
+                network have a /64 subnet mask.  This is an outrageous number of
+                local host address, 2 to the power of 64 or <span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">18,446,744,073,709,551,616
+                  address, many times the total IPv4 address space.  if you used
+                  a /96 bit mask you would have a subnet with the same ~4
+                  billion address that we have in the IPv4 pool (i.e. 32 bits
+                  for the local network). <br />
+                </span></p>
+              <h3> <span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">Neighbor
+                  Discovery Protocol</span></h3>
+              <p class="MsoNormal"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">IPv6
+                  does not use ARP like IPv4 it uses the functionality of the
+                  Neighbor Discovery Protocol.  IPv6 ND (</span><br />
+                <span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">Neighbor
+                  Discovery) is an improved method of address resolution using
+                  ICMP packets.  It is designed so only a small number of system
+                  on the local network need to process the request.  It also
+                  includes IPv6 routing redirects and many other functions
+                  including; Router discovery, Address autoconfiguration,
+                  Neighbor unreachability detection and Duplicate address
+                  detection.<br />
+                </span></p>
+              <p class="MsoNormal"><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                      style="font-weight: bold;"></span>A <span style="font-weight: bold;">Neighbor
+                      Discovery message (NS)</span> is sent via multicast to the
+                    "Solicited Node Multicast Address" of the target system
+                    where the sending system is doing Address Resolution. 
+                    Unlike ARP this is not a network broadcast and in most cases
+                    only one system processes the request.  The target system
+                    then sends back <br />
+                  </span></span></p>
+              <p class="MsoNormal"><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">a
+                    <span style="font-weight: bold;">Neighbor Advertisement
+                      message </span></span></span><span style="font-weight: bold;"><span
+                    style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                      style="font-weight: bold;"><span style="font-weight: bold;"><span
+                          style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                            style="font-weight: bold;">(NA) </span></span></span></span>.
+                    A system can also send an unsolicited Neighbor Advertisement
+                    message in order to propagate new address assignments
+                    quickly. </span></span><span style="font-weight: bold;"><span
+                    style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">Unsolicited
+                    Neighbor Advertisements are sent to the multicast address
+                    (ff02::1) for all the systems on a local network.</span></span></p>
+              <p class="MsoNormal"><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">The
+                    </span></span><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">"Solicited
+                    Node Multicast Address" is created by taking the last 24
+                    bits of the systems address and appending them to the prefix
+                    ff02::1:ff00:0/104. For a full 128 bit address.</span></span></p>
+              <p class="MsoNormal"><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">A
+                    <span style="font-weight: bold;">Router Solicitation message
+                      (RS)</span> request that all routers on the local network
+                    send a <span style="font-weight: bold;">Router
+                      Advertisement messages (RA)</span>. Routers send RA
+                    messages periodically, but when a node first powers on, it
+                    usually sends an RS message in order to get the RA
+                    information without delays.</span></span></p>
+              <p class="MsoNormal"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">A
+                </span><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                      style="font-weight: bold;">Neighbor redirect messages (ND
+                      redirect)</span> can also be sent out by routers, letting
+                    host know that there is a better route.  This is similar to
+                    an IPv4 ICMP redirect message, where the improved route to
+                    the host is in the packet.  ND redirect messages are sent to
+                    the host address the original packet that needs to rerouted
+                    came from.  <br />
+                  </span></span></p>
+              <h3><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">IPv6
+                  DNS Records</span></h3>
+              <p>An IPv6 Domain Name System (DNS) hostnames lookup is mapped to
+                IPv6 addresses by AAAA resource records (quad A records).  In
+                most cases if you do a quad A lookup and the host only has an
+                IPv4 "A" record it will fall back to the IPv4 address.</p>
+              <h3>Tunneling</h3>
+              <p>Older systems and networks may not have IPv6 support and they
+                must use IPv4 to carry IPv6 packets. This is done using
+                tunneling, which encapsulates IPv6 packets in IPv4.  IP protocol
+                41 indicates IPv4 packets which encapsulate IPv6 packets.  UDP
+                packets may also be used to encapsulate IPv6 datagrams. Other
+                encapsulation schemes include AYIYA and Generic Routing
+                Encapsulation.</p>
+              <p><br />
+              </p>
+              <p>Frank Sundstrom</p>
+              <p class="MsoNormal"><span style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><br />
+                  </span></span></p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

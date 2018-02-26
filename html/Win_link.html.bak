@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site Windows</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">Useful Applications for
+                  Windows<br />
+                </span></h2>
+              <ul>
+                <li><a target="_blank" href="https://www.cygwin.com/"><span style="font-weight: bold;">cygwin</span>
+                    (Linux like window in Windows)</a></li>
+                <li><a target="_blank" href="https://www.wireshark.org/"><span style="font-weight: bold;">Wireshark</span>
+                    (packet analyzer sniffer)</a></li>
+                <li><a target="_blank" href="http://www.mcafee.com/us/downloads/free-tools/superscan.aspx"><span
+                      style="color: #3388cc;"><span style="text-decoration: underline;"><span
+                          style="font-weight: bold;">Superscan</span> (Windows
+                        network port scanner)</span></span></a></li>
+                <li><a target="_blank" href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/"><span
+                      style="font-weight: bold;">putty</span> (SSH and Telnet
+                    client for Windows)</a></li>
+                <li><a target="_blank" href="http://winscp.net/"><span style="font-weight: bold;">WinSCP</span>
+                    (SCP, SFTP, FTP client for Windows)</a></li>
+                <li><a href="http://sourceforge.net/projects/xming/"><span style="color: #3388cc;"><span
+                        style="text-decoration: underline;"><span style="font-weight: bold;">Xming</span>
+                        (Linux Xserver for Windows)</span></span></a></li>
+                <li><a target="_blank" title="pdf Creater" href="http://www.pdfforge.org/pdfcreator"><span
+                      style="font-weight: bold;">PDFcreator</span> (print to PDF
+                    files)</a></li>
+                <li><a target="_blank" href="http://www.7-zip.org/"><span style="font-weight: bold;">7zip
+                      </span>(compression utility, also will open ISO files ...</a><a
+                    target="_blank" href="http://www.7-zip.org/">)</a></li>
+                <li><a href="http://www.gimp.org/"><span style="color: #3388cc;"><span
+                        style="text-decoration: underline;"><span style="font-weight: bold;">GIMP</span>
+                        (The GNU Image Manipulation Program</span></span>)</a></li>
+                <li><a href="http://www.videolan.org/"><span style="font-weight: bold;">VLC
+                      </span>(media player)</a></li>
+                <li><a target="_blank" href="http://bluegriffon.org/"><span style="font-weight: bold;">BlueGriffon
+                      </span>(Wysiwyg HTML editor)</a></li>
+                <li><a target="_blank" href="http://notepad-plus-plus.org/"><span
+                      style="font-weight: bold;">notepad++ </span>(editor for
+                    programmers etc)</a></li>
+                <li style="width: 622px;"><a href="http://www.proxomitron.info/"><span
+                      style="font-weight: bold;">Proxomitron</span> (HTTP proxy
+                    with header filtering and modification for testing)</a></li>
+                <li><a href="http://www.telerik.com/fiddler"><span style="font-weight: bold;">Fiddler
+                      </span>(HTTP debugging and Performance testing proxy)</a></li>
+                <li><a target="_blank" href="http://www.activestate.com/activeperl"><span
+                      style="font-weight: bold;">Perl</span> (Active State Perl
+                    for windows)</a></li>
+                <li><a target="_blank" href="https://technet.microsoft.com/en-us/sysinternals/bb897557.aspx"><span
+                      style="font-weight: bold;">BGinfo </span>(put system
+                    information on desktop screen)</a></li>
+                <li><a target="_blank" href="https://www.openoffice.org/"><span
+                      style="font-weight: bold;">Open Office</span> (I like MS
+                    Office but this works fine and is free)</a></li>
+                <li><a target="_blank" href="http://www.vmware.com/"><span style="font-weight: bold;">VMware
+                      player</span> for Windows (Run Virtual system in windows)</a></li>
+                <li><a target="_blank" href="https://www.virtualbox.org/"><span
+                      style="font-weight: bold;">Oracle VirtualBox</span> (Run
+                    Virtual system in windows)</a></li>
+              </ul>
+              <span style="font-weight: bold;">common add-on's</span><br />
+              <ul>
+                <li><a href="http://windows.microsoft.com/en-us/windows/security-essentials-download">Microsoft
+                    Security Essentials (Free protection)</a></li>
+                <li><a target="_blank" href="https://www.malwarebytes.org/">Malwarebytes
+                    (Anti Malware Free Version only Scans ++)</a></li>
+                <li><a target="_blank" href="https://www.google.com/intl/en/chrome/browser/desktop/index.html">Google
+                    Chrome</a></li>
+                <li><a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox<br />
+                  </a></li>
+                <li><a target="_blank" href="http://www.opera.com/">Opera (Fast
+                    Lightweight Browser)</a></li>
+                <li><a target="_blank" href="http://www.skype.com/en/download-skype/skype-for-computer/">Skype</a></li>
+              </ul>
+              <p><br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

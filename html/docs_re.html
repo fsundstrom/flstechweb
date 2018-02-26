@@ -1,0 +1,1258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <title>Franks Tech site DOCS</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h1 style="text-align: center;"><span style="font-family: Arial,Sans-Serif;"><span
+                    style="font-weight: bold;">Regular expressions quick
+                    reference</span></span></h1>
+              <pre style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 249);"> =~ m//          ;; regex <b>match</b> in Perl
+ =~ s///         ;; regex <b>substitution</b> in Perl</pre>
+              <h1><span style="font-family: Arial,Sans-Serif;"><span style="font-weight: bold;"></span></span></h1>
+              <span style="font-family: Arial,Sans-Serif;"><span style="font-weight: bold;"><br />
+                </span></span>
+              <table class="wikitable" style="font-size: 14px; margin: 1em 0px; border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: black; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 249);">
+                <tbody>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Metacharacter</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Description</th>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">.</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      any single character (many applications exclude<span class="Apple-converted-space"> </span>
+                      and exactly which characters are considered newlines is
+                      flavor-, character-encoding-, and platform-specific, but
+                      it is safe to assume that the line feed character is
+                      included). Within POSIX bracket expressions, the dot
+                      character matches a literal dot. For example,<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">a.c</code><span
+                        class="Apple-converted-space"> </span>matches "abc",
+                      etc., but<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[a.c]</code><span
+                        class="Apple-converted-space"> </span>matches only "a",
+                      ".", or "c".</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[ ]</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">A
+                      bracket expression. Matches a single character that is
+                      contained within the brackets. For example,<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[abc]</code><span
+                        class="Apple-converted-space"> </span>matches "a", "b",
+                      or "c".<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[a-z]</code><span
+                        class="Apple-converted-space"> </span>specifies a range
+                      which matches any lowercase letter from "a" to "z". These
+                      forms can be mixed:<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[abcx-z]</code><span
+                        class="Apple-converted-space"> </span>matches "a", "b",
+                      "c", "x", "y", or "z", as does<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[a-cx-z]</code>.
+                      <p style="margin: 0.5em 0px; line-height: inherit;">The<span
+                          class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">-</code><span
+                          class="Apple-converted-space"> </span>character is
+                        treated as a literal character if it is the last or the
+                        first (after the<span class="Apple-converted-space"> </span><code
+                          style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">^</code>,
+                        if present) character within the brackets:<span class="Apple-converted-space"> </span><code
+                          style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[abc-]</code>,<span
+                          class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[-abc]</code>.
+                        Note that backslash escapes are not allowed. The<span class="Apple-converted-space"> </span><code
+                          style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">]</code><span
+                          class="Apple-converted-space"> </span>character can be
+                        included in a bracket expression if it is the first
+                        (after the<span class="Apple-converted-space"> </span><code
+                          style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">^</code>)
+                        character:<span class="Apple-converted-space"> </span><code
+                          style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[]abc]</code>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^ ]</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      a single character that is not contained within the
+                      brackets. For example,<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^abc]</code><span
+                        class="Apple-converted-space"> </span>matches any
+                      character other than "a", "b", or "c".<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^a-z]</code><span
+                        class="Apple-converted-space"> </span>matches any single
+                      character that is not a lowercase letter from "a" to "z".
+                      Likewise, literal characters and ranges can be mixed.</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">^</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the starting position within the string. In line-based
+                      tools, it matches the starting position of any line.</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">$</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the ending position of the string or the position just
+                      before a string-ending newline. In line-based tools, it
+                      matches the ending position of any line.</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">(
+                        )</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Defines
+                      a marked subexpression. The string matched within the
+                      parentheses can be recalled later (see the next entry,<span
+                        class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\<i>n</i></code>).
+                      A marked subexpression is also called a block or capturing
+                      group.<span class="Apple-converted-space"> </span><b>BRE
+                        mode requires<span class="Apple-converted-space"> </span><span
+                          class="nowrap" style="white-space: nowrap;"><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\( \)</code></span></b>.</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\<i>n</i></code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      what the<span class="Apple-converted-space"> </span><i>n</i>th
+                      marked subexpression matched, where<span class="Apple-converted-space"> </span><i>n</i><span
+                        class="Apple-converted-space"> </span>is a digit from 1
+                      to 9. This construct is vaguely defined in the POSIX.2
+                      standard. Some tools allow referencing more than nine
+                      capturing groups.</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">*</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the preceding element zero or more times. For example,<span
+                        class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">ab*c</code><span
+                        class="Apple-converted-space"> </span>matches "ac",
+                      "abc", "abbbc", etc.<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[xyz]*</code><span
+                        class="Apple-converted-space"> </span>matches "", "x",
+                      "y", "z", "zx", "zyx", "xyzzy", and so on.<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">(ab)*</code><span
+                        class="Apple-converted-space"> </span>matches "", "ab",
+                      "abab", "ababab", and so on.</td>
+                  </tr>
+                  <tr valign="top">
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><span
+                        class="nowrap" style="white-space: nowrap;"><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">{<i>m</i>,<i>n</i>}</code></span></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the preceding element at least<span class="Apple-converted-space"> </span><i>m</i><span
+                        class="Apple-converted-space"> </span>and not more than<span
+                        class="Apple-converted-space"> </span><i>n</i><span class="Apple-converted-space"> </span>times.
+                      For example,<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">a{3,5}</code><span
+                        class="Apple-converted-space"> </span>matches only
+                      "aaa", "aaaa", and "aaaaa". This is not found in a few
+                      older instances of regular expressions.<span class="Apple-converted-space"> </span><b>BRE
+                        mode requires<span class="Apple-converted-space"> </span><code
+                          style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);"><span
+                            class="nowrap" style="white-space: nowrap;">\{<i>m</i>,<i>n</i>\</span>}</code></b>.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <br />
+              <table class="wikitable" style="font-size: 14px; margin: 1em 0px; border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: black; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 249);">
+                <tbody>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Meta-<br />
+                      character(s)</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Description</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Example</th>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">.</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Normally
+                      matches any character except a newline.<br />
+                      Within square brackets the dot is literal.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/...../</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            has length &gt;= 5<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">(
+                        )</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Groups
+                      a series of pattern elements to a single element.<br />
+                      When you match a pattern within parentheses, you can use
+                      any of<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">$1</code>,<span
+                        class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">$2</code>,
+                      ... later to refer to the previously matched pattern.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/(H..).(o..)/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"We
+                            matched '$1' and '$2'<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                      <b>Output:</b>
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="text source-text" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;">We
+                          matched 'Hel' and 'o W'</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">+</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the preceding pattern element one or more times.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/l+/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There
+                            are one or more consecutive letter<span class="Apple-converted-space"> </span><span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\"</span>l<span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\"</span>'s
+                            in $string1<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                      <b>Output:</b>
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="text source-text" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;">There
+                          are one or more consecutive letter "l"'s in Hello
+                          World</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">?</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the preceding pattern element zero or one times.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/H.?e/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There is
+                            an 'H' and a 'e' separated by "</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"0-1
+                            characters (Ex: He Hoe)<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">?</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Modifies
+                      the<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">*</code>,<span
+                        class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">+</code>,<span
+                        class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">?</code><span
+                        class="Apple-converted-space"> </span>or<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">{M,N}</code>'d
+                      regex that comes before to match as few times as possible.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/(l.+?o)/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"The
+                            non-greedy match with 'l' followed by one or<span class="es0"
+                              style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"more
+                            characters is 'llo' rather than 'llo Wo'.<span class="es0"
+                              style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                      <b>Output:</b>
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="text source-text" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;">The
+                          non-greedy match with 'l' followed by one or<br />
+                          more characters is 'llo' rather than 'llo Wo'.</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">*</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the preceding pattern element zero or more times.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/el*o/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There is
+                            an 'e' followed by zero to many "</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"'l'
+                            followed by 'o' (eo, elo, ello, elllo)<span class="es0"
+                              style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">{M,N}</th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Denotes
+                      the minimum M and the maximum N match count.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/l{1,2}/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="kw3" style="color: rgb(0, 0, 102);">print</span><span
+                            class="Apple-converted-space"> </span><span class="st0"
+                            style="color: rgb(255, 0, 0);">"There exists a
+                            substring with at least 1 "</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                          <br />
+                           <span class="kw3" style="color: rgb(0, 0, 102);">print</span><span
+                            class="Apple-converted-space"> </span><span class="st0"
+                            style="color: rgb(255, 0, 0);">"and at most 2 l's in
+                            $string1<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[...]</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Denotes
+                      a set of possible character matches.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/[aeiou]+/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            contains one or more vowels.<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">|</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Separates
+                      alternate possibilities.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/(Hello|Hi|Pogo)/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"At least
+                            one of Hello, Hi, or Pogo is "</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"contained
+                            in $string1.<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\b</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      a zero-width boundary between a word-class character (see
+                      next) and either a non-word class character or an edge.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/llo\b/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There is
+                            a word that ends with 'llo'<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\w</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      an alphanumeric character, including "_";<br />
+                      same as<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[A-Za-z0-9_]</code><span
+                        class="Apple-converted-space"> </span>in ASCII.<br />
+                      In Unicode<span class="Apple-converted-space"> </span>same
+                      as<span class="Apple-converted-space"> </span><tt style="font-family: monospace, Courier; white-space: normal;">[\p{Alphabetic}<wbr
+                          style="display: inline-block;" />\p{GC=Mark}<wbr style="display: inline-block;" />\p{GC=Decimal_Number}<wbr
+                          style="display: inline-block;" />\p{GC=Connector_Punctuation}]</tt>,<br />
+                      where the<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">Alphabetic
+                        property</code><span class="Apple-converted-space"> </span>contains
+                      more than just Letters, and the<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">Decimal_Number</code>property
+                      contains more than<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[0-9]</code>.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/\w/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There is
+                            at least one alphanumeric "</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"character
+                            in $string1 (A-Z, a-z, 0-9, _)<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\W</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      a<span class="Apple-converted-space"> </span><b>non</b>-alphanumeric
+                      character, excluding "_";<br />
+                      same as<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^A-Za-z0-9_]</code><span
+                        class="Apple-converted-space"> </span>in ASCII,<br />
+                      and<span class="Apple-converted-space"> </span><tt style="font-family: monospace, Courier; white-space: normal;">[^\p{Alphabetic}<wbr
+                          style="display: inline-block;" />\p{GC=Mark}<wbr style="display: inline-block;" />\p{GC=Decimal_Number}<wbr
+                          style="display: inline-block;" />\p{GC=Connector_Punctuation}]</tt>in
+                      Unicode.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/\W/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"The
+                            space between Hello and "</span><span class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"World is
+                            not alphanumeric<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\s</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      a whitespace character,<br />
+                      which in ASCII are tab, line feed, form feed, carriage
+                      return, and space;<br />
+                      in Unicode, also matches no-<wbr style="display: inline-block;" />break
+                      spaces, next line, and the variable-<wbr style="display: inline-block;" />width
+                      spaces (amongst others).</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/\s.*\s/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There
+                            are TWO whitespace characters, which may"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">" be
+                            separated by other characters, in $string1"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\S</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      anything BUT a whitespace.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/\S.*\S/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There
+                            are TWO non-whitespace characters, which"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">" may be
+                            separated by other characters, in $string1"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\d</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      a digit;<br />
+                      same as<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[0-9]</code><span
+                        class="Apple-converted-space"> </span>in ASCII;<br />
+                      in Unicode, same as the<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\p{Digit}</code><span
+                        class="Apple-converted-space"> </span>or<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\p{GC=Decimal_Number}</code><span
+                        class="Apple-converted-space"> </span>property, which
+                      itself the same as the<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\p{Numeric_Type=Decimal}</code><span
+                        class="Apple-converted-space"> </span>property.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"99
+                            bottles of beer on the wall."</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/(\d+)/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$1 is
+                            the first number in '$string1'<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                      <b>Output:</b>
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="text source-text" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;">99
+                          is the first number in '99 bottles of beer on the
+                          wall.'</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\D</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      a non-digit;<br />
+                      same as<span class="Apple-converted-space"> </span><code style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^0-9]</code><span
+                        class="Apple-converted-space"> </span>in ASCII or<span class="Apple-converted-space"> </span><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\P{Digit}</code><span
+                        class="Apple-converted-space"> </span>in Unicode.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/\D/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"There is
+                            at least one character in $string1"</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">" that is
+                            not a digit.<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">^</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the beginning of a line or string.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/^He/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            starts with the characters 'He'<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">$</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the end of a line or string.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/rld$/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            is a line or string "</span><span class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"that
+                            ends with 'rld'<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\A</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the beginning of a string (but not an internal line).</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello<span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>World<span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/\AH/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            is a string "</span><span class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"that
+                            starts with 'H'<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\z</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      the end of a string (but not an internal line).</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello<span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>World<span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/d\n\z/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            is a string "</span><span class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"that
+                            ends with 'd<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\\</span>n'<span
+                              class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^...]</code></th>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Matches
+                      every character except the ones inside brackets.</td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">
+                      <div dir="ltr" class="mw-geshi mw-code mw-content-ltr" style="direction: ltr; font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);">
+                        <div class="perl source-perl" style="line-height: normal; tab-size: 4; font-family: monospace, monospace;"><span
+                            class="re0" style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"Hello
+                            World<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="kw1" style="color: rgb(177, 177, 0);">if</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">(</span><span class="re0"
+                            style="color: rgb(0, 0, 255);">$string1</span><span
+                            class="Apple-converted-space"> </span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">=~</span><span class="Apple-converted-space"> </span><span
+                            class="co2" style="color: rgb(0, 153, 102); font-style: italic;">m/[^abc]/</span><span
+                            class="br0" style="color: rgb(0, 153, 0);">)</span><span
+                            class="Apple-converted-space"> </span><span class="br0"
+                            style="color: rgb(0, 153, 0);">{</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"$string1
+                            contains a character other than "</span><span class="sy0"
+                            style="color: rgb(51, 153, 51);">;</span><br />
+                           <span class="Apple-converted-space"> </span><span class="kw3"
+                            style="color: rgb(0, 0, 102);">print</span><span class="Apple-converted-space"> </span><span
+                            class="st0" style="color: rgb(255, 0, 0);">"a, b,
+                            and c<span class="es0" style="color: rgb(0, 0, 153); font-weight: bold;">\n</span>"</span><span
+                            class="sy0" style="color: rgb(51, 153, 51);">;</span><br />
+                          <span class="br0" style="color: rgb(0, 153, 0);">}</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <table class="wikitable" style="font-size: 14px; margin: 1em 0px; border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: black; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 249);">
+                <tbody>
+                  <tr>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Perl/Tcl</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Vim</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">ASCII</th>
+                    <th style="border: 1px solid rgb(170, 170, 170); padding: 0.2em; text-align: center; background-color: rgb(242, 242, 242);">Description</th>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[A-Za-z0-9]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Alphanumeric
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\w</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\w</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[A-Za-z0-9_]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Alphanumeric
+                      characters plus "_"</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\W</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\W</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^A-Za-z0-9_]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Non-word
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\a</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[A-Za-z]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Alphabetic
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\s</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[<span
+                          class="Apple-converted-space"> </span>]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Space
+                      and tab</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\b</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\&lt;
+                        \&gt;</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">(?&lt;=\W)(?=\w)|(?&lt;=\w)(?=\W)</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Word
+                      boundaries</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[\x00-\x1F\x7F]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Control
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\d</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\d</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[0-9]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Digits</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\D</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\D</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^0-9]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Non-digits</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[\x21-\x7E]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Visible
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\l</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[a-z]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Lowercase
+                      letters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\p</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[\x20-\x7E]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Visible
+                      characters and the space character</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[][!"#$%&amp;'()*+,./:;&lt;=&gt;?@\^_`{|}~-]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Punctuation
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\s</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\_s</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[<span
+                          class="Apple-converted-space"> </span>]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Whitespace
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\S</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[^
+                        \t\r\n\v\f]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Non-whitespace
+                      characters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\u</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[A-Z]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Uppercase
+                      letters</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><br />
+                    </td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">\x</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;"><code
+                        style="font-family: monospace, Courier; color: black; border: 1px solid rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; background-color: rgb(249, 249, 249);">[A-Fa-f0-9]</code></td>
+                    <td style="border: 1px solid rgb(170, 170, 170); padding: 0.2em;">Hexadecimal
+                      digits</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br class="Apple-interchange-newline" />
+              <br class="Apple-interchange-newline" />
+              <br />
+              <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

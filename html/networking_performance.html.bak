@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Franks Tech site NETWORKING</title>
+    <meta content="text/html" name="dc.format" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <style media="print" type="text/css">
+
+</style> <link media="screen" type="text/css" href="thickbox.css" rel="stylesheet" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div id="top" style="background-color: #000099;">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p id="blogdesc" style="background-color: #000099;">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div class="post" id="p5">
+              <h2><span style="font-weight: bold;">Network Performance<br />
+                </span></h2>
+              <p> <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: 100; letter-spacing: normal; line-height: 12.4800004959106px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                    style="color: #333333;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">When
+                      talking about network performance we need to make sure
+                      that the systems can access the needed data in a timely
+                      manner.  The big question here is what do we consider
+                      timely?  In some cases this depends on the applications
+                      and sometimes it's just a </span></span></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: 100; letter-spacing: normal; line-height: 12.4800004959106px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                    style="color: #333333;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;"><span
+                        style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: 100; letter-spacing: normal; line-height: 12.4800004959106px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                          style="color: #333333;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">required
+                            </span></span></span>speed or bandwidth benchmark. 
+                    </span></span></span></p>
+              <p><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: 100; letter-spacing: normal; line-height: 12.4800004959106px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                    style="color: #333333;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">
+                    </span></span></span></p>
+              <p><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: 100; letter-spacing: normal; line-height: 12.4800004959106px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                    style="color: #333333;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;">
+                      One thing you need to know is the best case scenario based
+                      on number of hops, link speed, RTT, etc.  After you know
+                      the best case you can make comparisons to measured
+                      results.</span></span></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: 100; letter-spacing: normal; line-height: 12.4800004959106px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+                    style="color: #333333;"><span style="font-family: 'Lucida Grande',Arial,Sans-Serif;"> 
+                      Some things you can not control like RTT over long
+                      distances or in other cases it's the bandwidth on a
+                      transport link.  Taking all this into consideration you
+                      can decide whether there is an issue with performance.   </span></span></span>
+              </p>
+              <h4>Identifying the Issues</h4>
+              First is identifying where the issues are.  With a normal
+              transaction there are many interactions between systems all or one
+              of which may be causing issues.  The trick is finding out what
+              system or network link may be causing delays or packet loss.<br />
+              <br />
+              Verify what service has the issue.  For example you may think that
+              some web pages are taking a long time to load although the problem
+              may be that DNS lookups are slow.  As the client can not connect
+              to the web server until it get the address form DNS.  Another
+              example is if you are using a proxy for some data the proxy server
+              may be slow.  So you need to verify what service has the issue and
+              its role in the transactions form client to server.<br />
+              <br />
+              You may have loading issues on the client or server, where the
+              delays look like network issues although they are
+              software/hardware issues.  To see if this is the case look at the
+              time between receiving the packet and sending out the <span style="font-size:9.5pt;line-height:115%; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;color:#333333;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">response</span>
+              for that packet on the local network.  you also need to check the
+              TCP window size as when servers get loaded the window size can be
+              reduced.<br />
+              <br />
+              Slow network links are also common issues where congestion or bad
+              routing can cause delays.  just running a ping form the client to
+              the server will not always tell the whole story.   You may need to
+              trace the route in both directions or send packets full of data to
+              find an issue.<br />
+              <br />
+              Packet loss can be a major performance issue.  Look for packet
+              loss as nothing affects performance like lost packets.  For UDP
+              the packet is just lost and the application needs to retransmit
+              the data or work around the issue.  TCP will retransmit lost
+              packets but with a performance hit.  <br />
+              <h4><span style="font-weight: bold;">The TCP Window</span>.   </h4>
+              <p> TCP window size can make a big difference with network
+                performance.  The TCP window size determines the amount of data
+                that is transmitted before the receiving system needs to send an
+                ACK.  As the sender is waiting for the ACK this can cause a
+                delay.  The longer the RTT the more the TCP window affects
+                performance.</p>
+              <p>When the receiving system starts to get loaded it will reduce
+                the TCP window.  This will continue until the system gets so
+                loaded that it can not accept any data at that time the window
+                will be set to 0.  When the window size is 0 the sender can not
+                send any data until the system receiving the data changes the
+                window to something other than 0.  If the sender does not
+                receive a packet before the timeout, it sends a packet to the
+                receiving system to get a packet with a new receive window.</p>
+              <p>Today with high bandwidth networks we can use window scaling,
+                for a larger TCP window size. The TCP window size is limited to
+                65,535 bytes by default.  The TCP window scale option is defined
+                during the TCP handshake. The window scale value represents the
+                number of bits to left-shift the 16-bit window size field. The
+                window scale value can be set from 0 to 14 for each direction
+                independently.  Both sides must send the option in their SYN
+                segments to enable window scaling in that direction.</p>
+              <h4><span style="font-weight: bold;">RTT and its effect on
+                  performance</span></h4>
+              <p>RTT (Round Trip Time) has a varying effect on performance
+                depending on the application or service.  If you are using the
+                same application on the same server you will get better
+                performance for the locations with the lower RTTs.  You also
+                will see the biggest affect from round trip time on start up. 
+                When setting up a connection you have several round trips and as
+                TCP starts sending data the sliding window is smaller doubling
+                with each ACK.  So RTT affects applications that create lots of
+                new connections more than an application that is just
+                transferring one large file.  Your also have to take server
+                response time into effect as this also adds delays to each
+                transaction. </p>
+              <p> With all that said RTT still has an effect on the max B/W that
+                you can use as you always need to acknowledge the data during
+                the transmission.  In general you are not going to see much
+                difference form a 10 or 15 milliseconds difference although if
+                you are going from NY to LA ~ 100ms this becomes an issue.  <br />
+                You also have to be aware of your applications and how they are
+                affected by RTT.  </p>
+              <p>If your applications are going to be run from all over the
+                country take into consideration that large chunks of data will
+                not be affected by RTT as much as many small retrievals are. 
+                The same is true with database lookups.  You don’t want to be
+                making lotsqueries of independent  on a DB, instead you want to
+                make one or two queries and send the results all at once.  In
+                general users are not going to notice a 50ms delay, although if
+                it takes 10 round trips to complete a task now that is going to
+                be more than ½ second and could be noticed.</p>
+              <p> To help with this consider the location of data centers
+                hosting your applications and the location of users.  If most of
+                your users are in NY then don’t host you systems in LA.  In many
+                cases it makes sense to have servers in multiple locations and
+                use a DNS service that has location awareness.  You can also use
+                a CDN or cloud service that takes all this into account or use
+                something like F5s Global Traffic Manager service in you data
+                centers.</p>
+              <h4>Monitoring Network and application performance</h4>
+              <p>To be continued ...</p>
+              <p><br />
+              </p>
+              <p> </p>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>

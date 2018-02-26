@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="description" content="My tech information page flstech.com by, Frank Sundstrom, Techmology and computer systems information for Linux, UNIX, Windows and Robotics" />
+    <meta name="keywords" content="Frank Sundstrom,Sundstrom, engineering, technology, administration, Linux, Windows, robots, micro-controllers, networking, testing, virtualization, computers, hotrod, consulting" />
+    <meta name="author" content="Frank Sundstrom" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <title>Franks Tech site HOME</title>
+    <meta name="dc.format" content="text/html" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css" media="print">
+
+</style> <link rel="stylesheet" href="thickbox.css" type="text/css" media="screen" />
+  </head>
+  <body class="dc-page">
+    <div id="page">
+      <div style="background-color: #000099;" id="top">
+        <div id="logo"><br />
+        </div>
+        <h1 style="background-color: #000099;"><span>Franks Tech Site<br />
+          </span></h1>
+        <p style="background-color: #000099;" id="blogdesc">Tech Info and other
+          things I am working on</p>
+        <br />
+      </div>
+      <div id="menu">
+        <ul>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="Consulting_Services"><a href="Consulting.html">Consulting</a></li>
+          <li id="Tech_Links"><a href="links.html">Links</a></li>
+          <li id="Networking"><a href="networking.html">Networking</a></li>
+          <li id="Linux"><a href="Linux.html">Linux</a></li>
+          <li id="Windows"><a href="Win.html">Windows</a></li>
+          <li id="VMs"><a href="VMs.html">VM</a></li>
+          <li id="Programming_and_scripting"><a href="programming.html">Programming</a></li>
+          <li id="Robotics_My_Rover"><a href="robots.html">Robotics</a></li>
+          <li id="Basic_Electronics"><a href="electronics.html">Electronics</a></li>
+          <li id="Hot_roding"><a href="hotrod.html">cars</a></li>
+          <li id="docs"><a href="docs.html">Docs</a></li>
+          <li id="contact_info"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="wrapper">
+        <div id="main">
+          <div id="content">
+            <div id="p5" class="post" style="width: 630px;"><span style="font-weight: bold;">Hello,<br />
+                <br />
+                I am a computer systems engineer, electronic engineer, and
+                fabricator with over 20 years experience working at Bell Labs,
+                AT&amp;T, Verizon and as a freelance consultant.  <br />
+                <br />
+              </span>This site was started for my notes and to share useful info
+              with friends.  I have added basic networking, hardware, and OS
+              information and hope that everyone finds this site useful and
+              interesting.  The format is that of high level notes and is not a
+              tutorial.  Many of the subjects covered could consume several
+              books.  The purpose here is to have a good reference site showing
+              how the technology's can be used and some of the hard to find
+              details.  Pleas let me know if you think I left out something of
+              importance on any of the subjects covered.  One can always learn
+              form others ;-)     <br />
+              <br />
+              At this time the site is under construction and I apologize for
+              any dead links, unfinished pages, etc.  I am being very ambitious
+              here and it will take some time to finish the site with all the
+              technology information that I want to cover (i.e. a never-ending
+              task).  I am looking to create a quality site that engineers and
+              those interested in technology will find useful. <br />
+              <br />
+              With all that mentioned  I would appreciate  any comments. <br />
+              <br />
+              <br />
+              <span style="font-weight: bold;">Site Technical Details</span><br />
+              <p>This site is running on a virtual Linux CentOS system using an
+                Apache web server and is hosted on a VMware 5.5 server.  The
+                server hardware consist of an old dell desktop with a 3.2 GHz
+                dual core processor and 8 Gigs of memory.  Cloud DNS is used for
+                the DDNS service and our ISP is Verizon FIOS.</p>
+              <br />
+              Thanks,<br />
+              <br />
+              Frank L. Sundstrom <br />
+              f_sundstrom@yahoo.com<br />
+              <br />
+              <br />
+              <br />
+              <br />
+              Legal Disclaimer: I am not responsible for anything resulting
+              from, using or reading anything on this site. <span style="font-weight: bold;"></span></div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="blognav">
+            <div class="text">
+              <p class="imgContainer"><br />
+              </p>
+              <img style="width: 220px; height: 219px;" alt="" src="CC2.jpg" /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"> </div>
+    </div>
+    <!-- End #page -->
+  </body>
+</html>
