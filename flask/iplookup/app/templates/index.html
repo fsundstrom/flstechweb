@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+  <title>Flask Demo</title>
+</head>
+<h2> This is a basic test page <h2/>
+<p><h3> Your IP is {{  lookup_ip }} <h3/></p>
+<p><h4> Your IP name is {{ name }} <h3/></p>
+<br/> 
+<h3> Headers <h3/> 
+{% for entry in headers %}
+{{  entry }}
+<br/>
+{%  endfor %}
+<br/>
+<h3> GeoIP Info <h3/> 
+{% for entry in geo_data %}
+{{ entry }} = {{ geo_data[entry] }}
+<br/>
+{%  endfor %}
+</body>
+</html>
